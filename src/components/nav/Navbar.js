@@ -5,7 +5,6 @@ const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const handleDropdown = () => {
-    console.log("hello");
     setIsDropdownOpen(!isDropdownOpen);
   };
 
@@ -20,17 +19,11 @@ const Navbar = () => {
           <li>
             <Link to="/">Home</Link>
           </li>
-          <li>
-            <Link
-              to="/about"
-              onMouseOver={handleDropdown}
-              onMouseOut={handleDropdown}
-            >
-              About
-            </Link>
+          <li onMouseEnter={handleDropdown} onMouseLeave={handleDropdown}>
+            <Link to="/about">About</Link>
             {isDropdownOpen && (
               <div>
-                <Link to="">About Us</Link>
+                <Link to="/about">About Us</Link>
                 <Link to="/FAQ">FAQ</Link>
               </div>
             )}
