@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -19,7 +21,7 @@ const Navbar = () => {
             <a href="">Home</a>
           </li>
           <li>
-            <a href="">About</a>
+            <Link to="/about">About</Link>
           </li>
           <li>
             <a href="" onMouseOver={handleDropdown} onMouseOut={handleDropdown}>
