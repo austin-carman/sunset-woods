@@ -11,37 +11,41 @@ const Navbar = () => {
 
   return (
     <nav>
-      <a href="/">
+      <Link to="/">
         <img src="#" alt="Company Logo" />
         Company Name
-      </a>
+      </Link>
       <div>
         <ul>
           <li>
-            <a href="">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <a href="" onMouseOver={handleDropdown} onMouseOut={handleDropdown}>
-              Shop
-            </a>
+            <Link
+              to="/about"
+              onMouseOver={handleDropdown}
+              onMouseOut={handleDropdown}
+            >
+              About
+            </Link>
             {isDropdownOpen && (
               <div>
-                <a href="">About Us</a>
-                <a href="">FAQ</a>
+                <Link to="">About Us</Link>
+                <Link to="/FAQ">FAQ</Link>
               </div>
             )}
           </li>
           <li>
-            <a href="">Contact</a>
+            <Link to="/shop">Shop</Link>
           </li>
           <li>
-            <a href="">Cart</a>
+            <Link to="/contact">Contact</Link>
           </li>
           <li>
-            <a href="">Custom Order</a>
+            <Link to="/cart">Cart</Link>
+          </li>
+          <li>
+            <Link to="/custom-orders">Custom Order</Link>
           </li>
         </ul>
       </div>
