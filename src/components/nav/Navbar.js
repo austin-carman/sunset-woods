@@ -1,14 +1,31 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleToggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
-    <nav>
-      <Link to="/">
-        <img src="#" alt="Company Logo" />
-        Company Name
+    <nav className="navbar">
+      {/* Company logo and/or name */}
+      <Link to="/" className="logo">
+        Sunset Woods
       </Link>
-      <div>
-        <ul>
+      {/* Navigation menu */}
+      <ul className="nav-menu">
+        {/* Hamburger Menu */}
+        <span onClick={handleToggleMenu} className="hamburger">
+          &#9776;
+        </span>
+        {/* Nav links */}
+        <div
+          className={
+            isMenuOpen ? "show-links links-wrapper" : "hide-links links-wrapper"
+          }
+        >
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -25,10 +42,10 @@ const Navbar = () => {
             <Link to="/cart">Cart</Link>
           </li>
           <li>
-            <Link to="/custom-orders">Custom Order</Link>
+            <Link to="/custom-orders">Custom Orders</Link>
           </li>
-        </ul>
-      </div>
+        </div>
+      </ul>
     </nav>
   );
 };
