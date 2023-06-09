@@ -248,4 +248,28 @@ a {
 }
 
 /* ========== FOOT STYLES ========== */
-
+footer {
+  background-color: antiquewhite;
+}
+footer .info-container {
+  width: 90%;
+  margin: auto;
+}
+footer .img-quick-links-container img {
+  margin-top: 10%;
+  /* width:  */
+}
+footer .links-container {
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10% 0%;
+  padding: 10% 0%;
+}
+footer .social-links-container {
+  margin-bottom: 10%;
+}
+footer .copyright {
+  text-align: center;
+}
