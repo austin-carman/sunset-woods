@@ -1,6 +1,7 @@
 const About = () => {
   // eslint-disable-next-line no-undef
   const image = process.env.PUBLIC_URL + "./blue.png";
+
   return (
     <>
       <div className="about-hero-section">

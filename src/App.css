@@ -357,3 +357,8 @@ footer a {
     height: 75vh;
   }
 }
+
+/* ========== Shop Page Styles ========== */
+.shop-title-container {
+  text-align: center;
+}
