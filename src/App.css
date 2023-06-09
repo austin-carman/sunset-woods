@@ -362,3 +362,9 @@ footer a {
 .shop-title-container {
   text-align: center;
 }
+.shop-custom-order-button {
+  padding: 1em 4em;
+  margin: 5%;
+  border: 1px solid black;
+  border-radius: 5em; /* use this elsewhere - create general button styles */
+}
