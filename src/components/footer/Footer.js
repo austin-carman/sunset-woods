@@ -37,16 +37,16 @@ const Footer = () => {
             <li>
               <span className="links-label">Contact</span>
             </li>
-            <li>Call or Text:</li>
+            <li>Call or Text:</li> {/* use phone icon instead */}
             <li>
               <a href="tel:+44-785-7895">+44-785-7895</a>
             </li>
-            <li>
-              <a href="mailto:1234@example.com">Email Us</a>
+            <li id="footer-email">
+              <a href="mailto:1234@example.com">Email</a>
             </li>
             <li>
               <Link to="/custom-orders">
-                <button>Custom Quote</button>
+                <button id="footer-custom-orders-btn">Custom Quote</button>
               </Link>
             </li>
           </ul>
