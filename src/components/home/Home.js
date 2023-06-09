@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Home = () => {
   // eslint-disable-next-line no-undef
   const image = process.env.PUBLIC_URL + "/blue.png";
@@ -12,7 +14,9 @@ const Home = () => {
       <div className="hero-img">
         <div className="hero-content">
           <h1>Quality. Custom. Handcrafted.</h1>
-          <button onClick={handleCallToAction}>Call to Action</button>
+          <Link to="/shop">
+            <button onClick={handleCallToAction}>Call to Action</button>
+          </Link>
         </div>
       </div>
       {/* Gallery */}

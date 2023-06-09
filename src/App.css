@@ -170,6 +170,8 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* TODO: come back to later - parallax scrolling on hero img */
+  /* background-attachment: fixed; */
 }
 
 /* Hero content */
@@ -244,5 +246,71 @@ a {
   .home-intro img {
     width: 45%;
     margin: 0% auto;
+  }
+}
+
+/* ========== FOOT STYLES ========== */
+footer {
+  background-color: antiquewhite;
+}
+footer .links-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 5%;
+}
+footer .footer-section-container {
+  border-bottom: 1px solid grey;
+  width: 90%;
+  padding: 10%;
+}
+footer .copyright {
+  text-align: center;
+}
+#footer-custom-orders-btn {
+  border: 1px solid black;
+  text-align: center;
+  padding: 5% 15%;
+  border-radius: 15px;
+  margin-top: 5%;
+  letter-spacing: 0.2em;
+}
+#footer-custom-orders-btn:hover {
+  background-color: grey;
+  color: white;
+  cursor: pointer;
+}
+footer .links-label {
+  text-transform: uppercase;
+}
+footer a {
+  color: grey;
+}
+#footer-email {
+  text-decoration: underline;
+}
+
+/* footer media queries */
+@media only screen and (min-width: 600px) {
+  footer .footer-section-container {
+    width: 45%;
+    padding: 5%;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  footer .footer-section-container {
+    width: 30%;
+    border-bottom: none;
+  }
+  footer .copyright {
+    border-top: 1px solid grey;
+    padding: 1%;
+    margin: 0% 5%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  footer .footer-section-container {
+    width: 22%;
+    padding: 2%;
   }
 }
