@@ -25,6 +25,7 @@ const Navbar = () => {
           className={
             isMenuOpen ? "show-links links-wrapper" : "hide-links links-wrapper"
           }
+          onClick={handleToggleMenu}
         >
           <li>
             <Link to="/">Home</Link>
