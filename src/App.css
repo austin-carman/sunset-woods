@@ -170,6 +170,8 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* TODO: come back to later - parallax scrolling on hero img */
+  /* background-attachment: fixed; */
 }
 
 /* Hero content */
