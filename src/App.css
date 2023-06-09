@@ -61,10 +61,17 @@ body{
 	font-family: 'Roboto Mono', monospace;
 }
 h1{
-	font-size:6rem
+	font-size: 6rem;
+}
+h2 {
+  font-size: 4rem;
+}
+h3 {
+  font-size: 3rem;
 }
 a {
   text-decoration: none;
+  letter-spacing: 0.1em;
 }
 
 /* ========== Navbar ========== */
@@ -112,10 +119,18 @@ a {
   transition: 0.5s ease;
 }
 
-/* MEDIA QUERIES */
-@media only screen and  (min-width: 850px) {
+/* navbar MEDIA QUERIES */
+@media only screen and  (min-width: 1200px) {
   .navbar {
     padding: 1% 3%;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+  }
+
+  /* nav logo/company name */
+  .navbar .logo {
+    font-size: 3rem;
   }
 
   /* menu */
@@ -130,7 +145,7 @@ a {
     justify-content: flex-end;
     font-size: 1.8rem;
     position: static;
-    margin-right: 11em;
+    margin-right: 12em;
     background-color: white;
   }
   .links-wrapper li {
@@ -141,5 +156,93 @@ a {
   }
   .links-wrapper li:hover {
     border-radius: 5px;
+  }
+}
+
+/* ========== Home Styles ========== */
+/* Hero image */
+.hero-img {
+  background-image: url("../public/blue.png");
+  height: 75vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hero content */
+.hero-content {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+.hero-content h1 {
+  font-size: 3rem;
+  margin: 10%;
+}
+
+/* Call to Action button */
+.hero-img button {
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 2% 4%;
+}
+
+/* Gallery */
+.home-gallery {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 10% auto;
+}
+.gallery-item {
+  text-align: center;
+  margin: 5% auto;
+}
+
+/* Intro */
+.home-intro {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0% auto;
+}
+.home-intro h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2%;
+}
+.home-intro img {
+  margin: 10% auto;
+}
+
+/* Home page Media Queries */
+@media only screen and (min-width: 1000px) {
+  .home-gallery {
+    flex-direction: row;
+  }
+  .hero-content h1 {
+    margin: 2%;
+  }
+  .hero-img button {
+    padding: 1% 2%;
+  }
+  .gallery-item {
+    width: 30%;
+    margin: 0% 2%;
+  }
+  .home-intro {
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 10% auto;
+  }
+  .home-intro .intro-content {
+    width: 45%;
+    margin: 0% auto;
+  }
+  .home-intro img {
+    width: 45%;
+    margin: 0% auto;
   }
 }
