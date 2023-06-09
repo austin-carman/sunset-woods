@@ -314,3 +314,46 @@ footer a {
     padding: 2%;
   }
 }
+
+
+/* ========== About Page ========== */
+.about-hero-section {
+  background-image: url("../public/blue.png");
+  height: 75vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-hero-content {
+  text-align: center;
+}
+.about-section {
+  width: 90%;
+  margin: 10% auto;
+}
+.about-content {
+  margin-bottom: 10%;
+}
+@media only screen and (min-width: 800px) {
+  .about-hero-section {
+    height: 50vh;
+  }
+  .about-section {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .about-content {
+    width: 40%;
+  }
+  .about-img-container {
+    width: 45%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .about-hero-section {
+    height: 75vh;
+  }
+}
