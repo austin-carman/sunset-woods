@@ -1,29 +1,39 @@
 const Home = () => {
+  // eslint-disable-next-line no-undef
+  const image = process.env.PUBLIC_URL + "/blue.png";
+
+  const handleCallToAction = () => {
+    console.log("call to action");
+  };
+
   return (
     <>
       {/* Hero image and Call to Action */}
-      <div>
-        <img src="#" alt="" />
-        <button>Call to Action</button>
+      <div className="hero-img">
+        <div className="hero-content">
+          <h1>Quality. Custom. Handcrafted.</h1>
+          <button onClick={handleCallToAction}>Call to Action</button>
+        </div>
       </div>
       {/* Gallery */}
-      <section>
-        <div>
-          <img src="" alt="" />
-          <h4>Category title</h4>
+      <section className="home-gallery">
+        <div className="gallery-item">
+          <img src={image} alt="" />
+          <h4>Title</h4>
         </div>
-        <div>
-          <img src="" alt="" />
-          <h4>Category title</h4>
+        <div className="gallery-item">
+          <img src={image} alt="" />
+          <h4>Title</h4>
         </div>
-        <div>
-          <img src="" alt="" />
-          <h4>Category title</h4>
+        <div className="gallery-item">
+          <img src={image} alt="" />
+          <h4>Title</h4>
         </div>
       </section>
-      <section>
-        <div>
-          <h2>Title</h2>
+      {/* Company Intro */}
+      <section className="home-intro">
+        <div className="intro-content">
+          <h2>Quality. Custom. Handcrafted.</h2>
           <p>
             Nisi non consectetur occaecat est aliqua. Quis id incididunt in
             nostrud quis. Cillum aute nisi ea laboris Lorem culpa minim proident
@@ -33,7 +43,7 @@ const Home = () => {
             aliqua duis. Ad do ipsum aute sit deserunt.
           </p>
         </div>
-        <img src="" alt="" />
+        <img src={image} alt="" />
       </section>
     </>
   );
