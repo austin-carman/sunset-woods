@@ -470,4 +470,21 @@ footer a {
   right: 0;
   width: 25rem;
   height: 100vh;
+  border: 1px solid red;
+}
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 1rem auto 3rem;
+}
+.cart-items-container {
+  border: 1px solid red;
+  width: 90%;
+  margin: auto;
+}
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
