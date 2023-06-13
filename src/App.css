@@ -459,3 +459,15 @@ footer a {
     padding-bottom: 20rem;
   }
 }
+
+/* ============================== */
+/* Cart */
+/* ============================== */
+.cart {
+  background-color: beige;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25rem;
+  height: 100vh;
+}
