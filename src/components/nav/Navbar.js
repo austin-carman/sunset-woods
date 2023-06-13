@@ -27,24 +27,24 @@ const Navbar = () => {
           }
           onClick={handleToggleMenu}
         >
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/shop">Shop</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-          <li>
-            <Link to="/cart">Cart</Link>
-          </li>
-          <li>
-            <Link to="/custom-orders">Custom Orders</Link>
-          </li>
+          <Link to="/">
+            <li>Home</li>
+          </Link>
+          <Link to="/about">
+            <li>About</li>
+          </Link>
+          <Link to="/shop">
+            <li>Shop</li>
+          </Link>
+          <Link to="/contact">
+            <li>Contact</li>
+          </Link>
+          <Link to="/cart">
+            <li>Cart</li>
+          </Link>
+          <Link to="/custom-orders">
+            <li>Custom Orders</li>
+          </Link>
         </div>
       </ul>
     </nav>

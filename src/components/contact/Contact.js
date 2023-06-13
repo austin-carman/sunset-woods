@@ -1,7 +1,9 @@
 const Contact = () => {
+  // eslint-disable-next-line no-undef
+  // const image = process.env.PUBLIC_URL + "./blue.png";
+
   return (
     <>
-      {/* <div className="contact-hero-container"> */}
       <div className="contact-hero-container">
         <div className="contact-hero-content">
           <h2>Contact</h2>
@@ -26,6 +28,7 @@ const Contact = () => {
               @sunsettrailwoods
             </a>
           </h6>
+          {/* <img src={image} alt="" /> */}
         </div>
         <div className="contact-form">
           <h3>Send us a message</h3>
@@ -36,7 +39,6 @@ const Contact = () => {
           <button>Send Message</button>
         </div>
       </div>
-      {/* </div > */}
     </>
   );
 };
