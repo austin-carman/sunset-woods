@@ -363,6 +363,9 @@ footer a {
   text-align: center;
   width: 75%;
   margin: auto;
+  border-bottom: 1px solid grey;
+  margin-bottom: 2em;
+  padding-bottom: 2em;
 }
 .shop-custom-order-button {
   padding: 1em 4em;
