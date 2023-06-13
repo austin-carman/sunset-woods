@@ -1,11 +1,16 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+// eslint-disable-next-line react/prop-types
+const Navbar = ({ isCartOpen, setIsCartOpen }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleToggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const hanldeOpenCart = () => {
+    setIsCartOpen(!isCartOpen);
   };
 
   return (
@@ -39,9 +44,9 @@ const Navbar = () => {
           <Link to="/contact">
             <li>Contact</li>
           </Link>
-          <Link to="/cart">
-            <li>Cart</li>
-          </Link>
+          {/* <Link to="/cart"> */}
+          <li onClick={hanldeOpenCart}>Cart</li>
+          {/* </Link> */}
           <Link to="/custom-orders">
             <li>Custom Orders</li>
           </Link>

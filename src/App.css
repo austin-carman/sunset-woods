@@ -132,6 +132,7 @@ a {
 @media only screen and  (min-width: 1200px) {
   .navbar {
     position: fixed;
+    top: 0;
   }
   /* menu */
   .hamburger {
@@ -463,23 +464,25 @@ footer a {
 /* ============================== */
 /* Cart */
 /* ============================== */
+.hide-cart {
+  display: none;
+}
 .cart {
   background-color: beige;
-  position: absolute;
+  position: fixed;
+  /* position: absolute; */
   top: 0;
   right: 0;
   width: 25rem;
   height: 100vh;
-  border: 1px solid red;
 }
 .cart-header {
   display: flex;
   justify-content: space-between;
   width: 90%;
-  margin: 1rem auto 3rem;
+  margin: 1rem auto;
 }
 .cart-items-container {
-  border: 1px solid red;
   width: 90%;
   margin: auto;
 }
@@ -487,4 +490,22 @@ footer a {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+}
+.cart-total {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.cart-total span {
+  font-size: 1rem;
+}
+.proceed-to-checkout {
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto;
+}
+.proceed-to-checkout button {
+  border-radius: 5em;
+  padding: 1rem 3rem;
 }
