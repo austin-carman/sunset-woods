@@ -17,25 +17,84 @@ const Cart = ({ isCartOpen, setIsCartOpen }) => {
       </div>
       <div className="cart-items-container">
         <div className="cart-item">
-          <div>
-            <h5>Item</h5>
-            <img src="" alt="cart item" />
+          <div className="cart-item-left-wrapper">
+            <h6 className="delete-cart-item">x</h6>
+            <div>
+              <h5>Item</h5>
+              <img src="" alt="cart item" />
+            </div>
           </div>
-          <h6>$$$</h6>
+          <h6>$8888</h6>
         </div>
         <div className="cart-item">
-          <div>
-            <h5>Item</h5>
-            <img src="" alt="cart item" />
+          <div className="cart-item-left-wrapper">
+            <h6 className="delete-cart-item">x</h6>
+            <div>
+              <h5>Item</h5>
+              <img src="" alt="cart item" />
+            </div>
           </div>
-          <h6>$$$</h6>
+          <h6>$8888</h6>
         </div>
         <div className="cart-item">
-          <div>
-            <h5>Item</h5>
-            <img src="" alt="cart item" />
+          <div className="cart-item-left-wrapper">
+            <h6 className="delete-cart-item">x</h6>
+            <div>
+              <h5>Item</h5>
+              <img src="" alt="cart item" />
+            </div>
           </div>
-          <h6>$$$</h6>
+          <h6>$8888</h6>
+        </div>
+        <div className="cart-item">
+          <div className="cart-item-left-wrapper">
+            <h6 className="delete-cart-item">x</h6>
+            <div>
+              <h5>Item</h5>
+              <img src="" alt="cart item" />
+            </div>
+          </div>
+          <h6>$8888</h6>
+        </div>
+        <div className="cart-item">
+          <div className="cart-item-left-wrapper">
+            <h6 className="delete-cart-item">x</h6>
+            <div>
+              <h5>Item</h5>
+              <img src="" alt="cart item" />
+            </div>
+          </div>
+          <h6>$8888</h6>
+        </div>
+        <div className="cart-item">
+          <div className="cart-item-left-wrapper">
+            <h6 className="delete-cart-item">x</h6>
+            <div>
+              <h5>Item</h5>
+              <img src="" alt="cart item" />
+            </div>
+          </div>
+          <h6>$8888</h6>
+        </div>
+        <div className="cart-item">
+          <div className="cart-item-left-wrapper">
+            <h6 className="delete-cart-item">x</h6>
+            <div>
+              <h5>Item</h5>
+              <img src="" alt="cart item" />
+            </div>
+          </div>
+          <h6>$8888</h6>
+        </div>
+        <div className="cart-item">
+          <div className="cart-item-left-wrapper">
+            <h6 className="delete-cart-item">x</h6>
+            <div>
+              <h5>Item</h5>
+              <img src="" alt="cart item" />
+            </div>
+          </div>
+          <h6>$8888</h6>
         </div>
         <div className="cart-total">
           <div>

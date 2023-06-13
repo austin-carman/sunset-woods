@@ -470,11 +470,11 @@ footer a {
 .cart {
   background-color: beige;
   position: fixed;
-  /* position: absolute; */
   top: 0;
   right: 0;
-  width: 25rem;
+  width: 30rem;
   height: 100vh;
+  overflow-y: scroll;
 }
 .cart-header {
   display: flex;
@@ -489,13 +489,23 @@ footer a {
 .cart-item {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
+  /* border: 1px solid red; */
+  margin-bottom: 2rem;
+}
+.cart-item-left-wrapper {
+  display: flex;
+  align-items: center;
+}
+.delete-cart-item {
+  margin-right: 1rem;
 }
 .cart-total {
   margin-top: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  margin-bottom: 2rem;
 }
 .cart-total span {
   font-size: 1rem;
