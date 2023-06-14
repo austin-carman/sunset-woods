@@ -1,5 +1,23 @@
 const CustomOrders = () => {
-  return "custom";
+  return (
+    <>
+      <div className="custom-hero-container">
+        <h2>Custom Orders</h2>
+      </div>
+      <div className="custom-form-container">
+        <h3>Get a Quote for a custom build</h3>
+        <input placeholder="Name"></input>
+        <input placeholder="Email"></input>
+        <input placeholder="Phone"></input>
+        <input placeholder="What do you want built"></input>
+        <input placeholder="L x W x H Dimensions (if known)"></input>
+        <input type="select" placeholder="Wood"></input>
+        <input placeholder="Details"></input>
+        <input type="file"></input>
+        <button className="submit-quote-button">Get Quote</button>
+      </div>
+    </>
+  );
 };
 
 export default CustomOrders;
