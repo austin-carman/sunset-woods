@@ -11,8 +11,8 @@ const Home = () => {
   return (
     <>
       {/* Hero image and Call to Action */}
-      <div className="hero-img">
-        <div className="hero-content">
+      <div className="hero-img-container">
+        <div className="hero-content-container">
           <h1>Quality. Custom. Handcrafted.</h1>
           <Link to="/shop">
             <button onClick={handleCallToAction}>Call to Action</button>

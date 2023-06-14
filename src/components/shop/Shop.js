@@ -12,9 +12,9 @@ const Shop = () => {
 
   return (
     <>
-      <div className="shop-hero-container">
-        <div className="shop-hero-content">
-          <h2>Shop</h2>
+      <div className="hero-img-container">
+        <div className="hero-content-container">
+          <h1>Shop</h1>
           <h4>
             Nostrud labore minim consequat excepteur cillum minim nisi minim
             dolor.
