@@ -1,8 +1,10 @@
 const CustomOrders = () => {
   return (
     <>
-      <div className="custom-hero-container">
-        <h2>Custom Orders</h2>
+      <div className="hero-img-container">
+        <div className="hero-content-container">
+          <h2>Custom Orders</h2>
+        </div>
       </div>
       <div className="custom-form-container">
         <h3>Get a Quote for a custom build</h3>

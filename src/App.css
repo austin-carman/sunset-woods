@@ -77,6 +77,27 @@ a {
   text-decoration: none;
   letter-spacing: 0.1em;
 }
+.hero-img-container {
+  background-image: url("../public/blue.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+.hero-content-container {
+  text-align: center;
+}
+@media only screen and (min-width: 1200px) {
+  .hero-img-container {
+    position: relative;
+    top: 8rem;
+    margin-bottom: 10rem;
+  }
+}
 
 /* ============================= */
 /* Navbar */
@@ -89,7 +110,7 @@ a {
   width: 100%;
   height: 8rem;
   background-color: azure;
-  opacity: .3;
+  /* opacity: .3; */
 }
 /* company logo */
 .navbar .logo {
@@ -161,35 +182,6 @@ a {
 /* ================================= */
 /* Home Styles */
 /* ================================= */
-/* Hero image */
-.hero-img {
-  background-image: url("../public/blue.png");
-  height: 75vh;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* TODO: come back to later - parallax scrolling on hero img */
-  /* background-attachment: fixed; */
-}
-/* Hero content */
-.hero-content {
-  width: 90%;
-  margin: auto;
-  text-align: center;
-}
-.hero-content h1 {
-  font-size: 3rem;
-  margin: 10%;
-}
-/* Call to Action button */
-.hero-img button {
-  border: 1px solid black;
-  border-radius: 15px;
-  padding: 2% 4%;
-}
 /* Gallery */
 .home-gallery {
   display: flex;
@@ -217,18 +209,8 @@ a {
 }
 /* Home page Media Queries */
 @media only screen and (min-width: 1000px) {
-  .hero-img {
-    position: relative;
-    top: 8rem;
-  }
   .home-gallery {
     flex-direction: row;
-  }
-  .hero-content h1 {
-    margin: 2%;
-  }
-  .hero-img button {
-    padding: 1% 2%;
   }
   .gallery-item {
     width: 30%;
@@ -319,21 +301,6 @@ footer a {
 /* ================================ */
 /* About Page */
 /* ================================ */
-.about-hero-section {
-  background-image: url("../public/blue.png");
-  height: 75vh;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  top: 8rem;
-}
-.about-hero-content {
-  text-align: center;
-}
 .about-section {
   width: 90%;
   margin: 10% auto;
@@ -343,9 +310,6 @@ footer a {
 }
 /* About page media queries */
 @media only screen and (min-width: 800px) {
-  .about-hero-section {
-    height: 50vh;
-  }
   .about-section {
     display: flex;
     justify-content: space-evenly;
@@ -366,28 +330,12 @@ footer a {
 /* ====================================== */
 /* Shop Page Styles */
 /* ====================================== */
-.shop-hero-container {
-  background-image: url("../public/blue.png");
-  height: 50vh;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  top: 8rem;
-  margin-bottom: 5rem;
-}
-.shop-hero-content {
-  text-align: center;
-}
-.shop-custom-order-button {
+/* .shop-custom-order-button {
   padding: 1em 4em;
   margin: 5%;
   border: 1px solid black;
-  border-radius: 5em; /* use this elsewhere - create general button styles */
-}
+  border-radius: 5em;
+} */
 .shop-categories {
   display: flex;
   flex-wrap: wrap;
@@ -415,22 +363,6 @@ footer a {
 /* ================================= */
 /* Contact Page Styles */
 /* ================================= */
-.contact-hero-container {
-  padding-top: 5rem;
-  padding-bottom: 15rem;
-  background-image: url("../public/blue.png");
-  height: 15rem;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
-  top: 8rem;
-}
-.contact-hero-content {
-  width: 90%;
-  margin: auto;
-  text-align: center;
-}
 .contact-container {
   width: 90%;
   margin: auto;
@@ -470,13 +402,13 @@ footer a {
     width: 40%;
   }
 }
-@media only screen and (min-width: 1200px) {
+/* @media only screen and (min-width: 1200px) {
   .contact-hero-container {
     height: 30rem;
     padding-top: 15rem;
     padding-bottom: 20rem;
   }
-}
+} */
 
 /* ============================== */
 /* Cart */
@@ -507,7 +439,6 @@ footer a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* border: 1px solid red; */
   margin-bottom: 2rem;
 }
 .cart-item-left-wrapper {
@@ -540,16 +471,6 @@ footer a {
 /* ============================ */
 /* Custom orders page */
 /* ============================ */
-.custom-hero-container {
-  background-image: url("../public/blue.png");
-  height: 50vh;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .custom-form-container {
   display: flex;
   flex-direction: column;

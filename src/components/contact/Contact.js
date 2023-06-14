@@ -4,8 +4,8 @@ const Contact = () => {
 
   return (
     <>
-      <div className="contact-hero-container">
-        <div className="contact-hero-content">
+      <div className="hero-img-container">
+        <div className="hero-content-container">
           <h2>Contact</h2>
           <h4>
             Minim aliqua est non ipsum est veniam ullamco non tempor anim.
