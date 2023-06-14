@@ -1,13 +1,11 @@
 import { Link } from "react-router-dom";
 import CategoryFilter from "./CategoryFilters";
-import { shopFilters } from "../../data/data";
+import { shopFilters, shopItems } from "../../data/data";
 import { useState } from "react";
+import ShopItems from "./ShopItems";
 
 const Shop = () => {
   const [selected, setSelected] = useState("All Products");
-
-  // eslint-disable-next-line no-undef
-  const image = process.env.PUBLIC_URL + "./blue.png";
 
   const handleFilter = (category) => {
     setSelected(category);
@@ -40,24 +38,9 @@ const Shop = () => {
         })}
       </div>
       <section className="shop-gallery">
-        <div className="shop-gallery-item">
-          <img src={image} alt="" />
-          <h3>Title</h3>
-          <p>Cupidatat magna voluptate duis ex.</p>
-          <p>$XXX</p>
-        </div>
-        <div className="shop-gallery-item">
-          <img src={image} alt="" />
-          <h3>Title</h3>
-          <p>Cupidatat magna voluptate duis ex.</p>
-          <p>$XXX</p>
-        </div>
-        <div className="shop-gallery-item">
-          <img src={image} alt="" />
-          <h3>Title</h3>
-          <p>Cupidatat magna voluptate duis ex.</p>
-          <p>$XXX</p>
-        </div>
+        {shopItems.map((item) => {
+          return <ShopItems key={item.id} item={item} />;
+        })}
       </section>
     </>
   );
