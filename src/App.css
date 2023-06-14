@@ -89,6 +89,7 @@ a {
   width: 100%;
   height: 8rem;
   background-color: azure;
+  opacity: .3;
 }
 /* company logo */
 .navbar .logo {
@@ -216,6 +217,10 @@ a {
 }
 /* Home page Media Queries */
 @media only screen and (min-width: 1000px) {
+  .hero-img {
+    position: relative;
+    top: 8rem;
+  }
   .home-gallery {
     flex-direction: row;
   }
@@ -323,6 +328,8 @@ footer a {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  top: 8rem;
 }
 .about-hero-content {
   text-align: center;
@@ -359,13 +366,21 @@ footer a {
 /* ====================================== */
 /* Shop Page Styles */
 /* ====================================== */
-.shop-title-container {
+.shop-hero-container {
+  background-image: url("../public/blue.png");
+  height: 50vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 8rem;
+  margin-bottom: 5rem;
+}
+.shop-hero-content {
   text-align: center;
-  width: 75%;
-  margin: auto;
-  border-bottom: 1px solid grey;
-  margin-bottom: 2em;
-  padding-bottom: 2em;
 }
 .shop-custom-order-button {
   padding: 1em 4em;
@@ -408,6 +423,8 @@ footer a {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
+  top: 8rem;
 }
 .contact-hero-content {
   width: 90%;
@@ -523,3 +540,28 @@ footer a {
 /* ============================ */
 /* Custom orders page */
 /* ============================ */
+.custom-hero-container {
+  background-image: url("../public/blue.png");
+  height: 50vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.custom-form-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+}
+.custom-form-container input {
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+.custom-form-container .submit-quote-button {
+  border-radius: 5rem;
+  padding: 1rem;
+  margin: 2rem 0;
+}
