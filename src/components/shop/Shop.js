@@ -1,12 +1,15 @@
 import { Link } from "react-router-dom";
+import CategoryFilter from "./CategoryFilters";
+import { shopFilters } from "../../data/data";
 import { useState } from "react";
 
 const Shop = () => {
-  const [selected, setSelected] = useState("");
+  const [selected, setSelected] = useState("All Products");
+
   // eslint-disable-next-line no-undef
   const image = process.env.PUBLIC_URL + "./blue.png";
 
-  const handleClickCategory = (category) => {
+  const handleFilter = (category) => {
     setSelected(category);
   };
 
@@ -24,74 +27,18 @@ const Shop = () => {
           </Link>
         </div>
       </div>
-      <section className="shop-categories">
-        <div
-          className={
-            selected === "all"
-              ? "shop-categories-item selected"
-              : "shop-categories-item"
-          }
-          onClick={() => handleClickCategory("all")}
-        >
-          <img src={image} alt="" />
-          <h4>All Products</h4>
-        </div>
-        <div
-          className={
-            selected === "furniture"
-              ? "shop-categories-item selected"
-              : "shop-categories-item"
-          }
-          onClick={() => handleClickCategory("furniture")}
-        >
-          <img src={image} alt="" />
-          <h4>Furniture</h4>
-        </div>
-        <div
-          className={
-            selected === "signs"
-              ? "shop-categories-item selected"
-              : "shop-categories-item"
-          }
-          onClick={() => handleClickCategory("signs")}
-        >
-          <img src={image} alt="" />
-          <h4>Signs</h4>
-        </div>
-        <div
-          className={
-            selected === "boards"
-              ? "shop-categories-item selected"
-              : "shop-categories-item"
-          }
-          onClick={() => handleClickCategory("boards")}
-        >
-          <img src={image} alt="" />
-          <h4>Cutting Boards</h4>
-        </div>
-        <div
-          className={
-            selected === "coasters"
-              ? "shop-categories-item selected"
-              : "shop-categories-item"
-          }
-          onClick={() => handleClickCategory("coasters")}
-        >
-          <img src={image} alt="" />
-          <h4>Coasters</h4>
-        </div>
-        <div
-          className={
-            selected === "other"
-              ? "shop-categories-item selected"
-              : "shop-categories-item"
-          }
-          onClick={() => handleClickCategory("other")}
-        >
-          <img src={image} alt="" />
-          <h4>Other</h4>
-        </div>
-      </section>
+      <div className="shop-categories">
+        {shopFilters.map((category) => {
+          return (
+            <CategoryFilter
+              key={category}
+              category={category}
+              selected={selected}
+              handleFilter={handleFilter}
+            />
+          );
+        })}
+      </div>
       <section className="shop-gallery">
         <div className="shop-gallery-item">
           <img src={image} alt="" />

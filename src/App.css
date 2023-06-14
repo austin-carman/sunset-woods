@@ -387,6 +387,16 @@ footer a {
     margin: 0 1%;
   }
 }
+@media only screen and (min-width: 695px) {
+  .shop-categories {
+    width: 60rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .shop-categories {
+    width: 120rem;
+  }
+}
 
 /* ================================= */
 /* Contact Page Styles */
