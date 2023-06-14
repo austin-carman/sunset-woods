@@ -22,16 +22,22 @@ const Home = () => {
       {/* Gallery */}
       <section className="home-gallery">
         <div className="gallery-item">
-          <img src={image} alt="" />
-          <h4>Title</h4>
+          <a href="">
+            <img src={image} alt="" />
+            <h4>Title</h4>
+          </a>
         </div>
         <div className="gallery-item">
-          <img src={image} alt="" />
-          <h4>Title</h4>
+          <a href="">
+            <img src={image} alt="" />
+            <h4>Title</h4>
+          </a>
         </div>
         <div className="gallery-item">
-          <img src={image} alt="" />
-          <h4>Title</h4>
+          <a href="">
+            <img src={image} alt="" />
+            <h4>Title</h4>
+          </a>
         </div>
       </section>
       {/* Company Intro */}
@@ -46,6 +52,9 @@ const Home = () => {
             adipisicing. Consectetur eiusmod labore dolor fugiat cillum mollit
             aliqua duis. Ad do ipsum aute sit deserunt.
           </p>
+          <a href="/about">
+            <span id="about-us-link">Read About us</span>
+          </a>
         </div>
         <img src={image} alt="" />
       </section>

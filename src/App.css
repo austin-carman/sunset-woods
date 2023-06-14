@@ -216,6 +216,9 @@ button {
 .home-intro .intro-content h2 {
   margin-bottom: 2rem;
 }
+#about-us-link {
+  text-decoration: underline;
+}
 /* Home page Media Queries */
 @media only screen and (min-width: 1000px) {
   .home-gallery {
