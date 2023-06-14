@@ -511,6 +511,10 @@ footer a {
   padding: 1rem;
   margin-bottom: 2rem;
 }
+.custom-form-container select {
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
 .custom-form-container .submit-quote-button {
   border-radius: 5rem;
   padding: 1rem;

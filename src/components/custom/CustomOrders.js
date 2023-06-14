@@ -12,9 +12,17 @@ const CustomOrders = () => {
         <input placeholder="Email"></input>
         <input placeholder="Phone"></input>
         <input placeholder="What do you want built"></input>
-        <input placeholder="L x W x H Dimensions (if known)"></input>
-        <input type="select" placeholder="Wood"></input>
-        <input placeholder="Details"></input>
+        <input placeholder="LxWxH Dimensions (if known)"></input>
+        <select id="wood-types" name="wood">
+          <option value="pine" selected>
+            Wood Type
+          </option>
+          <option value="pine">Pine</option>
+          <option value="cherry">Cherry</option>
+          <option value="walnut">Walnut</option>
+          <option value="white pine">White pine</option>
+        </select>
+        <textarea placeholder="Details" rows="5"></textarea>
         <input type="file"></input>
         <button className="submit-quote-button">Get Quote</button>
       </div>
