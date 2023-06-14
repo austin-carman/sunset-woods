@@ -99,6 +99,9 @@ button {
 .hero-content-container {
   text-align: center;
 }
+.call-to-action-button:hover {
+  cursor: pointer;
+}
 @media only screen and (min-width: 1200px) {
   .hero-img-container {
     position: relative;
@@ -189,9 +192,6 @@ button {
 /* ================================= */
 /* Home Styles */
 /* ================================= */
-* {
-  /* border: 1px solid red; */
-}
 /* Gallery */
 .home-gallery {
   display: flex;

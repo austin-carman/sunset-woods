@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
 import CategoryFilter from "./CategoryFilters";
 import { shopFilters, shopItems } from "../../data/data";
 import { useState } from "react";
 import ShopItems from "./ShopItems";
+import HeroContent from "../hero/HeroContent";
 
 const Shop = () => {
   const [selected, setSelected] = useState("All Products");
@@ -13,18 +13,14 @@ const Shop = () => {
 
   return (
     <>
-      <div className="hero-img-container">
-        <div className="hero-content-container">
-          <h1>Shop</h1>
-          <h4>
-            Nostrud labore minim consequat excepteur cillum minim nisi minim
-            dolor.
-          </h4>
-          <Link>
-            <button className="shop-custom-order-button">Custom Order</button>
-          </Link>
-        </div>
-      </div>
+      {/* Hero image and Call to Action */}
+      <HeroContent
+        title="Shop"
+        subtitle="Nostrud labore minim consequat excepteur cillum minim nisi minim
+        dolor."
+        link="/custom-orders"
+        callToActionText="Custom Orders"
+      />
       <div className="shop-categories">
         {shopFilters.map((category) => {
           return (

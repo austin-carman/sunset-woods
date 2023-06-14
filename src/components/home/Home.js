@@ -1,24 +1,18 @@
-import { Link } from "react-router-dom";
+import HeroContent from "../hero/HeroContent";
 
 const Home = () => {
   // eslint-disable-next-line no-undef
   const image = process.env.PUBLIC_URL + "/blue.png";
 
-  const handleCallToAction = () => {
-    console.log("call to action");
-  };
-
   return (
     <>
       {/* Hero image and Call to Action */}
-      <div className="hero-img-container">
-        <div className="hero-content-container">
-          <h1>Quality. Custom. Handcrafted.</h1>
-          <Link to="/shop">
-            <button onClick={handleCallToAction}>Call to Action</button>
-          </Link>
-        </div>
-      </div>
+      <HeroContent
+        title="Quality. Custom. Handcrafted."
+        subtitle=""
+        link="/custom-orders"
+        callToActionText="Custom Quote"
+      />
       {/* Gallery */}
       <section className="home-gallery">
         <div className="gallery-item">
