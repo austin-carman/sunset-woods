@@ -1,15 +1,13 @@
+import HeroContent from "../hero/HeroContent";
+
 const About = () => {
   // eslint-disable-next-line no-undef
   const image = process.env.PUBLIC_URL + "./blue.png";
 
   return (
     <>
-      <div className="hero-img-container">
-        <div className="hero-content-container">
-          <h1>About Us</h1>
-          <h4>Quis in ea ex occaecat labore.</h4>
-        </div>
-      </div>
+      {/* Hero image and Call to Action */}
+      <HeroContent title="About us" subtitle="Quis in ea ex occaecat labore." />
       <section className="about-section">
         <div className="about-content">
           <h2>About Us</h2>

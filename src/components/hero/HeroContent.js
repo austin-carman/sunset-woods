@@ -7,9 +7,13 @@ const HeroContent = ({ title, subtitle, link, callToActionText }) => {
       <div className="hero-content-container">
         <h1>{title}</h1>
         <h2>{subtitle}</h2>
-        <Link to={link}>
-          <button className="call-to-action-button">{callToActionText}</button>
-        </Link>
+        {callToActionText && (
+          <Link to={link}>
+            <button className="call-to-action-button">
+              {callToActionText}
+            </button>
+          </Link>
+        )}
       </div>
     </div>
   );

@@ -16,8 +16,7 @@ const Shop = () => {
       {/* Hero image and Call to Action */}
       <HeroContent
         title="Shop"
-        subtitle="Nostrud labore minim consequat excepteur cillum minim nisi minim
-        dolor."
+        subtitle="Nostrud labore minim consequat excepteur"
         link="/custom-orders"
         callToActionText="Custom Orders"
       />
