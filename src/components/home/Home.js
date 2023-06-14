@@ -12,9 +12,7 @@ const Home = () => {
     <>
       {/* Hero image and Call to Action */}
       <div className="hero-img-container">
-        {/* <div className="hero-img"> */}
         <div className="hero-content-container">
-          {/* <div className="hero-content"> */}
           <h1>Quality. Custom. Handcrafted.</h1>
           <Link to="/shop">
             <button onClick={handleCallToAction}>Call to Action</button>

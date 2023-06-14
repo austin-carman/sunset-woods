@@ -13,7 +13,7 @@ const Cart = ({ isCartOpen, setIsCartOpen }) => {
         </h4>
       </div>
       <div className="proceed-to-checkout">
-        <button>Proceed to Checkout</button>
+        <button>Checkout</button>
       </div>
       <div className="cart-items-container">
         <div className="cart-item">

@@ -65,17 +65,24 @@ body{
 	font-family: 'Roboto Mono', monospace;
 }
 h1{
-	font-size: 6rem;
+	font-size: 4rem;
 }
 h2 {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 h3 {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 a {
   text-decoration: none;
   letter-spacing: 0.1em;
+}
+button {
+  width: 15rem;
+  border: 1px solid black;
+  border-radius: 5rem;
+  padding: 1rem;
+  margin: 2rem auto;
 }
 .hero-img-container {
   background-image: url("../public/blue.png");
