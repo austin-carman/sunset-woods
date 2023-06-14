@@ -92,6 +92,26 @@ const Shop = () => {
           <h4>Other</h4>
         </div>
       </section>
+      <section className="shop-gallery">
+        <div className="shop-gallery-item">
+          <img src={image} alt="" />
+          <h3>Title</h3>
+          <p>Cupidatat magna voluptate duis ex.</p>
+          <p>$XXX</p>
+        </div>
+        <div className="shop-gallery-item">
+          <img src={image} alt="" />
+          <h3>Title</h3>
+          <p>Cupidatat magna voluptate duis ex.</p>
+          <p>$XXX</p>
+        </div>
+        <div className="shop-gallery-item">
+          <img src={image} alt="" />
+          <h3>Title</h3>
+          <p>Cupidatat magna voluptate duis ex.</p>
+          <p>$XXX</p>
+        </div>
+      </section>
     </>
   );
 };

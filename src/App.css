@@ -340,7 +340,7 @@ footer a {
 .shop-categories {
   display: flex;
   flex-wrap: wrap;
-  margin: auto;
+  margin: -5rem auto 5rem;
   justify-content: space-evenly;
 }
 .shop-categories-item {
@@ -359,6 +359,33 @@ footer a {
 }
 .shop-categories .selected {
   background-color:#d3d3d3;
+}
+.shop-gallery {
+  width: 90%;
+  margin: 0 auto 10rem;
+}
+.shop-gallery-item {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+@media only screen and (min-width: 500px) {
+  .shop-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto 10rem;
+  }
+  .shop-gallery-item {
+    width: 45%;
+    margin: 0 2.5%;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .shop-gallery-item {
+    width: 30%;
+    margin: 0 1%;
+  }
 }
 
 /* ================================= */
