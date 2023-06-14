@@ -94,6 +94,7 @@ button {
   justify-content: center;
   align-items: center;
   z-index: -1;
+  margin-bottom: 10rem;
 }
 .hero-content-container {
   text-align: center;
@@ -102,7 +103,7 @@ button {
   .hero-img-container {
     position: relative;
     top: 8rem;
-    margin-bottom: 10rem;
+    margin-bottom: 20rem;
   }
 }
 
@@ -117,7 +118,6 @@ button {
   width: 100%;
   height: 8rem;
   background-color: azure;
-  /* opacity: .3; */
 }
 /* company logo */
 .navbar .logo {
@@ -189,30 +189,32 @@ button {
 /* ================================= */
 /* Home Styles */
 /* ================================= */
+* {
+  /* border: 1px solid red; */
+}
 /* Gallery */
 .home-gallery {
   display: flex;
   flex-direction: column;
   width: 90%;
-  margin: 10% auto;
+  margin: 5rem auto;
 }
 .gallery-item {
   text-align: center;
-  margin: 5% auto;
+  margin-bottom: 5rem;
 }
 /* Intro */
 .home-intro {
   display: flex;
   flex-direction: column;
   width: 90%;
-  margin: 0% auto;
+  margin: 0 auto 10rem;
 }
-.home-intro h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2%;
+.home-intro .intro-content {
+  margin-bottom: 5rem;
 }
-.home-intro img {
-  margin: 10% auto;
+.home-intro .intro-content h2 {
+  margin-bottom: 2rem;
 }
 /* Home page Media Queries */
 @media only screen and (min-width: 1000px) {
@@ -310,7 +312,7 @@ footer a {
 /* ================================ */
 .about-section {
   width: 90%;
-  margin: 10% auto;
+  margin: auto;
 }
 .about-content {
   margin-bottom: 10%;
@@ -328,21 +330,10 @@ footer a {
     width: 45%;
   }
 }
-@media only screen and (min-width: 1200px) {
-  .about-hero-section {
-    height: 75vh;
-  }
-}
 
 /* ====================================== */
 /* Shop Page Styles */
 /* ====================================== */
-/* .shop-custom-order-button {
-  padding: 1em 4em;
-  margin: 5%;
-  border: 1px solid black;
-  border-radius: 5em;
-} */
 .shop-categories {
   display: flex;
   flex-wrap: wrap;
@@ -373,7 +364,6 @@ footer a {
 .contact-container {
   width: 90%;
   margin: auto;
-  margin-top: 5rem;
 }
 .contact-container .info-container {
   margin-bottom: 5rem;
@@ -409,13 +399,6 @@ footer a {
     width: 40%;
   }
 }
-/* @media only screen and (min-width: 1200px) {
-  .contact-hero-container {
-    height: 30rem;
-    padding-top: 15rem;
-    padding-bottom: 20rem;
-  }
-} */
 
 /* ============================== */
 /* Cart */
