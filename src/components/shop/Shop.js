@@ -14,7 +14,7 @@ const Shop = () => {
     <>
       <div className="hero-img-container">
         <div className="hero-content-container">
-          <h2>Shop</h2>
+          <h1>Shop</h1>
           <h4>
             Nostrud labore minim consequat excepteur cillum minim nisi minim
             dolor.

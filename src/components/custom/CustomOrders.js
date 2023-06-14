@@ -3,7 +3,7 @@ const CustomOrders = () => {
     <>
       <div className="hero-img-container">
         <div className="hero-content-container">
-          <h2>Custom Orders</h2>
+          <h1>Custom Orders</h1>
         </div>
       </div>
       <div className="custom-form-container">

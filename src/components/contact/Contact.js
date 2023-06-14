@@ -6,7 +6,7 @@ const Contact = () => {
     <>
       <div className="hero-img-container">
         <div className="hero-content-container">
-          <h2>Contact</h2>
+          <h1>Contact</h1>
           <h4>
             Minim aliqua est non ipsum est veniam ullamco non tempor anim.
           </h4>
