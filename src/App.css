@@ -315,10 +315,10 @@ footer a {
 /* ================================ */
 .about-section {
   width: 90%;
-  margin: auto;
+  margin: 0 auto 10rem;
 }
 .about-content {
-  margin-bottom: 10%;
+  margin-bottom: 5rem;
 }
 /* About page media queries */
 @media only screen and (min-width: 800px) {
