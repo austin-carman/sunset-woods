@@ -78,7 +78,7 @@ export const shopItems = [
     category: "Other",
     // eslint-disable-next-line no-undef
     image: process.env.PUBLIC_URL + "/blue.png",
-    title: "Title",
+    title: "Other",
     subtitle: "Subtitle",
     price: 50,
   },

@@ -5,10 +5,21 @@ import ShopItems from "./ShopItems";
 import HeroContent from "../hero/HeroContent";
 
 const Shop = () => {
-  const [selected, setSelected] = useState("All Products");
+  const initialSelected = "All Products";
+  const [selected, setSelected] = useState(initialSelected);
+
+  const filterShopItems = () => {
+    return shopItems.filter((item) => {
+      return item.category === selected;
+    });
+  };
+
+  const filteredShopItems =
+    selected === initialSelected ? shopItems : filterShopItems();
 
   const handleFilter = (category) => {
     setSelected(category);
+    filterShopItems();
   };
 
   return (
@@ -33,7 +44,7 @@ const Shop = () => {
         })}
       </div>
       <section className="shop-gallery">
-        {shopItems.map((item) => {
+        {filteredShopItems.map((item) => {
           return <ShopItems key={item.id} item={item} />;
         })}
       </section>
