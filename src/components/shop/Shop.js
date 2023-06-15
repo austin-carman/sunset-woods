@@ -1,7 +1,7 @@
 import CategoryFilter from "./CategoryFilters";
 import { shopFilters, shopItems } from "../../data/data";
 import { useState } from "react";
-import ShopItems from "./ShopItems";
+import ShopItem from "./ShopItem";
 import HeroContent from "../hero/HeroContent";
 
 const Shop = () => {
@@ -45,7 +45,7 @@ const Shop = () => {
       </div>
       <section className="shop-gallery">
         {filteredShopItems.map((item) => {
-          return <ShopItems key={item.id} item={item} />;
+          return <ShopItem key={item.id} item={item} />;
         })}
       </section>
     </>

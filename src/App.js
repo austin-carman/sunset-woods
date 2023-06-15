@@ -9,6 +9,7 @@ import CustomOrders from "./components/custom/CustomOrders";
 import Footer from "./components/footer/Footer";
 import Shop from "./components/shop/Shop";
 import { useState } from "react";
+import ItemDetails from "./components/shop/ItemDetails";
 
 function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -22,6 +23,7 @@ function App() {
         <Route path="/shop" element={<Shop />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/custom-orders" element={<CustomOrders />} />
+        <Route path="/item-details/:id" element={<ItemDetails />} />
       </Routes>
       {isCartOpen && (
         <Cart isCartOpen={isCartOpen} setIsCartOpen={setIsCartOpen} />
