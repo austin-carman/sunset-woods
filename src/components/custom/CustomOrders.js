@@ -1,11 +1,13 @@
+import HeroContent from "../hero/HeroContent";
+
 const CustomOrders = () => {
   return (
     <>
-      <div className="hero-img-container">
-        <div className="hero-content-container">
-          <h1>Custom Orders</h1>
-        </div>
-      </div>
+      {/* Hero image and Call to Action */}
+      <HeroContent
+        title="Custom Orders"
+        subtitle="Nostrud labore minim consequat excepteur"
+      />
       <div className="custom-form-container">
         <h3>Get a Quote for a custom build</h3>
         <input placeholder="Name"></input>

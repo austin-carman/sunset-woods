@@ -135,30 +135,45 @@ button {
   cursor: pointer;
 }
 /* links */
-.hide-links {
-  display: none;
-}
-.show-links {
-  display: block;
-}
 .links-wrapper {
-  position: absolute;
+  position: fixed;
+  top: 0rem;
+  right: 0;
+  width: 25rem;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  /* position: absolute;
   top: 8rem;
   left: 0;
   width: 100%;
   text-align: center;
-  background-color: azure;
+  background-color: azure; */
+}
+.hide-links {
+  display: none;
 }
 .links-wrapper a {
   color: black;
 }
 .links-wrapper li {
-  padding: 1.5%;
+  padding: 1rem;
   cursor: pointer;
+  color: white;
 }
 .links-wrapper li:hover {
   background-color: #d3d3d3;
   transition: 0.5s ease;
+}
+#close-menu {
+  cursor: pointer;
+  align-self: flex-end;
+  width: 2rem;
+}
+#close-menu:hover {
+  background-color: black;
 }
 /* navbar MEDIA QUERIES */
 @media only screen and  (min-width: 1200px) {
@@ -176,12 +191,21 @@ button {
     align-items: center;
     justify-content: flex-end;
     position: static;
+    flex-direction: row;
+    height: auto;
+    padding: 0;
+    width: 100%;
+    background-color: azure;
+  }
+  #close-menu {
+    display: none;
   }
   .links-wrapper li {
     padding: 2rem 1.5rem;
+    color: black;
   }
   .links-wrapper a {
-    color: black;
+    /* color: black; */
     white-space: nowrap;
   }
   .links-wrapper li:hover {

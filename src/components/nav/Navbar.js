@@ -30,19 +30,21 @@ const Navbar = ({ isCartOpen, setIsCartOpen }) => {
           className={
             isMenuOpen ? "show-links links-wrapper" : "hide-links links-wrapper"
           }
-          onClick={handleToggleMenu}
         >
+          <li onClick={handleToggleMenu} id="close-menu">
+            X
+          </li>
           <Link to="/">
-            <li>Home</li>
+            <li onClick={handleToggleMenu}>Home</li>
           </Link>
           <Link to="/about">
-            <li>About</li>
+            <li onClick={handleToggleMenu}>About</li>
           </Link>
           <Link to="/shop">
-            <li>Shop</li>
+            <li onClick={handleToggleMenu}>Shop</li>
           </Link>
           <Link to="/contact">
-            <li>Contact</li>
+            <li onClick={handleToggleMenu}>Contact</li>
           </Link>
           {/* <Link to="/cart"> */}
           <li onClick={hanldeOpenCart}>Cart</li>
