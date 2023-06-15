@@ -84,6 +84,10 @@ button {
   padding: 1rem;
   margin: 2rem auto;
 }
+
+/* =========================== */
+/* HERO SECTION */
+/* =========================== */
 .hero-img-container {
   background-image: url("../public/blue.png");
   background-position: center;
