@@ -1,37 +1,37 @@
-import { Link } from "react-router-dom";
+import HeroContent from "../hero/HeroContent";
 
 const Home = () => {
   // eslint-disable-next-line no-undef
   const image = process.env.PUBLIC_URL + "/blue.png";
 
-  const handleCallToAction = () => {
-    console.log("call to action");
-  };
-
   return (
     <>
       {/* Hero image and Call to Action */}
-      <div className="hero-img-container">
-        <div className="hero-content-container">
-          <h1>Quality. Custom. Handcrafted.</h1>
-          <Link to="/shop">
-            <button onClick={handleCallToAction}>Call to Action</button>
-          </Link>
-        </div>
-      </div>
+      <HeroContent
+        title="Quality. Custom. Handcrafted."
+        subtitle=""
+        link="/custom-orders"
+        callToActionText="Custom Quote"
+      />
       {/* Gallery */}
       <section className="home-gallery">
         <div className="gallery-item">
-          <img src={image} alt="" />
-          <h4>Title</h4>
+          <a href="/shop">
+            <img src={image} alt="" />
+            <h4>Furniture</h4>
+          </a>
         </div>
         <div className="gallery-item">
-          <img src={image} alt="" />
-          <h4>Title</h4>
+          <a href="/shop">
+            <img src={image} alt="" />
+            <h4>Signs</h4>
+          </a>
         </div>
         <div className="gallery-item">
-          <img src={image} alt="" />
-          <h4>Title</h4>
+          <a href="/shop">
+            <img src={image} alt="" />
+            <h4>Engravings</h4>
+          </a>
         </div>
       </section>
       {/* Company Intro */}
@@ -46,6 +46,9 @@ const Home = () => {
             adipisicing. Consectetur eiusmod labore dolor fugiat cillum mollit
             aliqua duis. Ad do ipsum aute sit deserunt.
           </p>
+          <a href="/about">
+            <span id="about-us-link">Read About us</span>
+          </a>
         </div>
         <img src={image} alt="" />
       </section>

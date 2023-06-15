@@ -1,17 +1,13 @@
-const Contact = () => {
-  // eslint-disable-next-line no-undef
-  // const image = process.env.PUBLIC_URL + "./blue.png";
+import HeroContent from "../hero/HeroContent";
 
+const Contact = () => {
   return (
     <>
-      <div className="hero-img-container">
-        <div className="hero-content-container">
-          <h1>Contact</h1>
-          <h4>
-            Minim aliqua est non ipsum est veniam ullamco non tempor anim.
-          </h4>
-        </div>
-      </div>
+      {/* Hero image and Call to Action */}
+      <HeroContent
+        title="Contact"
+        subtitle="Nostrud labore minim consequat excepteur"
+      />
       <div className="contact-container">
         <div className="info-container">
           <h3>Contact Info</h3>
