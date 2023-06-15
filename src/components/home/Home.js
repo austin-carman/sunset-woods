@@ -16,21 +16,21 @@ const Home = () => {
       {/* Gallery */}
       <section className="home-gallery">
         <div className="gallery-item">
-          <a href="">
+          <a href="/shop">
             <img src={image} alt="" />
-            <h4>Title</h4>
+            <h4>Furniture</h4>
           </a>
         </div>
         <div className="gallery-item">
-          <a href="">
+          <a href="/shop">
             <img src={image} alt="" />
-            <h4>Title</h4>
+            <h4>Signs</h4>
           </a>
         </div>
         <div className="gallery-item">
-          <a href="">
+          <a href="/shop">
             <img src={image} alt="" />
-            <h4>Title</h4>
+            <h4>Engravings</h4>
           </a>
         </div>
       </section>
