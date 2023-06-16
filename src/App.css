@@ -634,6 +634,7 @@ footer a {
 /* =========================== */
 /* ITEM DETAILS */
 /* =========================== */
+/* Image Slider */
 .item-order-container {
   width: 90%;
   margin: 2rem auto 5rem;
@@ -649,6 +650,17 @@ footer a {
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+
+.slide-arrow {
+  color: white;
+  opacity: 0.4;
+}
+
+.slide-arrow:hover {
+  font-size: 4rem;
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 .image-slides-dots-container {
@@ -671,7 +683,7 @@ footer a {
   background-color: white;
   opacity: 1;
 }
-
+/* Details Title */
 .item-title-container {
   text-align: center;
 }
