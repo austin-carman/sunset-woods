@@ -93,15 +93,15 @@ export const shopItems = [
       ],
       leafExtension: [
         {
-          length: 24,
+          inches: 24,
           addedCost: 50,
         },
         {
-          length: 48,
+          inches: 48,
           addedCost: 100,
         },
         {
-          length: 60,
+          inches: 60,
           addedCost: 150,
         },
       ],

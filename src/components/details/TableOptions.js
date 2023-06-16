@@ -5,6 +5,7 @@ const TableOptions = () => {
 
   return (
     <div>
+      {/* length */}
       <select>
         {table.options.length.map((option, index) => {
           return (
@@ -15,6 +16,7 @@ const TableOptions = () => {
           );
         })}
       </select>
+      {/* width */}
       <select>
         {table.options.width.map((option, index) => {
           return (
@@ -25,7 +27,16 @@ const TableOptions = () => {
           );
         })}
       </select>
-      <div>Wood Type</div>
+      {/* wood type */}
+      <select>
+        {table.options.woodType.map((option, index) => {
+          return (
+            <option key={index}>
+              {option.type} {option.addedCost > 0 && `+$${option.addedCost}`}
+            </option>
+          );
+        })}
+      </select>
       <div>Leaf Extension</div>
       <div>Quantity</div>
     </div>
