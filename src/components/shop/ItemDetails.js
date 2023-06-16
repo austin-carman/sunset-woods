@@ -41,10 +41,12 @@ const ItemDetails = () => {
             })}
           </div>
         </div>
-        <div className="item-order-options">
-          <div>
+        <div className="order-container">
+          <div className="item-title-container">
             <h2>{item.title}</h2>
             <h4>{item.subtitle}</h4>
+          </div>
+          <div className="order-options-container">
             <div>Length</div>
             <div>Width</div>
             <div>Wood Type</div>

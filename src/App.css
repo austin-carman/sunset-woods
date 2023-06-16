@@ -585,3 +585,8 @@ footer a {
   background-color: white;
   opacity: 1;
 }
+
+/*  */
+.item-title-container {
+  text-align: center;
+}
