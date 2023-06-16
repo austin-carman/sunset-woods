@@ -13,8 +13,16 @@ export const shopItems = [
   {
     id: 1,
     category: "Furniture",
-    // eslint-disable-next-line no-undef
-    image: process.env.PUBLIC_URL + "/blue.png",
+    images: [
+      // eslint-disable-next-line no-undef
+      process.env.PUBLIC_URL + "/blue.png",
+      // eslint-disable-next-line no-undef
+      process.env.PUBLIC_URL + "/blue.png",
+      // eslint-disable-next-line no-undef
+      process.env.PUBLIC_URL + "/blue.png",
+      // eslint-disable-next-line no-undef
+      process.env.PUBLIC_URL + "/blue.png",
+    ],
     title: "Table",
     subtitle: "4 person kitchen table",
     price: 1999,
@@ -23,7 +31,16 @@ export const shopItems = [
     id: 2,
     category: "Furniture",
     // eslint-disable-next-line no-undef
-    image: process.env.PUBLIC_URL + "/blue.png",
+    images: [
+      // eslint-disable-next-line no-undef
+      process.env.PUBLIC_URL + "/blue.png",
+      // eslint-disable-next-line no-undef
+      process.env.PUBLIC_URL + "/blue.png",
+      // eslint-disable-next-line no-undef
+      process.env.PUBLIC_URL + "/blue.png",
+      // eslint-disable-next-line no-undef
+      process.env.PUBLIC_URL + "/blue.png",
+    ],
     title: "Table",
     subtitle: "6 person kitchen table",
     price: 3999,
@@ -32,7 +49,16 @@ export const shopItems = [
     id: 3,
     category: "Furniture",
     // eslint-disable-next-line no-undef
-    image: process.env.PUBLIC_URL + "/blue.png",
+    images: [
+      // eslint-disable-next-line no-undef
+      process.env.PUBLIC_URL + "/blue.png",
+      // eslint-disable-next-line no-undef
+      process.env.PUBLIC_URL + "/blue.png",
+      // eslint-disable-next-line no-undef
+      process.env.PUBLIC_URL + "/blue.png",
+      // eslint-disable-next-line no-undef
+      process.env.PUBLIC_URL + "/blue.png",
+    ],
     title: "Coffee Table",
     subtitle: null,
     price: 3999,
@@ -41,7 +67,16 @@ export const shopItems = [
     id: 4,
     category: "Furniture",
     // eslint-disable-next-line no-undef
-    image: process.env.PUBLIC_URL + "/blue.png",
+    images: [
+      // eslint-disable-next-line no-undef
+      process.env.PUBLIC_URL + "/blue.png",
+      // eslint-disable-next-line no-undef
+      process.env.PUBLIC_URL + "/blue.png",
+      // eslint-disable-next-line no-undef
+      process.env.PUBLIC_URL + "/blue.png",
+      // eslint-disable-next-line no-undef
+      process.env.PUBLIC_URL + "/blue.png",
+    ],
     title: "Coffee Table",
     subtitle: null,
     price: 3999,
@@ -50,7 +85,16 @@ export const shopItems = [
     id: 5,
     category: "Signs",
     // eslint-disable-next-line no-undef
-    image: process.env.PUBLIC_URL + "/blue.png",
+    images: [
+      // eslint-disable-next-line no-undef
+      process.env.PUBLIC_URL + "/blue.png",
+      // eslint-disable-next-line no-undef
+      process.env.PUBLIC_URL + "/blue.png",
+      // eslint-disable-next-line no-undef
+      process.env.PUBLIC_URL + "/blue.png",
+      // eslint-disable-next-line no-undef
+      process.env.PUBLIC_URL + "/blue.png",
+    ],
     title: "A-Frame",
     subtitle: "Customized engraving",
     price: 3999,
@@ -59,7 +103,16 @@ export const shopItems = [
     id: 6,
     category: "Cutting Boards",
     // eslint-disable-next-line no-undef
-    image: process.env.PUBLIC_URL + "/blue.png",
+    images: [
+      // eslint-disable-next-line no-undef
+      process.env.PUBLIC_URL + "/blue.png",
+      // eslint-disable-next-line no-undef
+      process.env.PUBLIC_URL + "/blue.png",
+      // eslint-disable-next-line no-undef
+      process.env.PUBLIC_URL + "/blue.png",
+      // eslint-disable-next-line no-undef
+      process.env.PUBLIC_URL + "/blue.png",
+    ],
     title: "Cutting Board",
     subtitle: "Subtitle",
     price: 99,
@@ -68,7 +121,16 @@ export const shopItems = [
     id: 7,
     category: "Coasters",
     // eslint-disable-next-line no-undef
-    image: process.env.PUBLIC_URL + "/blue.png",
+    images: [
+      // eslint-disable-next-line no-undef
+      process.env.PUBLIC_URL + "/blue.png",
+      // eslint-disable-next-line no-undef
+      process.env.PUBLIC_URL + "/blue.png",
+      // eslint-disable-next-line no-undef
+      process.env.PUBLIC_URL + "/blue.png",
+      // eslint-disable-next-line no-undef
+      process.env.PUBLIC_URL + "/blue.png",
+    ],
     title: "Coaster",
     subtitle: "Custom engraving",
     price: 19,
@@ -77,8 +139,17 @@ export const shopItems = [
     id: 8,
     category: "Other",
     // eslint-disable-next-line no-undef
-    image: process.env.PUBLIC_URL + "/blue.png",
-    title: "Title",
+    images: [
+      // eslint-disable-next-line no-undef
+      process.env.PUBLIC_URL + "/blue.png",
+      // eslint-disable-next-line no-undef
+      process.env.PUBLIC_URL + "/blue.png",
+      // eslint-disable-next-line no-undef
+      process.env.PUBLIC_URL + "/blue.png",
+      // eslint-disable-next-line no-undef
+      process.env.PUBLIC_URL + "/blue.png",
+    ],
+    title: "Other",
     subtitle: "Subtitle",
     price: 50,
   },

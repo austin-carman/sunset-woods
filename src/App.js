@@ -9,9 +9,11 @@ import CustomOrders from "./components/custom/CustomOrders";
 import Footer from "./components/footer/Footer";
 import Shop from "./components/shop/Shop";
 import { useState } from "react";
+import ItemDetails from "./components/shop/ItemDetails";
 
 function App() {
-  const [isCartOpen, setIsCartOpen] = useState(true);
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
   return (
     <div className="App">
       <Navbar isCartOpen={isCartOpen} setIsCartOpen={setIsCartOpen} />
@@ -20,8 +22,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/contact" element={<Contact />} />
-        {/* <Route path="/cart" element={<Cart />} /> */}
         <Route path="/custom-orders" element={<CustomOrders />} />
+        <Route path="/item-details/:id" element={<ItemDetails />} />
       </Routes>
       {isCartOpen && (
         <Cart isCartOpen={isCartOpen} setIsCartOpen={setIsCartOpen} />

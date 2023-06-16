@@ -97,8 +97,8 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* z-index: -1; */
   margin-bottom: 10rem;
+  /* margin-top: 8rem; */
 }
 .hero-content-container {
   text-align: center;
@@ -149,12 +149,7 @@ button {
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  /* position: absolute;
-  top: 8rem;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  background-color: azure; */
+  z-index: 1;
 }
 .hide-links {
   display: none;
@@ -549,4 +544,44 @@ footer a {
   border-radius: 5rem;
   padding: 1rem;
   margin: 2rem 0;
+}
+
+/* =========================== */
+/* ITEM DETAILS */
+/* =========================== */
+.item-order-container {
+  width: 90%;
+  margin: 2rem auto 5rem;
+}
+.image-container {
+  position: relative;
+}
+
+.item-image-arrows-container {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.image-slides-dots-container {
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.slides-dot {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: white;
+  border-radius: 50%;
+  margin: 0 2px;
+  opacity: 0.4;
+}
+.active-dot {
+  background-color: white;
+  opacity: 1;
 }
