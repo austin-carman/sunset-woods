@@ -1,4 +1,8 @@
+import { useState } from "react";
+
 const ItemDetails = () => {
+  const [currentImage, setCurrentImage] = useState(0);
+
   const images = [
     // eslint-disable-next-line no-undef
     process.env.PUBLIC_URL + "/blue.png",
@@ -12,14 +16,38 @@ const ItemDetails = () => {
     process.env.PUBLIC_URL + "/blue.png",
   ];
 
+  const handleImageSlide = (direction) => {
+    console.log("direction: ", direction);
+    if (currentImage === 0 && direction === -1) {
+      return;
+    }
+    if (currentImage === images.length - 1 && direction === 1) {
+      return;
+    }
+    setCurrentImage(currentImage + direction);
+  };
+
   return (
     <>
-      <div className="item-container">
-        <div className="item-images-container">
-          <img className="item-main-image" src={images[0]} alt="" />
-          <div className="item-images-gallery">
+      <div className="item-order-container">
+        <div className="image-container">
+          <img src={images[currentImage]} alt="" />
+          <div className="item-image-arrows-container">
+            <div onClick={() => handleImageSlide(-1)}>Left</div>
+            <div onClick={() => handleImageSlide(1)}>right</div>
+          </div>
+          <div className="image-slides-dots-container">
             {images.map((image, index) => {
-              return <img key={index} src={image} alt="" />;
+              return (
+                <div
+                  key={index}
+                  className={
+                    index === currentImage
+                      ? "active-dot slides-dot"
+                      : "slides-dot"
+                  }
+                ></div>
+              );
             })}
           </div>
         </div>

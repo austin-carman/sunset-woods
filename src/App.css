@@ -554,14 +554,40 @@ footer a {
 /* =========================== */
 /* ITEM DETAILS */
 /* =========================== */
-.item-container {
+.item-order-container {
   width: 90%;
-  margin: auto;
+  margin: 2rem auto 5rem;
 }
-.item-images-gallery {
+.image-container {
+  position: relative;
+}
+
+.item-image-arrows-container {
+  position: absolute;
+  top: 50%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
+  border: 1px solid red;
 }
-.item-images-gallery img {
-  width: 5rem;
+
+.image-slides-dots-container {
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.slides-dot {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: white;
+  border-radius: 50%;
+  margin: 0 2px;
+  opacity: 0.4;
+}
+.active-dot {
+  background-color: white;
+  opacity: 1;
 }
