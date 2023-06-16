@@ -149,12 +149,7 @@ button {
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  /* position: absolute;
-  top: 8rem;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  background-color: azure; */
+  z-index: 1;
 }
 .hide-links {
   display: none;
