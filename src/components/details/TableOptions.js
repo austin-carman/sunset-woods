@@ -37,7 +37,16 @@ const TableOptions = () => {
           );
         })}
       </select>
-      <div>Leaf Extension</div>
+      {/* Finish */}
+      <select>
+        {table.options.finish.map((option, index) => {
+          return (
+            <option key={index}>
+              {option.type} {option.addedCost > 0 && `+$${option.addedCost}`}
+            </option>
+          );
+        })}
+      </select>
       <div>Quantity</div>
     </div>
   );
