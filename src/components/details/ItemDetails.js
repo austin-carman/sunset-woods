@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom";
 import ImageSlides from "./ImageSlides";
+import OrderOptions from "./OrderOptions";
 
 const ItemDetails = () => {
   const location = useLocation();
@@ -14,15 +15,7 @@ const ItemDetails = () => {
             <h2>{item.title}</h2>
             <h4>{item.subtitle}</h4>
           </div>
-          <div className="order-options-container">
-            <div>Length</div>
-            <div>Width</div>
-            <div>Wood Type</div>
-            <div>Leaf Extension</div>
-            <div>Quantity</div>
-            <h3>Base Price: ${item.price}</h3>
-            <h3>Total Price: &#40;Base + Customizations&#41;</h3>
-          </div>
+          <OrderOptions item={item} />
           <div>
             <div>Payment Options</div>
             <button>Add to Cart</button>
