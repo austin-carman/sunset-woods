@@ -25,7 +25,87 @@ export const shopItems = [
     ],
     title: "Table",
     subtitle: "4 person kitchen table",
-    price: 1999,
+    basePrice: 1999,
+    options: {
+      length: [
+        {
+          inches: 48,
+          addedCost: 0,
+        },
+        {
+          inches: 60,
+          addedCost: 0,
+        },
+        {
+          inches: 66,
+          addedCost: 100,
+        },
+        {
+          inches: 72,
+          addedCost: 150,
+        },
+        {
+          inches: 78,
+          addedCost: 200,
+        },
+      ],
+      width: [
+        {
+          inches: 30,
+          price: 0,
+        },
+        {
+          inches: 36,
+          price: 50,
+        },
+        {
+          inches: 42,
+          price: 100,
+        },
+        {
+          inches: 48,
+          price: 150,
+        },
+      ],
+      woodType: [
+        {
+          type: "Walnut",
+          price: 2000,
+        },
+        {
+          type: "Alder",
+          price: 1000,
+        },
+        {
+          type: "Pine",
+          price: 0,
+        },
+      ],
+      finish: [
+        {
+          type: "Natural (clear coat)",
+          price: 0,
+        },
+        {
+          type: "Painted",
+          price: 100,
+        },
+      ],
+      leafExtension: [
+        {
+          length: 24,
+          price: 50,
+        },
+        {
+          length: 48,
+          price: 100,
+        },
+        {
+          length: 60,
+          price: 150,
+        },
+      ],
+    },
   },
   {
     id: 2,
