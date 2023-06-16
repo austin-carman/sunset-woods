@@ -6,7 +6,7 @@ const ShopItem = ({ item }) => {
 
   const handleClickItem = (item) => {
     console.log("click item", item);
-    navigate(`/item-details/${item.id}`);
+    navigate(`/item-details/${item.id}`, { state: item });
   };
 
   return (

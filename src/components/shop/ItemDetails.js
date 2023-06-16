@@ -1,27 +1,17 @@
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 
 const ItemDetails = () => {
   const [currentImage, setCurrentImage] = useState(0);
-
-  const images = [
-    // eslint-disable-next-line no-undef
-    process.env.PUBLIC_URL + "/blue.png",
-    // eslint-disable-next-line no-undef
-    process.env.PUBLIC_URL + "/blue.png",
-    // eslint-disable-next-line no-undef
-    process.env.PUBLIC_URL + "/blue.png",
-    // eslint-disable-next-line no-undef
-    process.env.PUBLIC_URL + "/blue.png",
-    // eslint-disable-next-line no-undef
-    process.env.PUBLIC_URL + "/blue.png",
-  ];
+  const location = useLocation();
+  const item = location.state;
 
   const handleImageSlide = (direction) => {
     console.log("direction: ", direction);
     if (currentImage === 0 && direction === -1) {
       return;
     }
-    if (currentImage === images.length - 1 && direction === 1) {
+    if (currentImage === item.images.length - 1 && direction === 1) {
       return;
     }
     setCurrentImage(currentImage + direction);
@@ -31,13 +21,13 @@ const ItemDetails = () => {
     <>
       <div className="item-order-container">
         <div className="image-container">
-          <img src={images[currentImage]} alt="" />
+          <img src={item.images[currentImage]} alt="" />
           <div className="item-image-arrows-container">
             <div onClick={() => handleImageSlide(-1)}>Left</div>
             <div onClick={() => handleImageSlide(1)}>right</div>
           </div>
           <div className="image-slides-dots-container">
-            {images.map((image, index) => {
+            {item.images.map((image, index) => {
               return (
                 <div
                   key={index}
@@ -53,15 +43,15 @@ const ItemDetails = () => {
         </div>
         <div className="item-order-options">
           <div>
-            <h2>Title</h2>
-            <h4>Subtitle</h4>
+            <h2>{item.title}</h2>
+            <h4>{item.subtitle}</h4>
             <div>Length</div>
             <div>Width</div>
             <div>Wood Type</div>
             <div>Leaf Extension</div>
             <div>Quantity</div>
-            <h3>Base Price</h3>
-            <h3>Total Price - Base + Customizations</h3>
+            <h3>Base Price: ${item.price}</h3>
+            <h3>Total Price: &#40;Base + Customizations&#41;</h3>
           </div>
           <div>
             <div>Payment Options</div>
