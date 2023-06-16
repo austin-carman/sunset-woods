@@ -9,7 +9,7 @@ import CustomOrders from "./components/custom/CustomOrders";
 import Footer from "./components/footer/Footer";
 import Shop from "./components/shop/Shop";
 import { useState } from "react";
-import ItemDetails from "./components/shop/ItemDetails";
+import ItemDetails from "./components/details/ItemDetails";
 
 function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);

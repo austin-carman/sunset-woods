@@ -5,7 +5,6 @@ const ShopItem = ({ item }) => {
   const navigate = useNavigate();
 
   const handleClickItem = (item) => {
-    console.log("click item", item);
     navigate(`/item-details/${item.id}`, { state: item });
   };
 
