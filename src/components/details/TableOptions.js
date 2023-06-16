@@ -47,6 +47,17 @@ const TableOptions = () => {
           );
         })}
       </select>
+      {/* Leaf Extension */}
+      <select>
+        {table.options.leafExtension.map((option, index) => {
+          return (
+            <option key={index}>
+              {option.inches}&ldquo;{" "}
+              {option.addedCost > 0 && `+$${option.addedCost}`}
+            </option>
+          );
+        })}
+      </select>
       <div>Quantity</div>
     </div>
   );
