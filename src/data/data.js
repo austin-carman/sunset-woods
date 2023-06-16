@@ -52,57 +52,57 @@ export const shopItems = [
       width: [
         {
           inches: 30,
-          price: 0,
+          addedCost: 0,
         },
         {
           inches: 36,
-          price: 50,
+          addedCost: 50,
         },
         {
           inches: 42,
-          price: 100,
+          addedCost: 100,
         },
         {
           inches: 48,
-          price: 150,
+          addedCost: 150,
         },
       ],
       woodType: [
         {
           type: "Walnut",
-          price: 2000,
+          addedCost: 2000,
         },
         {
           type: "Alder",
-          price: 1000,
+          addedCost: 1000,
         },
         {
           type: "Pine",
-          price: 0,
+          addedCost: 0,
         },
       ],
       finish: [
         {
           type: "Natural (clear coat)",
-          price: 0,
+          addedCost: 0,
         },
         {
           type: "Painted",
-          price: 100,
+          addedCost: 100,
         },
       ],
       leafExtension: [
         {
           length: 24,
-          price: 50,
+          addedCost: 50,
         },
         {
           length: 48,
-          price: 100,
+          addedCost: 100,
         },
         {
           length: 60,
-          price: 150,
+          addedCost: 150,
         },
       ],
     },

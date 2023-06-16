@@ -16,10 +16,14 @@ const TableOptions = () => {
         })}
       </select>
       <select>
-        <option>30&ldquo;</option>
-        <option>36&ldquo;</option>
-        <option>42&ldquo;</option>
-        <option>48&ldquo;</option>
+        {table.options.width.map((option, index) => {
+          return (
+            <option key={index}>
+              {option.inches}&ldquo;{" "}
+              {option.addedCost > 0 && `+$${option.addedCost}`}
+            </option>
+          );
+        })}
       </select>
       <div>Wood Type</div>
       <div>Leaf Extension</div>
