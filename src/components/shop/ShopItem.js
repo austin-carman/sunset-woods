@@ -4,13 +4,13 @@ import { useNavigate } from "react-router-dom";
 const ShopItem = ({ item }) => {
   const navigate = useNavigate();
 
-  const handleClickItem = (id) => {
-    console.log("click item");
-    navigate(`/item-details/${id}`);
+  const handleClickItem = (item) => {
+    console.log("click item", item);
+    navigate(`/item-details/${item.id}`);
   };
 
   return (
-    <div className="shop-gallery-item" onClick={() => handleClickItem(item.id)}>
+    <div className="shop-gallery-item" onClick={() => handleClickItem(item)}>
       <img src={item.image} alt="" />
       <h3>{item.title}</h3>
       <h5>{item.subtitle}</h5>

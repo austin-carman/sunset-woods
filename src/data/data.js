@@ -13,8 +13,16 @@ export const shopItems = [
   {
     id: 1,
     category: "Furniture",
-    // eslint-disable-next-line no-undef
-    image: process.env.PUBLIC_URL + "/blue.png",
+    images: [
+      // eslint-disable-next-line no-undef
+      process.env.PUBLIC_URL + "/blue.png",
+      // eslint-disable-next-line no-undef
+      process.env.PUBLIC_URL + "/blue.png",
+      // eslint-disable-next-line no-undef
+      process.env.PUBLIC_URL + "/blue.png",
+      // eslint-disable-next-line no-undef
+      process.env.PUBLIC_URL + "/blue.png",
+    ],
     title: "Table",
     subtitle: "4 person kitchen table",
     price: 1999,

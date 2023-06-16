@@ -554,3 +554,14 @@ footer a {
 /* =========================== */
 /* ITEM DETAILS */
 /* =========================== */
+.item-container {
+  width: 90%;
+  margin: auto;
+}
+.item-images-gallery {
+  display: flex;
+  justify-content: space-between;
+}
+.item-images-gallery img {
+  width: 5rem;
+}
