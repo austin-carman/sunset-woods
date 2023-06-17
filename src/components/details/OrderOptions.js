@@ -1,19 +1,18 @@
 import TableOptions from "./TableOptions";
+import ItemUnavailable from "./ItemUnavailable";
 
 /* eslint-disable react/prop-types */
-const OrderOptions = ({ item }) => {
-  function getOptions(category) {
+const OrderOptions = ({ item, price, handlePrice }) => {
+  const getOptions = (category) => {
     switch (category) {
       case "Furniture":
-        return <TableOptions />;
-      case "green":
-        return "green";
-      case "blue":
-        return "blue";
+        return (
+          <TableOptions item={item} price={price} handlePrice={handlePrice} />
+        );
       default:
-        return "black";
+        return <ItemUnavailable />;
     }
-  }
+  };
 
   return (
     <div className="order-options-container">

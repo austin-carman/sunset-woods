@@ -69,16 +69,16 @@ export const shopItems = [
       ],
       woodType: [
         {
-          type: "Walnut",
-          addedCost: 2000,
+          type: "Pine",
+          addedCost: 0,
         },
         {
           type: "Alder",
           addedCost: 1000,
         },
         {
-          type: "Pine",
-          addedCost: 0,
+          type: "Walnut",
+          addedCost: 2000,
         },
       ],
       finish: [

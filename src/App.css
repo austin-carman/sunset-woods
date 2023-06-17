@@ -687,3 +687,21 @@ footer a {
 .item-title-container {
   text-align: center;
 }
+/* customized options */
+.item-customized-options {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-customized-options select {
+  padding: 1rem;
+}
+
+.item-customized-options input {
+  padding: 1rem;
+}
+
+.quantity-container {
+  display: flex;
+  align-items: center;
+}
