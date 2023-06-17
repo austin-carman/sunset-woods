@@ -13,7 +13,7 @@ const TableOptions = ({ item, price, handlePrice }) => {
   };
   const [orderForm, setOrderForm] = useState(initialOrderFormValues);
 
-  const handleQuantityValue = (value) => {
+  const handleQuantity = (value) => {
     if (orderForm.quantity === 1 && value === -1) {
       return;
     }
@@ -22,19 +22,16 @@ const TableOptions = ({ item, price, handlePrice }) => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    console.log("value: ", JSON.parse(value));
-    setOrderForm({ ...orderForm, [name]: value });
+    setOrderForm({ ...orderForm, [name]: JSON.parse(value) });
   };
+
+  console.log(orderForm);
 
   return (
     <div className="item-customized-options">
       {/* length */}
       <label>Length</label>
-      <select
-        name="length"
-        value={orderForm.length}
-        onChange={(e) => handleChange(e)}
-      >
+      <select name="length" onChange={(e) => handleChange(e)}>
         <optgroup label="Length">
           {item.options.length.map((option, index) => {
             return (
@@ -47,12 +44,12 @@ const TableOptions = ({ item, price, handlePrice }) => {
         </optgroup>
       </select>
       {/* width */}
-      <label htmlFor="width">Width</label>
-      <select>
+      <label>Width</label>
+      <select name="width" onChange={(e) => handleChange(e)}>
         <optgroup label="Width">
           {item.options.width.map((option, index) => {
             return (
-              <option key={index}>
+              <option key={index} value={JSON.stringify(option)}>
                 {option.inches}&ldquo;{" "}
                 {option.addedCost > 0 && `+$${option.addedCost}`}
               </option>
@@ -61,12 +58,12 @@ const TableOptions = ({ item, price, handlePrice }) => {
         </optgroup>
       </select>
       {/* wood type */}
-      <label htmlFor="woodType">Wood Type</label>
-      <select>
+      <label>Wood Type</label>
+      <select name="woodType" onChange={(e) => handleChange(e)}>
         <optgroup label="Wood Type">
           {item.options.woodType.map((option, index) => {
             return (
-              <option key={index}>
+              <option key={index} value={JSON.stringify(option)}>
                 {option.type} {option.addedCost > 0 && `+$${option.addedCost}`}
               </option>
             );
@@ -74,12 +71,12 @@ const TableOptions = ({ item, price, handlePrice }) => {
         </optgroup>
       </select>
       {/* Finish */}
-      <label htmlFor="finish">Finish</label>
-      <select>
+      <label>Finish</label>
+      <select name="finish" onChange={(e) => handleChange(e)}>
         <optgroup label="Finish">
           {item.options.finish.map((option, index) => {
             return (
-              <option key={index}>
+              <option key={index} value={JSON.stringify(option)}>
                 {option.type} {option.addedCost > 0 && `+$${option.addedCost}`}
               </option>
             );
@@ -87,13 +84,15 @@ const TableOptions = ({ item, price, handlePrice }) => {
         </optgroup>
       </select>
       {/* Leaf Extension */}
-      <label htmlFor="leafExtension">Leaf Extension</label>
-      <select>
+      <label>Leaf Extension</label>
+      <select name="leafExtension" onChange={(e) => handleChange(e)}>
         <optgroup label="Leaf Extension">
-          <option>No</option>;
+          <option value={JSON.stringify({ inches: 0, addedCost: 0 })}>
+            No
+          </option>
           {item.options.leafExtension.map((option, index) => {
             return (
-              <option key={index}>
+              <option key={index} value={JSON.stringify(option)}>
                 {option.inches}&ldquo;{" "}
                 {option.addedCost > 0 && `+$${option.addedCost}`}
               </option>
@@ -103,9 +102,9 @@ const TableOptions = ({ item, price, handlePrice }) => {
       </select>
       <label htmlFor="quantity">Quantity</label>
       <div className="quantity-container">
-        <div onClick={() => handleQuantityValue(-1)}>-</div>
+        <div onClick={() => handleQuantity(-1)}>-</div>
         <input defaultValue={1} value={orderForm.quantity}></input>
-        <div onClick={() => handleQuantityValue(1)}>+</div>
+        <div onClick={() => handleQuantity(1)}>+</div>
       </div>
     </div>
   );
