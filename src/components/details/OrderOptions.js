@@ -10,13 +10,7 @@ const OrderOptions = ({ item }) => {
   const getOrderOptions = (category) => {
     switch (category) {
       case "Furniture":
-        return (
-          <TableOptions
-            item={item}
-            addOnCost={addOnCost}
-            setAddOnCost={setAddOnCost}
-          />
-        );
+        return <TableOptions item={item} setAddOnCost={setAddOnCost} />;
       default:
         return <ItemUnavailable />;
     }

@@ -1,8 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState, useEffect } from "react";
 
-// eslint-disable-next-line no-unused-vars
-const TableOptions = ({ item, addOnCost, setAddOnCost }) => {
+const TableOptions = ({ item, setAddOnCost }) => {
   const initialOrderFormValues = {
     length: { inches: 48, addedCost: 0 },
     width: { inches: 30, addedCost: 0 },
@@ -12,13 +11,7 @@ const TableOptions = ({ item, addOnCost, setAddOnCost }) => {
   };
   const [orderForm, setOrderForm] = useState(initialOrderFormValues);
 
-  // const handleChange = (e) => {
-  //   const { name, value } = e.target;
-  //   setOrderForm({ ...orderForm, [name]: JSON.parse(value) });
-  // };
-
   const handleClickOption = (name, value) => {
-    // console.log(name, value);
     setOrderForm({ ...orderForm, [name]: value });
   };
 
@@ -55,9 +48,6 @@ const TableOptions = ({ item, addOnCost, setAddOnCost }) => {
           );
         })}
       </div>
-      {/* <div className="selected-option-added-cost">
-        Added Cost: <span>${orderForm.length.addedCost}</span>
-      </div> */}
       {/* Width */}
       <h3>Width</h3>
       <div className="option-boxes-container">
@@ -80,9 +70,6 @@ const TableOptions = ({ item, addOnCost, setAddOnCost }) => {
           );
         })}
       </div>
-      {/* <div className="selected-option-added-cost">
-        Added Cost: <span>${orderForm.width.addedCost}</span>
-      </div> */}
       {/* Wood Type */}
       <h3>Wood Type</h3>
       <div className="option-boxes-container">
@@ -149,81 +136,6 @@ const TableOptions = ({ item, addOnCost, setAddOnCost }) => {
           );
         })}
       </div>
-
-      {/* <div className="selected-option-added-cost">
-        Added Cost: <span>${orderForm.woodType.addedCost}</span>
-      </div> */}
-
-      {/* <label>Length</label>
-      <select name="length" onChange={(e) => handleChange(e)}>
-        <optgroup label="Length">
-          {item.options.length.map((option, index) => {
-            return (
-              <option key={index} value={JSON.stringify(option)}>
-                {option.inches}&ldquo;{" "}
-                {option.addedCost > 0 && `+$${option.addedCost}`}
-              </option>
-            );
-          })}
-        </optgroup>
-      </select>
-      
-      <label>Width</label>
-      <select name="width" onChange={(e) => handleChange(e)}>
-        <optgroup label="Width">
-          {item.options.width.map((option, index) => {
-            return (
-              <option key={index} value={JSON.stringify(option)}>
-                {option.inches}&ldquo;{" "}
-                {option.addedCost > 0 && `+$${option.addedCost}`}
-              </option>
-            );
-          })}
-        </optgroup>
-      </select>
-      
-      <label>Wood Type</label>
-      <select name="woodType" onChange={(e) => handleChange(e)}>
-        <optgroup label="Wood Type">
-          {item.options.woodType.map((option, index) => {
-            return (
-              <option key={index} value={JSON.stringify(option)}>
-                {option.type} {option.addedCost > 0 && `+$${option.addedCost}`}
-              </option>
-            );
-          })}
-        </optgroup>
-      </select>
-      
-      <label>Finish</label>
-      <select name="finish" onChange={(e) => handleChange(e)}>
-        <optgroup label="Finish">
-          {item.options.finish.map((option, index) => {
-            return (
-              <option key={index} value={JSON.stringify(option)}>
-                {option.type} {option.addedCost > 0 && `+$${option.addedCost}`}
-              </option>
-            );
-          })}
-        </optgroup>
-      </select>
-      
-      <label>Leaf Extension</label>
-      <select name="leafExtension" onChange={(e) => handleChange(e)}>
-        <optgroup label="Leaf Extension">
-          <option value={JSON.stringify({ inches: 0, addedCost: 0 })}>
-            No
-          </option>
-          {item.options.leafExtension.map((option, index) => {
-            return (
-              <option key={index} value={JSON.stringify(option)}>
-                {option.inches}&ldquo;{" "}
-                {option.addedCost > 0 && `+$${option.addedCost}`}
-              </option>
-            );
-          })}
-        </optgroup>
-      </select> */}
     </div>
   );
 };
