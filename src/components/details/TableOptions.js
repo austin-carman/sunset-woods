@@ -17,6 +17,11 @@ const TableOptions = ({ item, addOnCost, setAddOnCost }) => {
     setOrderForm({ ...orderForm, [name]: JSON.parse(value) });
   };
 
+  const handleClickOption = (name, value) => {
+    console.log(name, value);
+    setOrderForm({ ...orderForm, [name]: value });
+  };
+
   useEffect(() => {
     setAddOnCost(
       // eslint-disable-next-line prettier/prettier
@@ -26,6 +31,29 @@ const TableOptions = ({ item, addOnCost, setAddOnCost }) => {
 
   return (
     <div className="item-customized-options">
+      {/* Length */}
+      <label>Length</label>
+      <div className="option-boxes-container">
+        {item.options.length.map((option, index) => {
+          return (
+            <div
+              key={index}
+              onClick={() => handleClickOption("length", option)}
+              className={
+                orderForm.length.inches === option.inches
+                  ? "selected-option option-box"
+                  : "option-box"
+              }
+            >
+              <div>{option.inches}&ldquo;</div>
+            </div>
+          );
+        })}
+      </div>
+      <div className="selected-option-added-cost">
+        Added Cost: <span>${orderForm.length.addedCost}</span>
+      </div>
+
       {/* length */}
       <label>Length</label>
       <select name="length" onChange={(e) => handleChange(e)}>
