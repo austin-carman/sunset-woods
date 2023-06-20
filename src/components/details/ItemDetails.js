@@ -17,7 +17,7 @@ const ItemDetails = () => {
           </div>
           <OrderOptions item={item} />
           <div>
-            <div>Payment Options</div>
+            {/* <div>Payment Options</div> */}
             <button>Add to Cart</button>
           </div>
         </div>
