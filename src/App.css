@@ -775,6 +775,11 @@ footer a {
   bottom: 0;
 }
 
+.item-description-container {
+  width: 90%;
+  margin: auto;
+}
+
 @media only screen and (min-width: 800px) {
   .item-order-container {
     display: flex;
