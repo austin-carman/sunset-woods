@@ -1,13 +1,20 @@
 import TableOptions from "./TableOptions";
 import ItemUnavailable from "./ItemUnavailable";
+import { useState } from "react";
 
 /* eslint-disable react/prop-types */
-const OrderOptions = ({ item, price, handlePrice }) => {
-  const getOptions = (category) => {
+const OrderOptions = ({ item }) => {
+  const [addOnCost, setAddOnCost] = useState(0);
+
+  const getOrderOptions = (category) => {
     switch (category) {
       case "Furniture":
         return (
-          <TableOptions item={item} price={price} handlePrice={handlePrice} />
+          <TableOptions
+            item={item}
+            addOnCost={addOnCost}
+            setAddOnCost={setAddOnCost}
+          />
         );
       default:
         return <ItemUnavailable />;
@@ -16,14 +23,10 @@ const OrderOptions = ({ item, price, handlePrice }) => {
 
   return (
     <div className="order-options-container">
-      {getOptions(item.category)}
-      {/* <div>Length</div>
-      <div>Width</div>
-      <div>Wood Type</div>
-      <div>Leaf Extension</div>
-      <div>Quantity</div> */}
-      {/* <h3>Base Price: ${item.price}</h3>
-      <h3>Total Price: &#40;Base + Customizations&#41;</h3> */}
+      {getOrderOptions(item.category)}
+      <h3>Base Price: ${item.basePrice}</h3>
+      <span>+ ${addOnCost} customizations</span>
+      <h3>Total Price: ${item.basePrice + addOnCost}</h3>
     </div>
   );
 };

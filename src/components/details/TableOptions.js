@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 // eslint-disable-next-line no-unused-vars
-const TableOptions = ({ item, price, handlePrice }) => {
+const TableOptions = ({ item, addOnCost, setAddOnCost }) => {
   const initialOrderFormValues = {
     length: { inches: 48, addedCost: 0 },
     width: { inches: 30, addedCost: 0 },
@@ -13,17 +13,32 @@ const TableOptions = ({ item, price, handlePrice }) => {
   };
   const [orderForm, setOrderForm] = useState(initialOrderFormValues);
 
-  const handleQuantity = (value) => {
+  const handleClickQuantity = (value) => {
     if (orderForm.quantity === 1 && value === -1) {
       return;
     }
-    setOrderForm({ ...orderForm, quantity: orderForm.quantity + value });
+    setOrderForm({
+      ...orderForm,
+      quantity: parseInt(orderForm.quantity) + parseInt(value),
+    });
   };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setOrderForm({ ...orderForm, [name]: JSON.parse(value) });
   };
+
+  const handleChangeQuantity = (e) => {
+    const { name, value } = e.target;
+    setOrderForm({ ...orderForm, [name]: value });
+  };
+
+  useEffect(() => {
+    setAddOnCost(
+      // eslint-disable-next-line prettier/prettier
+      (orderForm.length.addedCost + orderForm.width.addedCost + orderForm.woodType.addedCost + orderForm.finish.addedCost + orderForm.leafExtension.addedCost) * orderForm.quantity
+    );
+  }, [orderForm]);
 
   console.log(orderForm);
 
@@ -102,9 +117,13 @@ const TableOptions = ({ item, price, handlePrice }) => {
       </select>
       <label htmlFor="quantity">Quantity</label>
       <div className="quantity-container">
-        <div onClick={() => handleQuantity(-1)}>-</div>
-        <input defaultValue={1} value={orderForm.quantity}></input>
-        <div onClick={() => handleQuantity(1)}>+</div>
+        <div onClick={() => handleClickQuantity(-1)}>-</div>
+        <input
+          name="quantity"
+          value={orderForm.quantity}
+          onChange={handleChangeQuantity}
+        ></input>
+        <div onClick={() => handleClickQuantity(1)}>+</div>
       </div>
     </div>
   );
