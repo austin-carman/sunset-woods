@@ -17,12 +17,15 @@ const ItemDetails = () => {
           </div>
           <OrderOptions item={item} />
           <div>
-            <div>Payment Options</div>
+            {/* <div>Payment Options</div> */}
             <button>Add to Cart</button>
           </div>
         </div>
       </div>
-      <div className="item-details-container">Details Container</div>
+      <div className="item-description-container">
+        <h2>Description</h2>
+        <p>{item.description}</p>
+      </div>
     </>
   );
 };

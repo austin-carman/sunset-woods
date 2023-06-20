@@ -25,6 +25,8 @@ export const shopItems = [
     ],
     title: "Table",
     subtitle: "4 person kitchen table",
+    description:
+      "Consectetur mollit cillum pariatur quis culpa anim et. Velit commodo velit est proident aliqua ex ipsum culpa velit exercitation. Exercitation est ex nulla dolore non. Ea eu id laboris quis elit ipsum cupidatat esse labore pariatur nulla. Sunt mollit aute quis consectetur duis cillum voluptate dolor velit amet laboris mollit tempor sint.",
     basePrice: 1999,
     options: {
       length: [

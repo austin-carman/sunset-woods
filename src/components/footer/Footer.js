@@ -5,7 +5,9 @@ const Footer = () => {
     <footer>
       <div className="links-container">
         <div className="footer-section-container">
-          <img src="#" alt="company logo" />
+          <a href="/" className="footer-company-logo">
+            Sunset Woods
+          </a>
         </div>
         <div className="footer-section-container">
           <ul className="quick-links">

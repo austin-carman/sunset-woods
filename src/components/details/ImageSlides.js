@@ -31,9 +31,6 @@ const ImageSlides = ({ item }) => {
                 currentImage === index + 1 ? "active-slide" : "hidden-slides"
               }
             >
-              <div className="slide-number-text">
-                {index + 1}/{item.images.length}
-              </div>
               <img src={image} alt="" />
             </div>
           );

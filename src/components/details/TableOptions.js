@@ -22,8 +22,6 @@ const TableOptions = ({ item, setAddOnCost }) => {
     );
   }, [orderForm]);
 
-  console.log(orderForm);
-
   return (
     <div className="item-customized-options">
       {/* Length */}
