@@ -634,56 +634,84 @@ footer a {
 /* =========================== */
 /* ITEM DETAILS */
 /* =========================== */
-/* Image Slider */
-.item-order-container {
+
+/* Image Slides */
+.slideshow-container {
   width: 90%;
-  margin: 2rem auto 5rem;
+  margin: 5% auto;
 }
 
-.image-container {
+.slides-container {
+  max-width: 1000px;
   position: relative;
+  margin: auto;
 }
 
-.item-image-arrows-container {
+/* Hide the images by default */
+.hidden-slides {
+  display: none;
+}
+
+/* Previous & Next buttons */
+.prev, .next {
+  cursor: pointer;
   position: absolute;
   top: 50%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.slide-arrow {
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
   color: white;
-  opacity: 0.4;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
 }
 
-.slide-arrow:hover {
-  font-size: 4rem;
-  opacity: 0.8;
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.3);
+}
+
+/* Slide number text (eg: 1/3) */
+.slide-number-text {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Image Slides Gallery */
+.thumbnail-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.image-thumbnail {
+  width: 20%;
+}
+
+.active-thumbnail {
+  opacity: 0.5;
+}
+
+.image-thumbnail:hover {
+  opacity: 0.5;
   cursor: pointer;
 }
 
-.image-slides-dots-container {
-  position: absolute;
-  bottom: 1rem;
-  width: 100%;
-  display: flex;
-  justify-content: center;
+/* Details Title */
+.order-container {
+  width: 90%;
+  margin: auto;
 }
 
-.slides-dot {
-  width: 1.5rem;
-  height: 1.5rem;
-  background-color: white;
-  border-radius: 50%;
-  margin: 0 2px;
-  opacity: 0.4;
-}
-.active-dot {
-  background-color: white;
-  opacity: 1;
-}
-/* Details Title */
 .item-title-container {
   text-align: center;
 }
@@ -704,4 +732,28 @@ footer a {
 .quantity-container {
   display: flex;
   align-items: center;
+}
+
+@media only screen and (min-width: 800px) {
+  .item-order-container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    margin: 5% auto 0;
+  }
+
+  .slideshow-container {
+    width: 50%;
+    margin: 0;
+  }
+
+  .order-container {
+    width: 40%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .item-order-container {
+    margin-top: 10%;
+  }
 }
