@@ -8,39 +8,21 @@ const TableOptions = ({ item, addOnCost, setAddOnCost }) => {
     width: { inches: 30, addedCost: 0 },
     woodType: { type: "Pine", addedCost: 0 },
     finish: { type: "Natural (clear coat)", addedCost: 0 },
-    leafExtension: { inches: 24, addedCost: 50 },
-    quantity: 1,
+    leafExtension: { inches: 0, addedCost: 0 },
   };
   const [orderForm, setOrderForm] = useState(initialOrderFormValues);
-
-  const handleClickQuantity = (value) => {
-    if (orderForm.quantity === 1 && value === -1) {
-      return;
-    }
-    setOrderForm({
-      ...orderForm,
-      quantity: parseInt(orderForm.quantity) + parseInt(value),
-    });
-  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setOrderForm({ ...orderForm, [name]: JSON.parse(value) });
   };
 
-  const handleChangeQuantity = (e) => {
-    const { name, value } = e.target;
-    setOrderForm({ ...orderForm, [name]: value });
-  };
-
   useEffect(() => {
     setAddOnCost(
       // eslint-disable-next-line prettier/prettier
-      (orderForm.length.addedCost + orderForm.width.addedCost + orderForm.woodType.addedCost + orderForm.finish.addedCost + orderForm.leafExtension.addedCost) * orderForm.quantity
+      (orderForm.length.addedCost + orderForm.width.addedCost + orderForm.woodType.addedCost + orderForm.finish.addedCost + orderForm.leafExtension.addedCost)
     );
   }, [orderForm]);
-
-  console.log(orderForm);
 
   return (
     <div className="item-customized-options">
@@ -115,16 +97,6 @@ const TableOptions = ({ item, addOnCost, setAddOnCost }) => {
           })}
         </optgroup>
       </select>
-      <label htmlFor="quantity">Quantity</label>
-      <div className="quantity-container">
-        <div onClick={() => handleClickQuantity(-1)}>-</div>
-        <input
-          name="quantity"
-          value={orderForm.quantity}
-          onChange={handleChangeQuantity}
-        ></input>
-        <div onClick={() => handleClickQuantity(1)}>+</div>
-      </div>
     </div>
   );
 };
