@@ -37,15 +37,25 @@ const OrderOptions = ({ item }) => {
   return (
     <div className="order-options-container">
       {getOrderOptions(item.category)}
-      <label htmlFor="quantity">Quantity</label>
+      <h3>Quantity</h3>
       <div className="quantity-container">
-        <div onClick={() => handleClickQuantity(-1)}>-</div>
+        <div
+          className="quantity-increments"
+          onClick={() => handleClickQuantity(-1)}
+        >
+          -
+        </div>
         <input
           name="quantity"
           value={quantity}
           onChange={handleChangeQuantity}
         ></input>
-        <div onClick={() => handleClickQuantity(1)}>+</div>
+        <div
+          className="quantity-increments"
+          onClick={() => handleClickQuantity(1)}
+        >
+          +
+        </div>
       </div>
       <h3>Base Price: ${item.basePrice}</h3>
       <span>+ ${addOnCost} customizations</span>

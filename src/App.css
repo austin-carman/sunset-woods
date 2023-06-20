@@ -722,10 +722,6 @@ footer a {
   flex-direction: column;
 }
 
-.item-customized-options select {
-  padding: 1rem;
-}
-
 .quantity-container input {
   padding: 1rem;
 }
@@ -735,30 +731,48 @@ footer a {
   align-items: center;
 }
 
+.quantity-increments {
+  border: 1px solid black;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+  user-select: none;
+  margin: 0 1rem;
+}
+.quantity-increments:hover {
+  cursor: pointer;
+}
+
 /* practice */
 .option-boxes-container {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 5%; 
 }
 .option-box {
   border: 1px solid black;
   border-radius: 5px;
-  padding: 4%;
+  padding: 2rem;
   margin: 2%;
   display: flex;
   justify-content: center;
   align-items: center;
   user-select: none;
+  position: relative;
 }
 .selected-option {
-  background-color: grey;
+  background-color: rgba(0,0,0,0.8);
   color: white
 }
 .option-box:hover {
   cursor: pointer;
 }
-.selected-option-added-cost span {
+.selected-option-added-cost {
+  font-size: 1.2rem;
   color: green;
+  position: absolute;
+  bottom: 0;
 }
 
 @media only screen and (min-width: 800px) {

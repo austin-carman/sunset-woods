@@ -29,10 +29,12 @@ const TableOptions = ({ item, addOnCost, setAddOnCost }) => {
     );
   }, [orderForm]);
 
+  console.log(orderForm);
+
   return (
     <div className="item-customized-options">
       {/* Length */}
-      <label>Length</label>
+      <h3>Length</h3>
       <div className="option-boxes-container">
         {item.options.length.map((option, index) => {
           return (
@@ -46,15 +48,18 @@ const TableOptions = ({ item, addOnCost, setAddOnCost }) => {
               }
             >
               <div>{option.inches}&ldquo;</div>
+              <div className="selected-option-added-cost">
+                {option.addedCost > 0 && `+$${option.addedCost}`}
+              </div>
             </div>
           );
         })}
       </div>
-      <div className="selected-option-added-cost">
+      {/* <div className="selected-option-added-cost">
         Added Cost: <span>${orderForm.length.addedCost}</span>
-      </div>
+      </div> */}
       {/* Width */}
-      <label>Width</label>
+      <h3>Width</h3>
       <div className="option-boxes-container">
         {item.options.width.map((option, index) => {
           return (
@@ -68,13 +73,87 @@ const TableOptions = ({ item, addOnCost, setAddOnCost }) => {
               }
             >
               <div>{option.inches}&ldquo;</div>
+              <div className="selected-option-added-cost">
+                {option.addedCost > 0 && `+$${option.addedCost}`}
+              </div>
             </div>
           );
         })}
       </div>
-      <div className="selected-option-added-cost">
+      {/* <div className="selected-option-added-cost">
         Added Cost: <span>${orderForm.width.addedCost}</span>
+      </div> */}
+      {/* Wood Type */}
+      <h3>Wood Type</h3>
+      <div className="option-boxes-container">
+        {item.options.woodType.map((option, index) => {
+          return (
+            <div
+              key={index}
+              onClick={() => handleClickOption("woodType", option)}
+              className={
+                orderForm.woodType.type === option.type
+                  ? "selected-option option-box"
+                  : "option-box"
+              }
+            >
+              <div>{option.type}</div>
+              <div className="selected-option-added-cost">
+                {option.addedCost > 0 && `+$${option.addedCost}`}
+              </div>
+            </div>
+          );
+        })}
       </div>
+      {/* Finish */}
+      <h3>Finish</h3>
+      <div className="option-boxes-container">
+        {item.options.finish.map((option, index) => {
+          return (
+            <div
+              key={index}
+              onClick={() => handleClickOption("finish", option)}
+              className={
+                orderForm.finish.type === option.type
+                  ? "selected-option option-box"
+                  : "option-box"
+              }
+            >
+              <div>{option.type}</div>
+              <div className="selected-option-added-cost">
+                {option.addedCost > 0 && `+$${option.addedCost}`}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      {/* Leaf Extension */}
+      <h3>Leaf Extension</h3>
+      <div className="option-boxes-container">
+        {item.options.leafExtension.map((option, index) => {
+          return (
+            <div
+              key={index}
+              onClick={() => handleClickOption("leafExtension", option)}
+              className={
+                orderForm.leafExtension.inches === option.inches
+                  ? "selected-option option-box"
+                  : "option-box"
+              }
+            >
+              <div>{option.inches > 0 ? `${option.inches}"` : "No"}</div>
+              <div className="selected-option-added-cost">
+                {option.addedCost > 0 && `+$${option.addedCost}`}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+      {/* <div className="selected-option-added-cost">
+        Added Cost: <span>${orderForm.woodType.addedCost}</span>
+      </div> */}
+
       {/* <label>Length</label>
       <select name="length" onChange={(e) => handleChange(e)}>
         <optgroup label="Length">
