@@ -12,13 +12,13 @@ const TableOptions = ({ item, addOnCost, setAddOnCost }) => {
   };
   const [orderForm, setOrderForm] = useState(initialOrderFormValues);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setOrderForm({ ...orderForm, [name]: JSON.parse(value) });
-  };
+  // const handleChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setOrderForm({ ...orderForm, [name]: JSON.parse(value) });
+  // };
 
   const handleClickOption = (name, value) => {
-    console.log(name, value);
+    // console.log(name, value);
     setOrderForm({ ...orderForm, [name]: value });
   };
 
@@ -53,9 +53,29 @@ const TableOptions = ({ item, addOnCost, setAddOnCost }) => {
       <div className="selected-option-added-cost">
         Added Cost: <span>${orderForm.length.addedCost}</span>
       </div>
-
-      {/* length */}
-      <label>Length</label>
+      {/* Width */}
+      <label>Width</label>
+      <div className="option-boxes-container">
+        {item.options.width.map((option, index) => {
+          return (
+            <div
+              key={index}
+              onClick={() => handleClickOption("width", option)}
+              className={
+                orderForm.width.inches === option.inches
+                  ? "selected-option option-box"
+                  : "option-box"
+              }
+            >
+              <div>{option.inches}&ldquo;</div>
+            </div>
+          );
+        })}
+      </div>
+      <div className="selected-option-added-cost">
+        Added Cost: <span>${orderForm.width.addedCost}</span>
+      </div>
+      {/* <label>Length</label>
       <select name="length" onChange={(e) => handleChange(e)}>
         <optgroup label="Length">
           {item.options.length.map((option, index) => {
@@ -68,7 +88,7 @@ const TableOptions = ({ item, addOnCost, setAddOnCost }) => {
           })}
         </optgroup>
       </select>
-      {/* width */}
+      
       <label>Width</label>
       <select name="width" onChange={(e) => handleChange(e)}>
         <optgroup label="Width">
@@ -82,7 +102,7 @@ const TableOptions = ({ item, addOnCost, setAddOnCost }) => {
           })}
         </optgroup>
       </select>
-      {/* wood type */}
+      
       <label>Wood Type</label>
       <select name="woodType" onChange={(e) => handleChange(e)}>
         <optgroup label="Wood Type">
@@ -95,7 +115,7 @@ const TableOptions = ({ item, addOnCost, setAddOnCost }) => {
           })}
         </optgroup>
       </select>
-      {/* Finish */}
+      
       <label>Finish</label>
       <select name="finish" onChange={(e) => handleChange(e)}>
         <optgroup label="Finish">
@@ -108,7 +128,7 @@ const TableOptions = ({ item, addOnCost, setAddOnCost }) => {
           })}
         </optgroup>
       </select>
-      {/* Leaf Extension */}
+      
       <label>Leaf Extension</label>
       <select name="leafExtension" onChange={(e) => handleChange(e)}>
         <optgroup label="Leaf Extension">
@@ -124,7 +144,7 @@ const TableOptions = ({ item, addOnCost, setAddOnCost }) => {
             );
           })}
         </optgroup>
-      </select>
+      </select> */}
     </div>
   );
 };
