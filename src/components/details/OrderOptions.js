@@ -51,11 +51,13 @@ const OrderOptions = ({ item }) => {
           +
         </div>
       </div>
-      <h3>Base Price: ${item.basePrice}</h3>
-      <span>+ ${addOnCost} customizations</span>
-      <br></br>
-      <span>x {quantity} &#40;quantity&#41;</span>
-      <h3>Total Price: ${(item.basePrice + addOnCost) * quantity}</h3>
+      <div className="order-price-container">
+        <h4>Base Price: ${item.basePrice}</h4>
+        <h4>+ ${addOnCost} customizations</h4>
+        <h4>x {quantity} &#40;quantity&#41;</h4>
+        <br></br>
+        <h3>Total: ${(item.basePrice + addOnCost) * quantity}</h3>
+      </div>
     </div>
   );
 };

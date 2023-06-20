@@ -744,6 +744,10 @@ footer a {
   cursor: pointer;
 }
 
+.order-price-container {
+  margin: 10% auto;
+}
+
 /* practice */
 .option-boxes-container {
   display: flex;
