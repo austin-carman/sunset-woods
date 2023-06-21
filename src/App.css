@@ -575,7 +575,7 @@ footer a {
 .cart-item {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   margin-bottom: 2rem;
 }
 
@@ -584,8 +584,18 @@ footer a {
   align-items: center;
 }
 
+.cart-item img {
+  width: 50%;
+}
+
 .delete-cart-item {
-  margin-right: 1rem;
+  margin-right: 2rem;
+  color: red;
+}
+.delete-cart-item:hover {
+  margin-right: 2rem;
+  color: red;
+  cursor: pointer;
 }
 
 .cart-total {
@@ -781,6 +791,10 @@ footer a {
 .item-description-container {
   width: 90%;
   margin: auto;
+}
+
+.add-to-cart-button:hover {
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 600px) {

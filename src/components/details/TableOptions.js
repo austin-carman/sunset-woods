@@ -1,26 +1,30 @@
 /* eslint-disable react/prop-types */
-import { useState, useEffect } from "react";
+// import { useEffect } from "react";
+// import { useState, useEffect } from "react";
 
-const TableOptions = ({ item, setAddOnCost }) => {
-  const initialOrderFormValues = {
-    length: { inches: 48, addedCost: 0 },
-    width: { inches: 30, addedCost: 0 },
-    woodType: { type: "Pine", addedCost: 0 },
-    finish: { type: "Natural (clear coat)", addedCost: 0 },
-    leafExtension: { inches: 0, addedCost: 0 },
-  };
-  const [orderForm, setOrderForm] = useState(initialOrderFormValues);
+const TableOptions = ({ item, orderForm, setOrderForm }) => {
+  // const TableOptions = ({ item, setAddOnCost, orderForm, setOrderForm }) => {
+  // const TableOptions = ({ item, setAddOnCost }) => {
+  // const initialOrderFormValues = {
+  //   length: { inches: 48, addedCost: 0 },
+  //   width: { inches: 30, addedCost: 0 },
+  //   woodType: { type: "Pine", addedCost: 0 },
+  //   finish: { type: "Natural (clear coat)", addedCost: 0 },
+  //   leafExtension: { inches: 0, addedCost: 0 },
+  // };
+  // const [orderForm, setOrderForm] = useState(initialOrderFormValues);
 
   const handleClickOption = (name, value) => {
+    console.log("name: ", name, "value: ", value);
     setOrderForm({ ...orderForm, [name]: value });
   };
 
-  useEffect(() => {
-    setAddOnCost(
-      // eslint-disable-next-line prettier/prettier
-      (orderForm.length.addedCost + orderForm.width.addedCost + orderForm.woodType.addedCost + orderForm.finish.addedCost + orderForm.leafExtension.addedCost)
-    );
-  }, [orderForm]);
+  // useEffect(() => {
+  //   setAddOnCost(
+  //     // eslint-disable-next-line prettier/prettier
+  //     (orderForm.length.addedCost + orderForm.width.addedCost + orderForm.woodType.addedCost + orderForm.finish.addedCost + orderForm.leafExtension.addedCost)
+  //   );
+  // }, [orderForm]);
 
   return (
     <div className="item-customized-options">
