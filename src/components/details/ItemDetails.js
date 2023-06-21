@@ -1,10 +1,8 @@
 import { useLocation } from "react-router-dom";
 import ImageSlides from "./ImageSlides";
-// import OrderOptions from "./OrderOptions";
 import TableOptions from "./TableOptions";
 import ItemUnavailable from "./ItemUnavailable";
 import { useState, useEffect, useContext } from "react";
-// import { useState } from "react";
 import ItemQuantity from "./ItemQuantity";
 import ItemPricing from "./ItemPricing";
 import { CartContext } from "../../context/CartContext";
@@ -72,18 +70,17 @@ const ItemDetails = () => {
   return (
     <>
       <div className="item-order-container">
-        {/* item, options form, quantity, addOnCost */}
-        {/* Images -> item */}
+        {/* Images */}
         <ImageSlides item={item} />
         <div className="order-container">
-          {/* Title -> item */}
+          {/* Title */}
           <div className="item-title-container">
             <h2>{item.title}</h2>
             <h4>{item.subtitle}</h4>
           </div>
-          {/* Options -> item, form */}
+          {/* Customizable Options */}
           {getOrderOptions(item.category)}
-          {/* Quantity - combine with options? */}
+          {/* Quantity */}
           <ItemQuantity quantity={quantity} setQuantity={setQuantity} />
           {/* Pricing */}
           <ItemPricing
@@ -91,13 +88,13 @@ const ItemDetails = () => {
             addOnCost={addOnCost}
             quantity={quantity}
           />
-          {/* Add to Cart -> item, optionsForm */}
+          {/* Add to Cart */}
           <button className="add-to-cart-button" onClick={handleAddToCart}>
             Add to Cart
           </button>
         </div>
       </div>
-      {/* Description -> item */}
+      {/* Description */}
       <div className="item-description-container">
         <h2>Description</h2>
         <p>{item.description}</p>
@@ -107,42 +104,3 @@ const ItemDetails = () => {
 };
 
 export default ItemDetails;
-
-// import { useLocation } from "react-router-dom";
-// import ImageSlides from "./ImageSlides";
-// import OrderOptions from "./OrderOptions";
-
-// const ItemDetails = () => {
-//   const location = useLocation();
-//   const item = location.state;
-
-//   const handleAddToCart = () => {
-//     console.log("click");
-//   };
-
-//   return (
-//     <>
-//       <div className="item-order-container">
-//         <ImageSlides item={item} />
-//         <div className="order-container">
-//           <div className="item-title-container">
-//             <h2>{item.title}</h2>
-//             <h4>{item.subtitle}</h4>
-//           </div>
-//           <OrderOptions item={item} />
-//           <div>
-//             <button className="add-to-cart-button" onClick={handleAddToCart}>
-//               Add to Cart
-//             </button>
-//           </div>
-//         </div>
-//       </div>
-//       <div className="item-description-container">
-//         <h2>Description</h2>
-//         <p>{item.description}</p>
-//       </div>
-//     </>
-//   );
-// };
-
-// export default ItemDetails;

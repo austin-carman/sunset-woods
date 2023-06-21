@@ -1,7 +1,5 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
-// import ArrowBackIosOutlinedIcon from "@mui/icons-material/ArrowBackIosOutlined";
-// import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
 
 const ImageSlides = ({ item }) => {
   const [currentImage, setCurrentImage] = useState(1);

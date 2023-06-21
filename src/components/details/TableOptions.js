@@ -1,34 +1,15 @@
 /* eslint-disable react/prop-types */
-// import { useEffect } from "react";
-// import { useState, useEffect } from "react";
-
 const TableOptions = ({ item, orderForm, setOrderForm }) => {
-  // const TableOptions = ({ item, setAddOnCost, orderForm, setOrderForm }) => {
-  // const TableOptions = ({ item, setAddOnCost }) => {
-  // const initialOrderFormValues = {
-  //   length: { inches: 48, addedCost: 0 },
-  //   width: { inches: 30, addedCost: 0 },
-  //   woodType: { type: "Pine", addedCost: 0 },
-  //   finish: { type: "Natural (clear coat)", addedCost: 0 },
-  //   leafExtension: { inches: 0, addedCost: 0 },
-  // };
-  // const [orderForm, setOrderForm] = useState(initialOrderFormValues);
-
   const handleClickOption = (name, value) => {
     console.log("name: ", name, "value: ", value);
     setOrderForm({ ...orderForm, [name]: value });
   };
 
-  // useEffect(() => {
-  //   setAddOnCost(
-  //     // eslint-disable-next-line prettier/prettier
-  //     (orderForm.length.addedCost + orderForm.width.addedCost + orderForm.woodType.addedCost + orderForm.finish.addedCost + orderForm.leafExtension.addedCost)
-  //   );
-  // }, [orderForm]);
+  // TODO -> CREATE REUSABLE COMPONENT TO RENDER ALL THE BELOW -> case uses 1) inches (ex: length), 2) type (ex: wood)
 
   return (
     <div className="item-customized-options">
-      {/* Length */}
+      {/* Length - uses inches */}
       <h3>Length</h3>
       <div className="option-boxes-container">
         {item.options.length.map((option, index) => {
@@ -50,7 +31,7 @@ const TableOptions = ({ item, orderForm, setOrderForm }) => {
           );
         })}
       </div>
-      {/* Width */}
+      {/* Width - uses inches */}
       <h3>Width</h3>
       <div className="option-boxes-container">
         {item.options.width.map((option, index) => {
@@ -72,7 +53,7 @@ const TableOptions = ({ item, orderForm, setOrderForm }) => {
           );
         })}
       </div>
-      {/* Wood Type */}
+      {/* Wood Type - uses type */}
       <h3>Wood Type</h3>
       <div className="option-boxes-container">
         {item.options.woodType.map((option, index) => {
@@ -94,7 +75,7 @@ const TableOptions = ({ item, orderForm, setOrderForm }) => {
           );
         })}
       </div>
-      {/* Finish */}
+      {/* Finish - uses type */}
       <h3>Finish</h3>
       <div className="option-boxes-container">
         {item.options.finish.map((option, index) => {
@@ -116,7 +97,7 @@ const TableOptions = ({ item, orderForm, setOrderForm }) => {
           );
         })}
       </div>
-      {/* Leaf Extension */}
+      {/* Leaf Extension - uses inches */}
       <h3>Leaf Extension</h3>
       <div className="option-boxes-container">
         {item.options.leafExtension.map((option, index) => {
