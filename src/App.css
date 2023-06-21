@@ -708,7 +708,7 @@ footer a {
 }
 
 .image-thumbnail:hover {
-  opacity: 0.5;
+  opacity: 0.8;
   cursor: pointer;
 }
 
@@ -750,11 +750,11 @@ footer a {
 }
 
 .order-price-container {
-  margin: 10% auto;
+  margin: 10% auto 0%;
 }
 
 .total-price {
-  color: green
+  color: green;
 }
 
 /* practice */
@@ -806,18 +806,34 @@ footer a {
 @media only screen and (min-width: 800px) {
   .item-order-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    /* justify-content: space-evenly; */
     width: 90%;
     margin: 5% auto 0;
+    /* border: 1px solid red; */
   }
 
   .slideshow-container {
     width: 50%;
     margin: 0;
+    /* border: 1px solid red; */
+  }
+  
+  .thumbnail-container {
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* border: 1px solid red; */
+    /* height: 30%; */
+  }
+  .image-thumbnail {
+    width: 25rem;
+    margin-top: 2rem;
   }
 
   .order-container {
-    width: 40%;
+    width: 45%;
+    /* border: 1px solid red; */
+    margin: 0;
   }
 }
 

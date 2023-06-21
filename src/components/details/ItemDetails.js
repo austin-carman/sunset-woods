@@ -71,29 +71,32 @@ const ItemDetails = () => {
 
   return (
     <>
-      {/* item, options form, quantity, addOnCost */}
-      {/* Images -> item */}
-      <ImageSlides item={item} />
-      {/* Title -> item */}
-      <div className="item-title-container">
-        <h2>{item.title}</h2>
-        <h4>{item.subtitle}</h4>
+      <div className="item-order-container">
+        {/* item, options form, quantity, addOnCost */}
+        {/* Images -> item */}
+        <ImageSlides item={item} />
+        <div className="order-container">
+          {/* Title -> item */}
+          <div className="item-title-container">
+            <h2>{item.title}</h2>
+            <h4>{item.subtitle}</h4>
+          </div>
+          {/* Options -> item, form */}
+          {getOrderOptions(item.category)}
+          {/* Quantity - combine with options? */}
+          <ItemQuantity quantity={quantity} setQuantity={setQuantity} />
+          {/* Pricing */}
+          <ItemPricing
+            basePrice={item.basePrice}
+            addOnCost={addOnCost}
+            quantity={quantity}
+          />
+          {/* Add to Cart -> item, optionsForm */}
+          <button className="add-to-cart-button" onClick={handleAddToCart}>
+            Add to Cart
+          </button>
+        </div>
       </div>
-      {/* Options -> item, form */}
-      {getOrderOptions(item.category)}
-      {/* Quantity - combine with options? */}
-      <ItemQuantity quantity={quantity} setQuantity={setQuantity} />
-      {/* Pricing */}
-      <ItemPricing
-        basePrice={item.basePrice}
-        addOnCost={addOnCost}
-        quantity={quantity}
-      />
-
-      {/* Add to Cart -> item, optionsForm */}
-      <button className="add-to-cart-button" onClick={handleAddToCart}>
-        Add to Cart
-      </button>
       {/* Description -> item */}
       <div className="item-description-container">
         <h2>Description</h2>
