@@ -27,7 +27,9 @@ const Cart = ({ isCartOpen, setIsCartOpen }) => {
   const cartTotal = calculateCartTotal();
 
   return (
-    <div className={isCartOpen ? "cart slide-in" : "hide-cart"}>
+    <div className={`cart ${isCartOpen ? "slide-in" : "slide-out"}`}>
+      {/* <div className={isCartOpen ? "cart slide-in" : "slide-out"}> */}
+      {/* <div className={isCartOpen ? "cart slide-in" : "hide-cart slide-out"}> */}
       <div className="cart-header">
         <h3>({cart.length}) Items</h3>
         <h4 id="close-cart" onClick={handleCloseCart}>

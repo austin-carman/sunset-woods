@@ -32,11 +32,8 @@ const Navbar = ({ isCartOpen, setIsCartOpen }) => {
         </span>
         {/* Nav links */}
         <div
-          className={
-            isMenuOpen
-              ? "show-links links-wrapper slide-in"
-              : "hide-links links-wrapper"
-          }
+          // eslint-disable-next-line prettier/prettier
+          className={`links-wrapper ${isMenuOpen ? "show-links slide-in" : "slide-out"}`}
         >
           <li onClick={handleToggleMenu} id="close-menu">
             X

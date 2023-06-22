@@ -92,6 +92,35 @@ button {
   margin: 2rem auto;
 }
 
+/* Slide in for opening Cart and NavLinks */
+.slide-in {
+  animation: slide-in 0.5s;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  } 
+}
+
+/* Slide out for closing cart and Navlinks */
+.slide-out {
+  transition: transform 0.5s;
+  transform: translateX(100%);
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  } 
+}
+
 
 /* =========================== */
 /* HERO SECTION */
@@ -173,10 +202,6 @@ button {
   padding: 2rem;
   z-index: 1;
   user-select: none;
-}
-
-.hide-links {
-  display: none;
 }
 
 .links-wrapper a {
@@ -552,9 +577,9 @@ footer a {
 /* ============================== */
 /* Cart */
 /* ============================== */
-.hide-cart {
+/* .hide-cart {
   display: none;
-}
+} */
 
 .cart {
   background-color: beige;
@@ -565,23 +590,6 @@ footer a {
   height: 100vh;
   overflow-y: scroll;
   z-index: 100;
-}
-
-.cart.slide-in {
-  animation: slide-in 0.5s;
-}
-
-.show-links.slide-in {
-  animation: slide-in 0.5s;
-}
-
-@keyframes slide-in {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
 }
 
 .cart-header {
