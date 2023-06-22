@@ -1,11 +1,11 @@
+/* eslint-disable react/prop-types */
 import { useNavigate } from "react-router-dom";
 
-/* eslint-disable react/prop-types */
 const ShopItem = ({ item }) => {
   const navigate = useNavigate();
 
   const handleClickItem = (item) => {
-    navigate(`/item-details/${item.id}`, { state: item });
+    navigate(`/item-details/${item.id}`);
   };
 
   return (
