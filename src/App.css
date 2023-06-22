@@ -143,6 +143,13 @@ button {
   font-size: 2rem;
   color: black;
 }
+.cart-icon {
+  margin-right: 2rem;
+  font-size: 5rem;
+}
+.cart-icon:hover {
+  cursor: pointer;
+}
 
 /* menu */
 .hamburger {
@@ -206,7 +213,7 @@ button {
   }
 
   /* menu */
-  .hamburger {
+  .hamburger, .cart-icon {
     display: none;
   }
 
@@ -558,6 +565,23 @@ footer a {
   height: 100vh;
   overflow-y: scroll;
   z-index: 100;
+}
+
+.cart.slide-in {
+  animation: slide-in 0.5s;
+}
+
+.show-links.slide-in {
+  animation: slide-in 0.5s;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .cart-header {

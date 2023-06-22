@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 // eslint-disable-next-line react/prop-types
 const Navbar = ({ isCartOpen, setIsCartOpen }) => {
@@ -9,7 +10,8 @@ const Navbar = ({ isCartOpen, setIsCartOpen }) => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const hanldeOpenCart = () => {
+  const handleOpenCart = () => {
+    setIsMenuOpen(false);
     setIsCartOpen(!isCartOpen);
   };
 
@@ -22,13 +24,18 @@ const Navbar = ({ isCartOpen, setIsCartOpen }) => {
       {/* Navigation menu */}
       <ul className="nav-menu">
         {/* Hamburger Menu */}
-        <span onClick={handleToggleMenu} className="hamburger">
+        <span className="cart-icon" onClick={handleOpenCart}>
+          <ShoppingCartIcon />
+        </span>
+        <span className="hamburger" onClick={handleToggleMenu}>
           &#9776;
         </span>
         {/* Nav links */}
         <div
           className={
-            isMenuOpen ? "show-links links-wrapper" : "hide-links links-wrapper"
+            isMenuOpen
+              ? "show-links links-wrapper slide-in"
+              : "hide-links links-wrapper"
           }
         >
           <li onClick={handleToggleMenu} id="close-menu">
@@ -47,7 +54,7 @@ const Navbar = ({ isCartOpen, setIsCartOpen }) => {
             <li onClick={handleToggleMenu}>Contact</li>
           </Link>
           {/* <Link to="/cart"> */}
-          <li onClick={hanldeOpenCart}>Cart</li>
+          <li onClick={handleOpenCart}>Cart</li>
           {/* </Link> */}
           <Link to="/custom-orders">
             <li>Custom Orders</li>
