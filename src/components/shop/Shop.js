@@ -1,6 +1,6 @@
 import CategoryFilter from "./CategoryFilters";
 import { shopFilters, shopItems } from "../../data/data";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ShopItem from "./ShopItem";
 import HeroContent from "../hero/HeroContent";
 
@@ -21,6 +21,10 @@ const Shop = () => {
     setSelected(category);
     filterShopItems();
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>

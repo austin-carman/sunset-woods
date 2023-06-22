@@ -1,50 +1,28 @@
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import ImageSlides from "./ImageSlides";
-import TableOptions from "./TableOptions";
-import ItemUnavailable from "./ItemUnavailable";
 import { useState, useEffect, useContext } from "react";
 import ItemQuantity from "./ItemQuantity";
 import ItemPricing from "./ItemPricing";
 import { CartContext } from "../../context/CartContext";
+import { shopItems } from "../../data/data";
+import ItemOptions from "./ItemOptions";
 
 const ItemDetails = () => {
+  const { id } = useParams();
+  const item = shopItems.find((shopItem) => shopItem.id === parseInt(id));
   const { cart, setCart } = useContext(CartContext);
-  const furnitureOptions = {
-    length: { inches: 48, addedCost: 0 },
-    width: { inches: 30, addedCost: 0 },
-    woodType: { type: "Pine", addedCost: 0 },
-    finish: { type: "Natural (clear coat)", addedCost: 0 },
-    leafExtension: { inches: 0, addedCost: 0 },
+
+  const getItemOptions = () => {
+    const options = {};
+    for (const key in item.options) {
+      options[key] = item.options[key][0];
+    }
+    return options;
   };
 
-  const location = useLocation();
-  const item = location.state;
-  const getItemOptions = () => {
-    switch (item.category) {
-      case "Furniture":
-        return furnitureOptions;
-      default:
-        return {};
-    }
-  };
   const [addOnCost, setAddOnCost] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const [orderForm, setOrderForm] = useState(getItemOptions());
-
-  const getOrderOptions = (category) => {
-    switch (category) {
-      case "Furniture":
-        return (
-          <TableOptions
-            item={item}
-            orderForm={orderForm}
-            setOrderForm={setOrderForm}
-          />
-        );
-      default:
-        return <ItemUnavailable />;
-    }
-  };
 
   const handleAddToCart = () => {
     setCart([
@@ -61,10 +39,19 @@ const ItemDetails = () => {
     ]);
   };
 
+  const calculateAddedCost = () => {
+    let total = 0;
+    for (const key in orderForm) {
+      if (orderForm[key]?.addedCost) {
+        total += orderForm[key]["addedCost"];
+      }
+    }
+    return total;
+  };
+
   useEffect(() => {
-    // eslint-disable-next-line prettier/prettier
-    setAddOnCost(orderForm.length.addedCost + orderForm.width.addedCost + orderForm.woodType.addedCost + orderForm.finish.addedCost + orderForm.leafExtension.addedCost
-    );
+    const addedCost = calculateAddedCost();
+    setAddOnCost(addedCost);
   }, [orderForm]);
 
   return (
@@ -79,7 +66,11 @@ const ItemDetails = () => {
             <h4>{item.subtitle}</h4>
           </div>
           {/* Customizable Options */}
-          {getOrderOptions(item.category)}
+          <ItemOptions
+            item={item}
+            orderForm={orderForm}
+            setOrderForm={setOrderForm}
+          />
           {/* Quantity */}
           <ItemQuantity quantity={quantity} setQuantity={setQuantity} />
           {/* Pricing */}

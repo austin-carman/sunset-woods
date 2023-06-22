@@ -3,7 +3,6 @@ import { useContext } from "react";
 
 // eslint-disable-next-line react/prop-types
 const Cart = ({ isCartOpen, setIsCartOpen }) => {
-  // eslint-disable-next-line no-unused-vars
   const { cart, setCart } = useContext(CartContext);
 
   const handleCloseCart = () => {
@@ -16,8 +15,6 @@ const Cart = ({ isCartOpen, setIsCartOpen }) => {
     });
     setCart(updatedCart);
   };
-
-  console.log("cart: ", cart);
 
   const calculateCartTotal = () => {
     let total = 0;
