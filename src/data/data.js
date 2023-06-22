@@ -1,7 +1,7 @@
 // Shop Filter Categories
 export const shopFilters = [
   "All Products",
-  "Furniture",
+  "Tables",
   "Signs",
   "Cutting Boards",
   "Coasters",
