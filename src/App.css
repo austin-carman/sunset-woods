@@ -251,6 +251,9 @@ button:hover {
 #expanded-nav-cart:hover {
   background-color: azure;
 }
+#expanded-nav-cart {
+  display: none;
+}
 
 
 /* navbar MEDIA QUERIES */
@@ -260,7 +263,9 @@ button:hover {
     top: 0;
     z-index: 1;
   }
-
+  #expanded-nav-cart {
+    display: inline-block;
+  }
   /* menu */
   .cart-hamburger-container {
     display: none;
