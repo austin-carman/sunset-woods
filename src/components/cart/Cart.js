@@ -9,10 +9,9 @@ const Cart = ({ isCartOpen, setIsCartOpen }) => {
     setIsCartOpen(!isCartOpen);
   };
 
-  const handleDeleteCartItem = (id) => {
-    const updatedCart = cart.filter((item) => {
-      return item.id !== id;
-    });
+  const handleDeleteCartItem = (index) => {
+    const updatedCart = [...cart];
+    updatedCart.splice(index, 1);
     setCart(updatedCart);
   };
 
@@ -51,7 +50,7 @@ const Cart = ({ isCartOpen, setIsCartOpen }) => {
               <div className="cart-item-left-wrapper">
                 <span
                   className="delete-cart-item"
-                  onClick={() => handleDeleteCartItem(item.id)}
+                  onClick={() => handleDeleteCartItem(index)}
                 >
                   X
                 </span>
