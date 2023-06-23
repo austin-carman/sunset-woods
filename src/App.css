@@ -121,22 +121,6 @@ button {
   } 
 }
 
-@media only screen and (min-width: 1200px) {
-  @keyframes slide-in {
-    0% {
-      transform: none;
-    }
-    100% {
-      transform: none;
-    }
-  }
-  .slide-out {
-    transform: none;
-    display: none;
-  }
-}
-
-
 /* =========================== */
 /* HERO SECTION */
 /* =========================== */
@@ -288,6 +272,17 @@ button {
 
   .links-wrapper li:hover {
     border-radius: 5px;
+  }
+
+  .links-wrapper.slide-in {
+    transition: none;
+    transform: none;
+    animation: none;
+  }
+  .links-wrapper.slide-out {
+    transition: none;
+    transform: none;
+    animation: none;
   }
 }
 
