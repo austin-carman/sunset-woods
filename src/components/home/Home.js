@@ -1,8 +1,14 @@
 import HeroContent from "../hero/HeroContent";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
   // eslint-disable-next-line no-undef
   const image = process.env.PUBLIC_URL + "/blue.png";
+
+  const handleClick = (category) => {
+    navigate("/shop", { state: category });
+  };
 
   return (
     <>
@@ -15,23 +21,17 @@ const Home = () => {
       />
       {/* Gallery */}
       <section className="home-gallery">
-        <div className="gallery-item">
-          <a href="/shop">
-            <img src={image} alt="" />
-            <h4>Furniture</h4>
-          </a>
+        <div className="gallery-item" onClick={() => handleClick("tables")}>
+          <img src={image} alt="" />
+          <h4>Tables</h4>
         </div>
-        <div className="gallery-item">
-          <a href="/shop">
-            <img src={image} alt="" />
-            <h4>Signs</h4>
-          </a>
+        <div className="gallery-item" onClick={() => handleClick("signs")}>
+          <img src={image} alt="" />
+          <h4>Signs</h4>
         </div>
-        <div className="gallery-item">
-          <a href="/shop">
-            <img src={image} alt="" />
-            <h4>Engravings</h4>
-          </a>
+        <div className="gallery-item" onClick={() => handleClick("other")}>
+          <img src={image} alt="" />
+          <h4>Engravings</h4>
         </div>
       </section>
       {/* Company Intro */}
