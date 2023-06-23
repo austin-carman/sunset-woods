@@ -791,12 +791,15 @@ footer a {
 .image-thumbnail {
   width: 20%;
 }
+.image-thumbnail:hover {
+  cursor: pointer;
+}
 
 .active-thumbnail {
   opacity: 0.5;
 }
 
-.image-thumbnail:hover {
+.not-active-thumbnail:hover {
   opacity: 0.8;
   cursor: pointer;
 }
@@ -869,6 +872,9 @@ footer a {
 }
 .option-box:hover {
   cursor: pointer;
+}
+.not-selected-option:hover {
+  background-color: #d3d3d3;
 }
 .selected-option-added-cost {
   font-size: 1.2rem;

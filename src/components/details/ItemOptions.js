@@ -10,11 +10,11 @@ const ItemOptions = ({ item, orderForm, setOrderForm }) => {
     if (key === "customizations") {
       return orderForm[key] === option
         ? "selected-option option-box"
-        : "option-box";
+        : "option-box not-selected-option";
     }
     return orderForm[key] === option
       ? "selected-option option-box"
-      : "option-box";
+      : "option-box not-selected-option";
   };
 
   useEffect(() => {
