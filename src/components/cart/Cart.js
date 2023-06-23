@@ -32,9 +32,9 @@ const Cart = ({ isCartOpen, setIsCartOpen }) => {
       {/* <div className={isCartOpen ? "cart slide-in" : "hide-cart slide-out"}> */}
       <div className="cart-header">
         <h3>({cart.length}) Items</h3>
-        <h4 id="close-cart" onClick={handleCloseCart}>
+        <span className="close-cart" onClick={handleCloseCart}>
           x
-        </h4>
+        </span>
       </div>
       <div className="proceed-to-checkout">
         <button>Checkout</button>

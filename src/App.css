@@ -121,6 +121,21 @@ button {
   } 
 }
 
+@media only screen and (min-width: 1200px) {
+  @keyframes slide-in {
+    0% {
+      transform: none;
+    }
+    100% {
+      transform: none;
+    }
+  }
+  .slide-out {
+    transform: none;
+    display: none;
+  }
+}
+
 
 /* =========================== */
 /* HERO SECTION */
@@ -235,6 +250,7 @@ button {
     position: fixed;
     top: 0;
     z-index: 1;
+    /* justify-content: flex-start; */
   }
 
   /* menu */
@@ -253,6 +269,7 @@ button {
     padding: 0;
     width: 100%;
     background-color: azure;
+    /* border: 1px solid red; */
   }
 
   #close-menu {
@@ -602,6 +619,10 @@ footer a {
 .cart-items-container {
   width: 90%;
   margin: auto;
+}
+
+.close-cart:hover {
+  cursor: pointer;
 }
 
 .cart-item {
