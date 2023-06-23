@@ -536,6 +536,9 @@ footer a {
   text-align: center;
   margin-bottom: 5rem;
 }
+.shop-gallery-item:hover {
+  cursor: pointer;
+}
 
 @media only screen and (min-width: 500px) {
   .shop-gallery {
