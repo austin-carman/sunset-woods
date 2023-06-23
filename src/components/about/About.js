@@ -7,7 +7,12 @@ const About = () => {
   return (
     <>
       {/* Hero image and Call to Action */}
-      <HeroContent title="About us" subtitle="Quis in ea ex occaecat labore." />
+      <HeroContent
+        title="About us"
+        subtitle="Quis in ea ex occaecat labore."
+        link={"/shop"}
+        callToActionText="Shop"
+      />
       <section className="about-section">
         <div className="about-content">
           <h2>About Us</h2>
