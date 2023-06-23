@@ -57,16 +57,16 @@ const Navbar = ({ isCartOpen, setIsCartOpen }) => {
           <Link to="/contact">
             <li onClick={handleToggleMenu}>Contact</li>
           </Link>
-          {/* <Link to="/cart"> */}
-          {/* <li onClick={handleOpenCart}>Cart</li> */}
           <li id="expanded-nav-cart" onClick={handleOpenCart}>
             <ShoppingCartIcon className="cart-icon" fontSize="large" />
           </li>
           {/* </Link> */}
           <Link to="/custom-orders">
-            {/* <li>Custom Orders</li> */}
             <li id="nav-custom-orders">
-              <button className="nav-custom-orders-button">
+              <button
+                className="nav-custom-orders-button"
+                onClick={handleToggleMenu}
+              >
                 Custom Orders
               </button>
             </li>
