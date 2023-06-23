@@ -25,9 +25,7 @@ function App() {
         <Route path="/custom-orders" element={<CustomOrders />} />
         <Route path="/item-details/:id" element={<ItemDetails />} />
       </Routes>
-      {isCartOpen && (
-        <Cart isCartOpen={isCartOpen} setIsCartOpen={setIsCartOpen} />
-      )}
+      <Cart isCartOpen={isCartOpen} setIsCartOpen={setIsCartOpen} />
       <Footer />
     </div>
   );

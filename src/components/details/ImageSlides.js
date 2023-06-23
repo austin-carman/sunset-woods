@@ -48,7 +48,7 @@ const ImageSlides = ({ item }) => {
               className={
                 currentImage === index + 1
                   ? "active-thumbnail image-thumbnail"
-                  : "image-thumbnail"
+                  : "image-thumbnail not-active-thumbnail"
               }
               src={image}
               alt=""

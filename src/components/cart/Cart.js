@@ -27,12 +27,12 @@ const Cart = ({ isCartOpen, setIsCartOpen }) => {
   const cartTotal = calculateCartTotal();
 
   return (
-    <div className={isCartOpen ? "cart" : "hide-cart"}>
+    <div className={`cart ${isCartOpen ? "slide-in" : "slide-out"}`}>
       <div className="cart-header">
         <h3>({cart.length}) Items</h3>
-        <h4 id="close-cart" onClick={handleCloseCart}>
+        <span className="close-cart" onClick={handleCloseCart}>
           x
-        </h4>
+        </span>
       </div>
       <div className="proceed-to-checkout">
         <button>Checkout</button>
@@ -49,12 +49,12 @@ const Cart = ({ isCartOpen, setIsCartOpen }) => {
           return (
             <div className="cart-item" key={`${item.id}-${index}`}>
               <div className="cart-item-left-wrapper">
-                <div
+                <span
                   className="delete-cart-item"
                   onClick={() => handleDeleteCartItem(item.id)}
                 >
                   X
-                </div>
+                </span>
                 <div>
                   <img src={item.image} alt="" />
                   <div>

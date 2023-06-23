@@ -91,7 +91,38 @@ button {
   padding: 1rem;
   margin: 2rem auto;
 }
+button:hover {
+  cursor: pointer;
+}
 
+/* Slide in for opening Cart and NavLinks */
+.slide-in {
+  animation: slide-in 0.5s;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  } 
+}
+
+/* Slide out for closing cart and Navlinks */
+.slide-out {
+  transition: transform 0.5s;
+  transform: translateX(100%);
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  } 
+}
 
 /* =========================== */
 /* HERO SECTION */
@@ -143,10 +174,22 @@ button {
   font-size: 2rem;
   color: black;
 }
-
-/* menu */
+.cart-hamburger-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 7rem;
+}
+.cart-icon {
+  font-size: 2.6rem;
+  margin-top: 0.3rem;
+}
+.cart-icon:hover {
+  cursor: pointer;
+  color: #d3d3d3;
+}
 .hamburger {
-  font-size: 2.4rem;
+  font-size: 3rem;
 }
 
 .hamburger:hover {
@@ -166,10 +209,6 @@ button {
   padding: 2rem;
   z-index: 1;
   user-select: none;
-}
-
-.hide-links {
-  display: none;
 }
 
 .links-wrapper a {
@@ -196,6 +235,26 @@ button {
 #close-menu:hover {
   background-color: black;
 }
+#nav-custom-orders:hover {
+  background-color: black;
+  cursor: auto;
+}
+.nav-custom-orders-button {
+  margin: 0;
+  background-color: azure;
+  border: 2px solid black;
+}
+.nav-custom-orders-button:hover {
+  cursor: pointer;
+  background-color: #d3d3d3;
+}
+#expanded-nav-cart:hover {
+  background-color: azure;
+}
+#expanded-nav-cart {
+  display: none;
+}
+
 
 /* navbar MEDIA QUERIES */
 @media only screen and  (min-width: 1200px) {
@@ -204,10 +263,15 @@ button {
     top: 0;
     z-index: 1;
   }
-
+  #expanded-nav-cart {
+    display: inline-block;
+  }
   /* menu */
-  .hamburger {
+  .cart-hamburger-container {
     display: none;
+  }
+  #nav-custom-orders:hover {
+    background-color: azure;
   }
 
   /* links */
@@ -240,6 +304,17 @@ button {
   .links-wrapper li:hover {
     border-radius: 5px;
   }
+
+  .links-wrapper.slide-in {
+    transition: none;
+    transform: none;
+    animation: none;
+  }
+  .links-wrapper.slide-out {
+    transition: none;
+    transform: none;
+    animation: none;
+  }
 }
 
 /* ================================= */
@@ -256,6 +331,9 @@ button {
 .gallery-item {
   text-align: center;
   margin-bottom: 5rem;
+}
+.gallery-item:hover {
+  cursor: pointer;
 }
 
 /* Intro */
@@ -458,6 +536,9 @@ footer a {
   text-align: center;
   margin-bottom: 5rem;
 }
+.shop-gallery-item:hover {
+  cursor: pointer;
+}
 
 @media only screen and (min-width: 500px) {
   .shop-gallery {
@@ -545,9 +626,9 @@ footer a {
 /* ============================== */
 /* Cart */
 /* ============================== */
-.hide-cart {
+/* .hide-cart {
   display: none;
-}
+} */
 
 .cart {
   background-color: beige;
@@ -570,6 +651,14 @@ footer a {
 .cart-items-container {
   width: 90%;
   margin: auto;
+}
+
+.close-cart {
+  font-size: 2rem;
+}
+
+.close-cart:hover {
+  cursor: pointer;
 }
 
 .cart-item {
@@ -624,11 +713,16 @@ footer a {
 /* ============================ */
 /* Custom orders page */
 /* ============================ */
+.custom-orders-image-container {
+  display: none;
+}
+
 .custom-form-container {
   display: flex;
   flex-direction: column;
   width: 90%;
   margin: auto;
+  max-width: 50rem;
 }
 
 .custom-form-container input {
@@ -645,6 +739,23 @@ footer a {
   border-radius: 5rem;
   padding: 1rem;
   margin: 2rem 0;
+}
+
+@media only screen and (min-width: 1200px) {
+  .custom-orders-content-container {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: space-evenly;
+  }
+  .custom-form-container {
+    margin: 0;
+  }
+  .custom-orders-image-container {
+    display: inline-block;
+    width: 50%;
+    max-width: 50rem;
+  }
 }
 
 /* =========================== */
@@ -702,12 +813,15 @@ footer a {
 .image-thumbnail {
   width: 20%;
 }
+.image-thumbnail:hover {
+  cursor: pointer;
+}
 
 .active-thumbnail {
   opacity: 0.5;
 }
 
-.image-thumbnail:hover {
+.not-active-thumbnail:hover {
   opacity: 0.8;
   cursor: pointer;
 }
@@ -780,6 +894,9 @@ footer a {
 }
 .option-box:hover {
   cursor: pointer;
+}
+.not-selected-option:hover {
+  background-color: #d3d3d3;
 }
 .selected-option-added-cost {
   font-size: 1.2rem;

@@ -3,14 +3,18 @@ import { shopFilters, shopItems } from "../../data/data";
 import { useState, useEffect } from "react";
 import ShopItem from "./ShopItem";
 import HeroContent from "../hero/HeroContent";
+import { useLocation } from "react-router-dom";
 
 const Shop = () => {
-  const initialSelected = "All Products";
-  const [selected, setSelected] = useState(initialSelected);
+  const location = useLocation();
+  const initialSelected = shopFilters[0];
+  const [selected, setSelected] = useState(
+    location.state ? location.state : initialSelected
+  );
 
   const filterShopItems = () => {
     return shopItems.filter((item) => {
-      return item.category === selected;
+      return item.category.toLowerCase() === selected.toLowerCase();
     });
   };
 

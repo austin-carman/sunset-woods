@@ -1,7 +1,7 @@
 // Shop Filter Categories
 export const shopFilters = [
   "All Products",
-  "Furniture",
+  "Tables",
   "Signs",
   "Cutting Boards",
   "Coasters",
@@ -377,6 +377,41 @@ export const shopItems = [
         },
       ],
       customizations: ["No", "Yes"],
+    },
+  },
+  {
+    id: 6,
+    category: "Other",
+    images: [
+      // eslint-disable-next-line no-undef
+      process.env.PUBLIC_URL + "/blue.png",
+      // eslint-disable-next-line no-undef
+      process.env.PUBLIC_URL + "/blue.png",
+      // eslint-disable-next-line no-undef
+      process.env.PUBLIC_URL + "/blue.png",
+      // eslint-disable-next-line no-undef
+      process.env.PUBLIC_URL + "/blue.png",
+    ],
+    title: "Custom Engravings",
+    subtitle: "",
+    description:
+      "Consectetur mollit cillum pariatur quis culpa anim et. Velit commodo velit est proident aliqua ex ipsum culpa velit exercitation. Exercitation est ex nulla dolore non. Ea eu id laboris quis elit ipsum cupidatat esse labore pariatur nulla. Sunt mollit aute quis consectetur duis cillum voluptate dolor velit amet laboris mollit tempor sint.",
+    basePrice: 10,
+    options: {
+      wood: [
+        {
+          value: "Pine",
+          addedCost: 0,
+        },
+        {
+          value: "Maple",
+          addedCost: 100,
+        },
+        {
+          value: "Walnut",
+          addedCost: 200,
+        },
+      ],
     },
   },
 ];

@@ -7,6 +7,8 @@ const Contact = () => {
       <HeroContent
         title="Contact"
         subtitle="Nostrud labore minim consequat excepteur"
+        link="/custom-orders"
+        callToActionText="Custom Orders"
       />
       <div className="contact-container">
         <div className="info-container">

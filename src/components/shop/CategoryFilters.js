@@ -1,4 +1,4 @@
-// eslint-disable-next-line react/prop-types
+/* eslint-disable react/prop-types */
 const CategoryFilter = ({ category, selected, handleFilter }) => {
   // eslint-disable-next-line no-undef
   const image = process.env.PUBLIC_URL + "./blue.png";
@@ -6,7 +6,7 @@ const CategoryFilter = ({ category, selected, handleFilter }) => {
   return (
     <div
       className={
-        selected === category
+        selected.toLowerCase() === category.toLowerCase()
           ? "shop-categories-item selected"
           : "shop-categories-item"
       }

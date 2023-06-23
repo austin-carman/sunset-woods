@@ -1,15 +1,20 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { CartContext } from "../../context/CartContext";
 
 // eslint-disable-next-line react/prop-types
 const Navbar = ({ isCartOpen, setIsCartOpen }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // eslint-disable-next-line no-unused-vars
+  const { cart } = useContext(CartContext);
 
   const handleToggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const hanldeOpenCart = () => {
+  const handleOpenCart = () => {
+    setIsMenuOpen(false);
     setIsCartOpen(!isCartOpen);
   };
 
@@ -21,15 +26,21 @@ const Navbar = ({ isCartOpen, setIsCartOpen }) => {
       </Link>
       {/* Navigation menu */}
       <ul className="nav-menu">
-        {/* Hamburger Menu */}
-        <span onClick={handleToggleMenu} className="hamburger">
-          &#9776;
-        </span>
+        {/* Cart & Hamburger Menu */}
+        <div className="cart-hamburger-container">
+          <ShoppingCartIcon
+            className="cart-icon"
+            fontSize="2.8rem"
+            onClick={handleOpenCart}
+          />
+          <span className="hamburger" onClick={handleToggleMenu}>
+            &#9776;
+          </span>
+        </div>
         {/* Nav links */}
         <div
-          className={
-            isMenuOpen ? "show-links links-wrapper" : "hide-links links-wrapper"
-          }
+          // eslint-disable-next-line prettier/prettier
+          className={`links-wrapper ${isMenuOpen ? "show-links slide-in" : "slide-out"}`}
         >
           <li onClick={handleToggleMenu} id="close-menu">
             X
@@ -46,11 +57,19 @@ const Navbar = ({ isCartOpen, setIsCartOpen }) => {
           <Link to="/contact">
             <li onClick={handleToggleMenu}>Contact</li>
           </Link>
-          {/* <Link to="/cart"> */}
-          <li onClick={hanldeOpenCart}>Cart</li>
+          <li id="expanded-nav-cart" onClick={handleOpenCart}>
+            <ShoppingCartIcon className="cart-icon" fontSize="large" />
+          </li>
           {/* </Link> */}
           <Link to="/custom-orders">
-            <li>Custom Orders</li>
+            <li id="nav-custom-orders">
+              <button
+                className="nav-custom-orders-button"
+                onClick={handleToggleMenu}
+              >
+                Custom Orders
+              </button>
+            </li>
           </Link>
         </div>
       </ul>
