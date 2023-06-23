@@ -91,6 +91,9 @@ button {
   padding: 1rem;
   margin: 2rem auto;
 }
+button:hover {
+  cursor: pointer;
+}
 
 /* Slide in for opening Cart and NavLinks */
 .slide-in {
@@ -171,17 +174,22 @@ button {
   font-size: 2rem;
   color: black;
 }
+.cart-hamburger-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 7rem;
+}
 .cart-icon {
-  margin-right: 2rem;
-  font-size: 5rem;
+  font-size: 2.6rem;
+  margin-top: 0.3rem;
 }
 .cart-icon:hover {
   cursor: pointer;
+  color: #d3d3d3;
 }
-
-/* menu */
 .hamburger {
-  font-size: 2.4rem;
+  font-size: 3rem;
 }
 
 .hamburger:hover {
@@ -227,6 +235,23 @@ button {
 #close-menu:hover {
   background-color: black;
 }
+#nav-custom-orders:hover {
+  background-color: azure;
+  cursor: auto;
+}
+.nav-custom-orders-button {
+  margin: 0;
+  background-color: azure;
+  border: 2px solid black;
+}
+.nav-custom-orders-button:hover {
+  cursor: pointer;
+  background-color: #d3d3d3;
+}
+#expanded-nav-cart:hover {
+  background-color: azure;
+}
+
 
 /* navbar MEDIA QUERIES */
 @media only screen and  (min-width: 1200px) {
@@ -234,11 +259,10 @@ button {
     position: fixed;
     top: 0;
     z-index: 1;
-    /* justify-content: flex-start; */
   }
 
   /* menu */
-  .hamburger, .cart-icon {
+  .cart-hamburger-container {
     display: none;
   }
 
@@ -253,7 +277,6 @@ button {
     padding: 0;
     width: 100%;
     background-color: azure;
-    /* border: 1px solid red; */
   }
 
   #close-menu {
@@ -300,6 +323,9 @@ button {
 .gallery-item {
   text-align: center;
   margin-bottom: 5rem;
+}
+.gallery-item:hover {
+  cursor: pointer;
 }
 
 /* Intro */
@@ -614,6 +640,10 @@ footer a {
 .cart-items-container {
   width: 90%;
   margin: auto;
+}
+
+.close-cart {
+  font-size: 2rem;
 }
 
 .close-cart:hover {

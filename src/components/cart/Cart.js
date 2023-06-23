@@ -28,8 +28,6 @@ const Cart = ({ isCartOpen, setIsCartOpen }) => {
 
   return (
     <div className={`cart ${isCartOpen ? "slide-in" : "slide-out"}`}>
-      {/* <div className={isCartOpen ? "cart slide-in" : "slide-out"}> */}
-      {/* <div className={isCartOpen ? "cart slide-in" : "hide-cart slide-out"}> */}
       <div className="cart-header">
         <h3>({cart.length}) Items</h3>
         <span className="close-cart" onClick={handleCloseCart}>
@@ -51,12 +49,12 @@ const Cart = ({ isCartOpen, setIsCartOpen }) => {
           return (
             <div className="cart-item" key={`${item.id}-${index}`}>
               <div className="cart-item-left-wrapper">
-                <div
+                <span
                   className="delete-cart-item"
                   onClick={() => handleDeleteCartItem(item.id)}
                 >
                   X
-                </div>
+                </span>
                 <div>
                   <img src={item.image} alt="" />
                   <div>

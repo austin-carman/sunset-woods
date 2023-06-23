@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { CartContext } from "../../context/CartContext";
 
 // eslint-disable-next-line react/prop-types
 const Navbar = ({ isCartOpen, setIsCartOpen }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // eslint-disable-next-line no-unused-vars
+  const { cart } = useContext(CartContext);
 
   const handleToggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -23,13 +26,17 @@ const Navbar = ({ isCartOpen, setIsCartOpen }) => {
       </Link>
       {/* Navigation menu */}
       <ul className="nav-menu">
-        {/* Hamburger Menu */}
-        <span className="cart-icon" onClick={handleOpenCart}>
-          <ShoppingCartIcon />
-        </span>
-        <span className="hamburger" onClick={handleToggleMenu}>
-          &#9776;
-        </span>
+        {/* Cart & Hamburger Menu */}
+        <div className="cart-hamburger-container">
+          <ShoppingCartIcon
+            className="cart-icon"
+            fontSize="2.8rem"
+            onClick={handleOpenCart}
+          />
+          <span className="hamburger" onClick={handleToggleMenu}>
+            &#9776;
+          </span>
+        </div>
         {/* Nav links */}
         <div
           // eslint-disable-next-line prettier/prettier
@@ -51,10 +58,18 @@ const Navbar = ({ isCartOpen, setIsCartOpen }) => {
             <li onClick={handleToggleMenu}>Contact</li>
           </Link>
           {/* <Link to="/cart"> */}
-          <li onClick={handleOpenCart}>Cart</li>
+          {/* <li onClick={handleOpenCart}>Cart</li> */}
+          <li id="expanded-nav-cart" onClick={handleToggleMenu}>
+            <ShoppingCartIcon className="cart-icon" fontSize="large" />
+          </li>
           {/* </Link> */}
           <Link to="/custom-orders">
-            <li>Custom Orders</li>
+            {/* <li>Custom Orders</li> */}
+            <li id="nav-custom-orders">
+              <button className="nav-custom-orders-button">
+                Custom Orders
+              </button>
+            </li>
           </Link>
         </div>
       </ul>
