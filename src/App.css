@@ -236,7 +236,7 @@ button:hover {
   background-color: black;
 }
 #nav-custom-orders:hover {
-  background-color: azure;
+  background-color: black;
   cursor: auto;
 }
 .nav-custom-orders-button {
@@ -269,6 +269,9 @@ button:hover {
   /* menu */
   .cart-hamburger-container {
     display: none;
+  }
+  #nav-custom-orders:hover {
+    background-color: azure;
   }
 
   /* links */
