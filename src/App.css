@@ -713,11 +713,16 @@ footer a {
 /* ============================ */
 /* Custom orders page */
 /* ============================ */
+.custom-orders-image-container {
+  display: none;
+}
+
 .custom-form-container {
   display: flex;
   flex-direction: column;
   width: 90%;
   margin: auto;
+  max-width: 50rem;
 }
 
 .custom-form-container input {
@@ -734,6 +739,23 @@ footer a {
   border-radius: 5rem;
   padding: 1rem;
   margin: 2rem 0;
+}
+
+@media only screen and (min-width: 1200px) {
+  .custom-orders-content-container {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: space-evenly;
+  }
+  .custom-form-container {
+    margin: 0;
+  }
+  .custom-orders-image-container {
+    display: inline-block;
+    width: 50%;
+    max-width: 50rem;
+  }
 }
 
 /* =========================== */
