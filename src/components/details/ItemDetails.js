@@ -89,6 +89,7 @@ const ItemDetails = () => {
             Add to Cart
           </button>
         </div>
+        {/* Added to Cart Confirmation message */}
         {isConfirmationOpen && (
           <div className="added-to-cart-confirmation">ADDED TO CART</div>
         )}

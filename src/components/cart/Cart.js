@@ -1,9 +1,10 @@
 import { CartContext } from "../../context/CartContext";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 
 // eslint-disable-next-line react/prop-types
 const Cart = ({ isCartOpen, setIsCartOpen }) => {
   const { cart, setCart } = useContext(CartContext);
+  const [isConfirmationOpen, setIsConfirmationOpen] = useState(false);
 
   const handleCloseCart = () => {
     setIsCartOpen(!isCartOpen);
@@ -13,6 +14,10 @@ const Cart = ({ isCartOpen, setIsCartOpen }) => {
     const updatedCart = [...cart];
     updatedCart.splice(index, 1);
     setCart(updatedCart);
+    setIsConfirmationOpen(true);
+    setTimeout(() => {
+      setIsConfirmationOpen(false);
+    }, 1000);
   };
 
   const calculateCartTotal = () => {
@@ -36,6 +41,9 @@ const Cart = ({ isCartOpen, setIsCartOpen }) => {
       <div className="proceed-to-checkout">
         <button>Checkout</button>
       </div>
+      {isConfirmationOpen && (
+        <div className="remove-from-cart">Item Removed</div>
+      )}
       <div className="cart-items-container">
         <div className="cart-total">
           <div>
