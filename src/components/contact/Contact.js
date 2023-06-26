@@ -8,14 +8,14 @@ const Contact = () => {
     email: "",
     message: "",
   };
-  const [messageForm, setMessageForm] = useState(initialState);
+  const [contactForm, setContactForm] = useState(initialState);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setMessageForm({ ...messageForm, [name]: value });
+    setContactForm({ ...contactForm, [name]: value });
   };
 
-  console.log("message: ", messageForm);
+  console.log("message: ", contactForm);
 
   return (
     <>
@@ -48,28 +48,28 @@ const Contact = () => {
             placeholder="Name"
             onChange={handleChange}
             name="name"
-            value={messageForm.name}
+            value={contactForm.name}
           ></input>
           <input
             type="tel"
             placeholder="Phone"
             onChange={handleChange}
             name="phone"
-            value={messageForm.phone}
+            value={contactForm.phone}
           ></input>
           <input
             type="email"
             placeholder="Email"
             onChange={handleChange}
             name="email"
-            value={messageForm.email}
+            value={contactForm.email}
           ></input>
           <textarea
             placeholder="Message"
             rows="10"
             onChange={handleChange}
             name="message"
-            value={messageForm.message}
+            value={contactForm.message}
           ></textarea>
           <button>Send Message</button>
         </div>
