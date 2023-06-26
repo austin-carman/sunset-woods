@@ -23,6 +23,7 @@ const ItemDetails = () => {
   const [addOnCost, setAddOnCost] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const [orderForm, setOrderForm] = useState(getItemOptions());
+  const [isConfirmationOpen, setIsConfirmationOpen] = useState(false);
 
   const handleAddToCart = () => {
     setCart([
@@ -37,6 +38,10 @@ const ItemDetails = () => {
         totalPrice: (item.basePrice + addOnCost) * quantity,
       },
     ]);
+    setIsConfirmationOpen(true);
+    setTimeout(() => {
+      setIsConfirmationOpen(false);
+    }, 1000);
   };
 
   const calculateAddedCost = () => {
@@ -84,6 +89,10 @@ const ItemDetails = () => {
             Add to Cart
           </button>
         </div>
+        {/* Added to Cart Confirmation message */}
+        {isConfirmationOpen && (
+          <div className="added-to-cart-confirmation">ADDED TO CART</div>
+        )}
       </div>
       {/* Description */}
       <div className="item-description-container">
