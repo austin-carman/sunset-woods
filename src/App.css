@@ -914,6 +914,20 @@ footer a {
   cursor: pointer;
 }
 
+.item-order-container {
+  position: relative;
+}
+
+.added-to-cart-confirmation {
+  background-color: rgb(48, 255, 55);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 1000;
+}
+
 @media only screen and (min-width: 600px) {
   .slideshow-container {
     width: 90%;
