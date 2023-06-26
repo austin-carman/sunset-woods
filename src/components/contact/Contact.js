@@ -15,7 +15,11 @@ const Contact = () => {
     setContactForm({ ...contactForm, [name]: value });
   };
 
-  console.log("message: ", contactForm);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // send form
+    console.log("contact form: ", contactForm);
+  };
 
   return (
     <>
@@ -42,7 +46,7 @@ const Contact = () => {
             </a>
           </h6>
         </div>
-        <div className="contact-form">
+        <form className="contact-form" onSubmit={handleSubmit}>
           <h3>Send us a message</h3>
           <input
             placeholder="Name"
@@ -71,8 +75,8 @@ const Contact = () => {
             name="message"
             value={contactForm.message}
           ></textarea>
-          <button>Send Message</button>
-        </div>
+          <button onClick={handleSubmit}>Send Message</button>
+        </form>
       </div>
     </>
   );
