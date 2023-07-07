@@ -128,7 +128,8 @@ button:hover {
 /* HERO SECTION */
 /* =========================== */
 .hero-img-container {
-  background-image: url("../public/blue.png");
+  background-image: url("../public/images/home-hero-img.png");
+  /* background-image: url("../public/blue.png"); */
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

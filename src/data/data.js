@@ -15,7 +15,8 @@ export const shopItems = [
     category: "Tables",
     images: [
       // eslint-disable-next-line no-undef
-      process.env.PUBLIC_URL + "/blue.png",
+      process.env.PUBLIC_URL + "/images/table5.png",
+      // process.env.PUBLIC_URL + "/blue.png",
       // eslint-disable-next-line no-undef
       process.env.PUBLIC_URL + "/blue.png",
       // eslint-disable-next-line no-undef
@@ -118,7 +119,9 @@ export const shopItems = [
     category: "Tables",
     images: [
       // eslint-disable-next-line no-undef
-      process.env.PUBLIC_URL + "/blue.png",
+      process.env.PUBLIC_URL + "/images/table2.png",
+      // process.env.PUBLIC_URL + "/blue.png",
+      // process.env.PUBLIC_URL + "/blue.png",
       // eslint-disable-next-line no-undef
       process.env.PUBLIC_URL + "/blue.png",
       // eslint-disable-next-line no-undef
@@ -221,7 +224,8 @@ export const shopItems = [
     category: "Signs",
     images: [
       // eslint-disable-next-line no-undef
-      process.env.PUBLIC_URL + "/blue.png",
+      process.env.PUBLIC_URL + "/images/sign.png",
+      // process.env.PUBLIC_URL + "/blue.png",
       // eslint-disable-next-line no-undef
       process.env.PUBLIC_URL + "/blue.png",
       // eslint-disable-next-line no-undef
@@ -294,7 +298,8 @@ export const shopItems = [
     category: "Cutting Boards",
     images: [
       // eslint-disable-next-line no-undef
-      process.env.PUBLIC_URL + "/blue.png",
+      process.env.PUBLIC_URL + "/images/cutting-board.png",
+      // process.env.PUBLIC_URL + "/blue.png",
       // eslint-disable-next-line no-undef
       process.env.PUBLIC_URL + "/blue.png",
       // eslint-disable-next-line no-undef
@@ -302,7 +307,7 @@ export const shopItems = [
       // eslint-disable-next-line no-undef
       process.env.PUBLIC_URL + "/blue.png",
     ],
-    title: "Cutting Boards",
+    title: "Cutting Board",
     subtitle: "",
     description:
       "Consectetur mollit cillum pariatur quis culpa anim et. Velit commodo velit est proident aliqua ex ipsum culpa velit exercitation. Exercitation est ex nulla dolore non. Ea eu id laboris quis elit ipsum cupidatat esse labore pariatur nulla. Sunt mollit aute quis consectetur duis cillum voluptate dolor velit amet laboris mollit tempor sint.",
@@ -348,7 +353,8 @@ export const shopItems = [
     category: "Coasters",
     images: [
       // eslint-disable-next-line no-undef
-      process.env.PUBLIC_URL + "/blue.png",
+      process.env.PUBLIC_URL + "/images/coasters.png",
+      // process.env.PUBLIC_URL + "/blue.png",
       // eslint-disable-next-line no-undef
       process.env.PUBLIC_URL + "/blue.png",
       // eslint-disable-next-line no-undef
@@ -384,7 +390,8 @@ export const shopItems = [
     category: "Other",
     images: [
       // eslint-disable-next-line no-undef
-      process.env.PUBLIC_URL + "/blue.png",
+      process.env.PUBLIC_URL + "/images/custom-engraving1.png",
+      // process.env.PUBLIC_URL + "/blue.png",
       // eslint-disable-next-line no-undef
       process.env.PUBLIC_URL + "/blue.png",
       // eslint-disable-next-line no-undef
