@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const Home = () => {
   const navigate = useNavigate();
   // eslint-disable-next-line no-undef
-  const image = process.env.PUBLIC_URL + "/blue.png";
+  // const image = process.env.PUBLIC_URL + "/blue.png";
 
   const handleClick = (category) => {
     navigate("/shop", { state: category });
@@ -22,15 +22,18 @@ const Home = () => {
       {/* Gallery */}
       <section className="home-gallery">
         <div className="gallery-item" onClick={() => handleClick("tables")}>
-          <img src={image} alt="" />
+          {/* eslint-disable-next-line no-undef */}
+          <img src={process.env.PUBLIC_URL + "/images/table2.png"} alt="" />
           <h4>Tables</h4>
         </div>
         <div className="gallery-item" onClick={() => handleClick("signs")}>
-          <img src={image} alt="" />
+          {/* eslint-disable-next-line no-undef */}
+          <img src={process.env.PUBLIC_URL + "/images/sign.png"} alt="" />
           <h4>Signs</h4>
         </div>
         <div className="gallery-item" onClick={() => handleClick("other")}>
-          <img src={image} alt="" />
+          {/* eslint-disable-next-line prettier/prettier, no-undef */}
+          <img src={process.env.PUBLIC_URL + "/images/custom-engraving.png"} alt="" />
           <h4>Engravings</h4>
         </div>
       </section>
@@ -50,7 +53,8 @@ const Home = () => {
             <span id="about-us-link">Read About us</span>
           </a>
         </div>
-        <img src={image} alt="" />
+        {/* eslint-disable-next-line prettier/prettier, no-undef */}
+        <img src={process.env.PUBLIC_URL + "/images/about-us.png"} alt="" />
       </section>
     </>
   );

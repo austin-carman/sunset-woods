@@ -537,6 +537,9 @@ footer a {
   text-align: center;
   margin-bottom: 5rem;
 }
+.shop-gallery-item img {
+  aspect-ratio: 16 / 9;
+}
 .shop-gallery-item:hover {
   cursor: pointer;
 }
@@ -552,6 +555,7 @@ footer a {
   .shop-gallery-item {
     width: 45%;
     margin: 1rem;
+    margin-bottom: 5rem;
   }
 }
 

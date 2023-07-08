@@ -298,7 +298,7 @@ export const shopItems = [
     category: "Cutting Boards",
     images: [
       // eslint-disable-next-line no-undef
-      process.env.PUBLIC_URL + "/images/cutting-board.png",
+      process.env.PUBLIC_URL + "/images/board.png",
       // process.env.PUBLIC_URL + "/blue.png",
       // eslint-disable-next-line no-undef
       process.env.PUBLIC_URL + "/blue.png",
@@ -390,7 +390,7 @@ export const shopItems = [
     category: "Other",
     images: [
       // eslint-disable-next-line no-undef
-      process.env.PUBLIC_URL + "/images/custom-engraving1.png",
+      process.env.PUBLIC_URL + "/images/custom-engraving.png",
       // process.env.PUBLIC_URL + "/blue.png",
       // eslint-disable-next-line no-undef
       process.env.PUBLIC_URL + "/blue.png",
