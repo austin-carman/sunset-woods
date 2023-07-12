@@ -6,6 +6,7 @@ import ItemPricing from "./ItemPricing";
 import { CartContext } from "../../context/CartContext";
 import { shopItems } from "../../data/data";
 import ItemOptions from "./ItemOptions";
+import CheckCircleOutlinedIcon from "@mui/icons-material/CheckCircleOutlined";
 
 const ItemDetails = () => {
   const { id } = useParams();
@@ -85,14 +86,18 @@ const ItemDetails = () => {
             quantity={quantity}
           />
           {/* Add to Cart */}
-          <button className="add-to-cart-button" onClick={handleAddToCart}>
-            Add to Cart
-          </button>
+          <div className="add-to-cart-container">
+            <button className="add-to-cart-button" onClick={handleAddToCart}>
+              Add to Cart
+            </button>
+          </div>
+          {/* Added to Cart Confirmation message */}
+          {isConfirmationOpen && (
+            <span className="added-to-cart-confirmation">
+              <CheckCircleOutlinedIcon sx={{ color: "green" }} /> Added to cart
+            </span>
+          )}
         </div>
-        {/* Added to Cart Confirmation message */}
-        {isConfirmationOpen && (
-          <div className="added-to-cart-confirmation">ADDED TO CART</div>
-        )}
       </div>
       {/* Description */}
       <div className="item-description-container">
