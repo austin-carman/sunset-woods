@@ -16,13 +16,12 @@ export const shopItems = [
     images: [
       // eslint-disable-next-line no-undef
       process.env.PUBLIC_URL + "/images/table5.png",
-      // process.env.PUBLIC_URL + "/blue.png",
       // eslint-disable-next-line no-undef
-      process.env.PUBLIC_URL + "/blue.png",
+      process.env.PUBLIC_URL + "/images/table5.png",
       // eslint-disable-next-line no-undef
-      process.env.PUBLIC_URL + "/blue.png",
+      process.env.PUBLIC_URL + "/images/table5.png",
       // eslint-disable-next-line no-undef
-      process.env.PUBLIC_URL + "/blue.png",
+      process.env.PUBLIC_URL + "/images/table5.png",
     ],
     title: "Table",
     subtitle: "4 person kitchen table",
@@ -120,14 +119,12 @@ export const shopItems = [
     images: [
       // eslint-disable-next-line no-undef
       process.env.PUBLIC_URL + "/images/table2.png",
-      // process.env.PUBLIC_URL + "/blue.png",
-      // process.env.PUBLIC_URL + "/blue.png",
       // eslint-disable-next-line no-undef
-      process.env.PUBLIC_URL + "/blue.png",
+      process.env.PUBLIC_URL + "/images/table2.png",
       // eslint-disable-next-line no-undef
-      process.env.PUBLIC_URL + "/blue.png",
+      process.env.PUBLIC_URL + "/images/table2.png",
       // eslint-disable-next-line no-undef
-      process.env.PUBLIC_URL + "/blue.png",
+      process.env.PUBLIC_URL + "/images/table2.png",
     ],
     title: "Table",
     subtitle: "6 person kitchen table",
@@ -225,13 +222,12 @@ export const shopItems = [
     images: [
       // eslint-disable-next-line no-undef
       process.env.PUBLIC_URL + "/images/sign.png",
-      // process.env.PUBLIC_URL + "/blue.png",
       // eslint-disable-next-line no-undef
-      process.env.PUBLIC_URL + "/blue.png",
+      process.env.PUBLIC_URL + "/images/sign.png",
       // eslint-disable-next-line no-undef
-      process.env.PUBLIC_URL + "/blue.png",
+      process.env.PUBLIC_URL + "/images/sign.png",
       // eslint-disable-next-line no-undef
-      process.env.PUBLIC_URL + "/blue.png",
+      process.env.PUBLIC_URL + "/images/sign.png",
     ],
     title: "A-frame Sign",
     subtitle: "",
@@ -299,13 +295,12 @@ export const shopItems = [
     images: [
       // eslint-disable-next-line no-undef
       process.env.PUBLIC_URL + "/images/board.png",
-      // process.env.PUBLIC_URL + "/blue.png",
       // eslint-disable-next-line no-undef
-      process.env.PUBLIC_URL + "/blue.png",
+      process.env.PUBLIC_URL + "/images/board.png",
       // eslint-disable-next-line no-undef
-      process.env.PUBLIC_URL + "/blue.png",
+      process.env.PUBLIC_URL + "/images/board.png",
       // eslint-disable-next-line no-undef
-      process.env.PUBLIC_URL + "/blue.png",
+      process.env.PUBLIC_URL + "/images/board.png",
     ],
     title: "Cutting Board",
     subtitle: "",
@@ -354,13 +349,12 @@ export const shopItems = [
     images: [
       // eslint-disable-next-line no-undef
       process.env.PUBLIC_URL + "/images/coasters.png",
-      // process.env.PUBLIC_URL + "/blue.png",
       // eslint-disable-next-line no-undef
-      process.env.PUBLIC_URL + "/blue.png",
+      process.env.PUBLIC_URL + "/images/coasters.png",
       // eslint-disable-next-line no-undef
-      process.env.PUBLIC_URL + "/blue.png",
+      process.env.PUBLIC_URL + "/images/coasters.png",
       // eslint-disable-next-line no-undef
-      process.env.PUBLIC_URL + "/blue.png",
+      process.env.PUBLIC_URL + "/images/coasters.png",
     ],
     title: "Coaster",
     subtitle: "",
@@ -391,13 +385,12 @@ export const shopItems = [
     images: [
       // eslint-disable-next-line no-undef
       process.env.PUBLIC_URL + "/images/custom-engraving.png",
-      // process.env.PUBLIC_URL + "/blue.png",
       // eslint-disable-next-line no-undef
-      process.env.PUBLIC_URL + "/blue.png",
+      process.env.PUBLIC_URL + "/images/custom-engraving.png",
       // eslint-disable-next-line no-undef
-      process.env.PUBLIC_URL + "/blue.png",
+      process.env.PUBLIC_URL + "/images/custom-engraving.png",
       // eslint-disable-next-line no-undef
-      process.env.PUBLIC_URL + "/blue.png",
+      process.env.PUBLIC_URL + "/images/custom-engraving.png",
     ],
     title: "Custom Engravings",
     subtitle: "",
