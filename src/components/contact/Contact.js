@@ -1,5 +1,6 @@
 import HeroContent from "../hero/HeroContent";
 import { useState } from "react";
+import CheckCircleOutlinedIcon from "@mui/icons-material/CheckCircleOutlined";
 
 const Contact = () => {
   const initialState = {
@@ -9,16 +10,48 @@ const Contact = () => {
     message: "",
   };
   const [contactForm, setContactForm] = useState(initialState);
+  const [confirmation, setConfirmation] = useState(false);
+  const [error, setError] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setContactForm({ ...contactForm, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const getConfirmation = () => {
+    setConfirmation(true);
+    setTimeout(() => {
+      setConfirmation(false);
+    }, 1000);
+  };
+
+  const getErrorMessage = () => {
+    setError(true);
+    setTimeout(() => {
+      setError(false);
+    }, 1000);
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // send form
-    console.log("contact form: ", contactForm);
+    try {
+      const response = await fetch(
+        "https://64af0767c85640541d4e0eb8.mockapi.io/api/v1/messages",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(contactForm),
+        }
+      );
+      if (!response.ok) {
+        getErrorMessage();
+      } else {
+        setContactForm(initialState);
+        getConfirmation();
+      }
+    } catch (error) {
+      setError(error);
+    }
   };
 
   return (
@@ -75,7 +108,13 @@ const Contact = () => {
             name="message"
             value={contactForm.message}
           ></textarea>
-          <button onClick={handleSubmit}>Send Message</button>
+          <div>
+            <button onClick={handleSubmit}>Send Message</button>
+            {confirmation && (
+              <span>{<CheckCircleOutlinedIcon />} Message Sent</span>
+            )}
+            {error && <span>There was an error sending message.</span>}
+          </div>
         </form>
       </div>
     </>
