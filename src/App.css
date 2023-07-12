@@ -90,9 +90,12 @@ button {
   border-radius: 5rem;
   padding: 1rem;
   margin: 2rem auto;
+  background-color: white;
 }
 button:hover {
   cursor: pointer;
+  background-color: black;
+  color: white;
 }
 
 /* Slide in for opening Cart and NavLinks */
@@ -527,6 +530,7 @@ footer a {
   width: 10em;
   text-align: center;
   margin: 3% 1%;
+  /* background-color: white; */
 }
 
 .shop-categories-item img {
@@ -535,11 +539,13 @@ footer a {
 
 .shop-categories-item:hover {
   cursor: pointer;
-  box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
 }
 
 .shop-categories .selected {
-  background-color:#d3d3d3;
+  background-color: black;
+  color: white;
+  /* background-color:#d3d3d3; */
 }
 
 .shop-gallery {
@@ -668,6 +674,7 @@ footer a {
   justify-content: space-between;
   width: 90%;
   margin: 1rem auto;
+  margin-top: 2rem;
 }
 
 .cart-items-container {
@@ -740,9 +747,12 @@ footer a {
   background-color: red;
   position: fixed;
   right: 0;
-  top: 12rem;
+  /* top: 12rem; */
   width: 30rem;
   text-align: center;
+  /*  */
+  color: black;
+  top: 0;
 }
 
 /* ============================ */
@@ -922,6 +932,7 @@ footer a {
   align-items: center;
   user-select: none;
   position: relative;
+  /* box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2); */
 }
 .selected-option {
   background-color: rgba(0,0,0,0.8);
@@ -931,7 +942,8 @@ footer a {
   cursor: pointer;
 }
 .not-selected-option:hover {
-  background-color: #d3d3d3;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+  /* background-color: #d3d3d3; */
 }
 .selected-option-added-cost {
   font-size: 1.2rem;
