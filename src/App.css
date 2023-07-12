@@ -731,6 +731,10 @@ footer a {
   border-radius: 5em;
   padding: 1rem 3rem;
 }
+.proceed-to-checkout button:hover {
+  background-color: black;
+  color: white;
+}
 
 .remove-from-cart {
   background-color: red;
