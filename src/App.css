@@ -790,9 +790,9 @@ footer a {
 }
 
 .custom-form-container .submit-quote-button {
-  border-radius: 5rem;
+  /* border-radius: 5rem;
   padding: 1rem;
-  margin: 2rem 0;
+  margin: 2rem 0; */
 }
 
 @media only screen and (min-width: 1200px) {
