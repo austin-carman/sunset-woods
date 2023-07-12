@@ -634,6 +634,15 @@ footer a {
   border-radius: 5rem;
 }
 
+.contact-button-container {
+  position: relative;
+}
+
+.contact-confirmation {
+  position: absolute;
+  display: block;
+}
+
 /* contact media queries */
 @media only screen and (min-width: 700px) {
   .contact-container {

@@ -1,6 +1,7 @@
 import HeroContent from "../hero/HeroContent";
 import { useState } from "react";
 import CheckCircleOutlinedIcon from "@mui/icons-material/CheckCircleOutlined";
+import ErrorOutlineOutlinedIcon from "@mui/icons-material/ErrorOutlineOutlined";
 
 const Contact = () => {
   const initialState = {
@@ -22,14 +23,14 @@ const Contact = () => {
     setConfirmation(true);
     setTimeout(() => {
       setConfirmation(false);
-    }, 1000);
+    }, 1500);
   };
 
   const getErrorMessage = () => {
     setError(true);
     setTimeout(() => {
       setError(false);
-    }, 1000);
+    }, 1500);
   };
 
   const handleSubmit = async (e) => {
@@ -108,12 +109,20 @@ const Contact = () => {
             name="message"
             value={contactForm.message}
           ></textarea>
-          <div>
+          <div className="contact-button-container">
             <button onClick={handleSubmit}>Send Message</button>
             {confirmation && (
-              <span>{<CheckCircleOutlinedIcon />} Message Sent</span>
+              <span className="contact-confirmation">
+                {<CheckCircleOutlinedIcon sx={{ color: "green" }} />} Message
+                Sent
+              </span>
             )}
-            {error && <span>There was an error sending message.</span>}
+            {error && (
+              <span className="contact-confirmation">
+                {<ErrorOutlineOutlinedIcon sx={{ color: "red" }} />} Error
+                sending message.
+              </span>
+            )}
           </div>
         </form>
       </div>
