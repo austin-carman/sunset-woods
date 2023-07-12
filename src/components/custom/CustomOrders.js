@@ -18,7 +18,7 @@ const CustomOrders = () => {
   const [confirmation, setConfirmation] = useState(false);
   const [error, setError] = useState(null);
   // eslint-disable-next-line no-undef
-  const image = process.env.PUBLIC_URL + "/blue.png";
+  const image = process.env.PUBLIC_URL + "/images/table5.png";
 
   const handleChange = (e) => {
     const { name, value } = e.target;
