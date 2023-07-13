@@ -1,5 +1,7 @@
 import HeroContent from "../hero/HeroContent";
 import { useState } from "react";
+import CheckCircleOutlinedIcon from "@mui/icons-material/CheckCircleOutlined";
+import ErrorOutlineOutlinedIcon from "@mui/icons-material/ErrorOutlineOutlined";
 
 const CustomOrders = () => {
   const initialState = {
@@ -13,18 +15,50 @@ const CustomOrders = () => {
     file: "",
   };
   const [customOrderForm, setCustomOrderForm] = useState(initialState);
+  const [confirmation, setConfirmation] = useState(false);
+  const [error, setError] = useState(null);
   // eslint-disable-next-line no-undef
-  const image = process.env.PUBLIC_URL + "/blue.png";
+  const image = process.env.PUBLIC_URL + "/images/table5.png";
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setCustomOrderForm({ ...customOrderForm, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const getConfirmation = () => {
+    setConfirmation(true);
+    setTimeout(() => {
+      setConfirmation(false);
+    }, 1500);
+  };
+
+  const getErrorMessage = () => {
+    setError(true);
+    setTimeout(() => {
+      setError(false);
+    }, 1500);
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // send contact form
-    console.log("custom order: ", customOrderForm);
+    try {
+      const response = await fetch(
+        "https://64af0767c85640541d4e0eb8.mockapi.io/api/v1/custom-order",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(customOrderForm),
+        }
+      );
+      if (!response.ok) {
+        getErrorMessage();
+      } else {
+        setCustomOrderForm(initialState);
+        getConfirmation();
+      }
+    } catch (error) {
+      setError(error);
+    }
   };
 
   return (
@@ -93,16 +127,28 @@ const CustomOrders = () => {
             value={customOrderForm.details}
             onChange={handleChange}
           ></textarea>
-          <label>Examples</label>
-          <input
+          {/* <label>Examples</label> */}
+          {/* <input
             name="file"
             value={customOrderForm.file}
             type="file"
             onChange={handleChange}
-          ></input>
-          <button className="submit-quote-button" onClick={handleSubmit}>
-            Get Quote
-          </button>
+          ></input> */}
+          <div className="contact-button-container">
+            <button onClick={handleSubmit}>Send Message</button>
+            {confirmation && (
+              <span className="contact-confirmation">
+                {<CheckCircleOutlinedIcon sx={{ color: "green" }} />} Message
+                Sent
+              </span>
+            )}
+            {error && (
+              <span className="contact-confirmation">
+                {<ErrorOutlineOutlinedIcon sx={{ color: "red" }} />} Error
+                sending message.
+              </span>
+            )}
+          </div>
         </form>
       </div>
     </>

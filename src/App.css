@@ -82,6 +82,7 @@ h3 {
 a {
   text-decoration: none;
   letter-spacing: 0.1em;
+  color: black;
 }
 
 button {
@@ -213,10 +214,6 @@ button:hover {
   padding: 2rem;
   z-index: 1;
   user-select: none;
-}
-
-.links-wrapper a {
-  color: black;
 }
 
 .links-wrapper li {
@@ -405,86 +402,44 @@ button:hover {
 /* ================================= */
 footer {
   background-color: #d3d3d3;
-  /* background-color: antiquewhite; */
+  margin-top: 10rem;
 }
-
-footer .links-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin: 5%;
-}
-
-footer .footer-section-container {
+.company-logo-container {
+  text-align: center;
   border-bottom: 1px solid grey;
+  padding-bottom: 2rem;
   width: 90%;
-  padding: 10%;
+  margin: auto;
 }
-
-footer .footer-company-logo {
-  font-size: 2.5rem;
-  cursor: pointer;
-  color: black;
+.company-logo {
+  font-size: 3rem;
 }
-
-footer .copyright {
-  text-align: center;
+.socials-link {
+  display: flex;
+  align-items: center;
+  width: 14rem;
+  justify-content: space-between;
+  margin: auto;
 }
-
-#footer-custom-orders-btn {
-  border: 1px solid black;
-  text-align: center;
-  padding: 5% 15%;
-  border-radius: 15px;
-  margin-top: 5%;
-  letter-spacing: 0.2em;
+.links-container {
+  width: 90%;
+  margin: auto;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
-
-#footer-custom-orders-btn:hover {
-  background-color: black;
-  color: white;
-  cursor: pointer;
+.links-section-container {
+  min-width: 19rem;
+  padding-top: 2rem;
 }
-
-footer .links-label {
-  text-transform: uppercase;
-}
-
-footer a {
-  color: grey;
-}
-
-#footer-email {
+.links-label {
   text-decoration: underline;
 }
-
-/* footer media queries */
-@media only screen and (min-width: 600px) {
-  footer .footer-section-container {
-    width: 45%;
-    padding: 5%;
-  }
+footer a {
+  color: #36454F;
 }
 
-@media only screen and (min-width: 1000px) {
-  footer .footer-section-container {
-    width: 30%;
-    border-bottom: none;
-  }
-
-  footer .copyright {
-    border-top: 1px solid grey;
-    padding: 1%;
-    margin: 0% 5%;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  footer .footer-section-container {
-    width: 22%;
-    padding: 2%;
-  }
-}
 
 /* ================================ */
 /* About Page */
@@ -634,6 +589,15 @@ footer a {
   border-radius: 5rem;
 }
 
+.contact-button-container {
+  position: relative;
+}
+
+.contact-confirmation {
+  position: absolute;
+  display: block;
+}
+
 /* contact media queries */
 @media only screen and (min-width: 700px) {
   .contact-container {
@@ -781,9 +745,9 @@ footer a {
 }
 
 .custom-form-container .submit-quote-button {
-  border-radius: 5rem;
+  /* border-radius: 5rem;
   padding: 1rem;
-  margin: 2rem 0;
+  margin: 2rem 0; */
 }
 
 @media only screen and (min-width: 1200px) {
