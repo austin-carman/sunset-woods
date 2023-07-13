@@ -1,15 +1,22 @@
 import { Link } from "react-router-dom";
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 const Footer = () => {
   return (
     <footer>
-      <div className="links-container">
-        <div className="footer-section-container">
-          <a href="/" className="footer-company-logo">
-            Sunset Woods
-          </a>
+      <div className="company-logo-container">
+        <a href="/" className="company-logo">
+          Sunset Woods
+        </a>
+        <div className="socials-link">
+          <span>Follow Us: </span>
+          <Link to="https://www.instagram.com/sunsettrailwoods/">
+            <InstagramIcon sx={{ fontSize: "3rem" }} />
+          </Link>
         </div>
-        <div className="footer-section-container">
+      </div>
+      <div className="links-container">
+        <div className="links-section-container">
           <ul className="quick-links">
             <li>
               <span className="links-label">Links</span>
@@ -24,22 +31,15 @@ const Footer = () => {
               <Link to="/shop">Shop</Link>
             </li>
             <li>
-              <Link to="/contact">Contact</Link>
-            </li>
-            <li>
               <Link to="/cart">Cart</Link>
-            </li>
-            <li>
-              <Link to="/custom-orders">Custom Orders</Link>
             </li>
           </ul>
         </div>
-        <div className="footer-section-container">
+        <div className="links-section-container">
           <ul className="quick-links">
             <li>
               <span className="links-label">Contact</span>
             </li>
-            <li>Call or Text:</li> {/* use phone icon instead */}
             <li>
               <a href="tel:+44-785-7895">+44-785-7895</a>
             </li>
@@ -48,26 +48,11 @@ const Footer = () => {
             </li>
             <li>
               <Link to="/custom-orders">
-                <button id="footer-custom-orders-btn">Custom Quote</button>
+                <button>Custom Orders</button>
               </Link>
             </li>
           </ul>
         </div>
-        <div className="footer-section-container">
-          <ul className="social-links-container">
-            <li>
-              <span className="links-label">Follow Us</span>
-            </li>
-            <li>
-              <Link to="https://www.instagram.com/sunsettrailwoods/">
-                Instagram
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div className="copyright">
-        <p>Copyright 2023 Sunset Woods, LLC</p>
       </div>
     </footer>
   );

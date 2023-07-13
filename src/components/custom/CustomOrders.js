@@ -127,13 +127,13 @@ const CustomOrders = () => {
             value={customOrderForm.details}
             onChange={handleChange}
           ></textarea>
-          <label>Examples</label>
-          <input
+          {/* <label>Examples</label> */}
+          {/* <input
             name="file"
             value={customOrderForm.file}
             type="file"
             onChange={handleChange}
-          ></input>
+          ></input> */}
           <div className="contact-button-container">
             <button onClick={handleSubmit}>Send Message</button>
             {confirmation && (
@@ -149,9 +149,6 @@ const CustomOrders = () => {
               </span>
             )}
           </div>
-          {/* <button className="submit-quote-button" onClick={handleSubmit}>
-            Get Quote
-          </button> */}
         </form>
       </div>
     </>
