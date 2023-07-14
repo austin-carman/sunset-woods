@@ -2,7 +2,7 @@ import HeroContent from "../hero/HeroContent";
 
 const About = () => {
   // eslint-disable-next-line no-undef
-  // const image = process.env.PUBLIC_URL + "./blue.png";
+  const familyImage = process.env.PUBLIC_URL + "/images/about-us.png";
 
   return (
     <>
@@ -25,8 +25,7 @@ const About = () => {
           </p>
         </div>
         <div className="about-img-container">
-          {/* eslint-disable-next-line no-undef */}
-          <img src={process.env.PUBLIC_URL + "/images/about-us.png"} alt="" />
+          <img src={familyImage} alt="Family photo" />
         </div>
       </section>
     </>
