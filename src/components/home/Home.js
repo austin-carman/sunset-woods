@@ -4,9 +4,15 @@ import { useNavigate } from "react-router-dom";
 const Home = () => {
   const navigate = useNavigate();
   // eslint-disable-next-line no-undef
-  // const image = process.env.PUBLIC_URL + "/blue.png";
+  const tableImage = process.env.PUBLIC_URL + "/images/table2.png";
+  // eslint-disable-next-line no-undef
+  const signImage = process.env.PUBLIC_URL + "/images/sign.png";
+  // eslint-disable-next-line prettier/prettier, no-undef
+  const engravingImage = process.env.PUBLIC_URL + "/images/custom-engraving.png";
+  // eslint-disable-next-line no-undef
+  const familyImage = process.env.PUBLIC_URL + "/images/about-us.png";
 
-  const handleClick = (category) => {
+  const handleClickCategory = (category) => {
     navigate("/shop", { state: category });
   };
 
@@ -19,21 +25,27 @@ const Home = () => {
         link="/custom-orders"
         callToActionText="Custom Quote"
       />
-      {/* Gallery */}
+      {/* Shop Category Links */}
       <section className="home-gallery">
-        <div className="gallery-item" onClick={() => handleClick("tables")}>
-          {/* eslint-disable-next-line no-undef */}
-          <img src={process.env.PUBLIC_URL + "/images/table2.png"} alt="" />
+        <div
+          className="gallery-item"
+          onClick={() => handleClickCategory("tables")}
+        >
+          <img src={tableImage} alt="Dinning room table" />
           <h4>Tables</h4>
         </div>
-        <div className="gallery-item" onClick={() => handleClick("signs")}>
-          {/* eslint-disable-next-line no-undef */}
-          <img src={process.env.PUBLIC_URL + "/images/sign.png"} alt="" />
+        <div
+          className="gallery-item"
+          onClick={() => handleClickCategory("signs")}
+        >
+          <img src={signImage} alt="Wood A-frame sign" />
           <h4>Signs</h4>
         </div>
-        <div className="gallery-item" onClick={() => handleClick("other")}>
-          {/* eslint-disable-next-line prettier/prettier, no-undef */}
-          <img src={process.env.PUBLIC_URL + "/images/custom-engraving.png"} alt="" />
+        <div
+          className="gallery-item"
+          onClick={() => handleClickCategory("other")}
+        >
+          <img src={engravingImage} alt="Wood engraved plaque" />
           <h4>Engravings</h4>
         </div>
       </section>
@@ -53,8 +65,7 @@ const Home = () => {
             <span id="about-us-link">Read About us</span>
           </a>
         </div>
-        {/* eslint-disable-next-line prettier/prettier, no-undef */}
-        <img src={process.env.PUBLIC_URL + "/images/about-us.png"} alt="" />
+        <img src={familyImage} alt="Family photo" />
       </section>
     </>
   );
