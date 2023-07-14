@@ -64,7 +64,9 @@ const ItemDetails = () => {
     <>
       <div className="item-order-container">
         {/* Images */}
-        <ImageSlides item={item} />
+        <div className="item-images">
+          <ImageSlides item={item} />
+        </div>
         <div className="order-container">
           {/* Title */}
           <div className="item-title-container">

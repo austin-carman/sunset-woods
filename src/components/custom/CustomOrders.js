@@ -2,6 +2,8 @@ import HeroContent from "../hero/HeroContent";
 import { useState } from "react";
 import CheckCircleOutlinedIcon from "@mui/icons-material/CheckCircleOutlined";
 import ErrorOutlineOutlinedIcon from "@mui/icons-material/ErrorOutlineOutlined";
+import ImageSlides from "../details/ImageSlides";
+import { customItemImages } from "../../data/data";
 
 const CustomOrders = () => {
   const initialState = {
@@ -18,7 +20,7 @@ const CustomOrders = () => {
   const [confirmation, setConfirmation] = useState(false);
   const [error, setError] = useState(null);
   // eslint-disable-next-line no-undef
-  const image = process.env.PUBLIC_URL + "/images/table5.png";
+  // const image = process.env.PUBLIC_URL + "/images/table5.png";
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -72,7 +74,8 @@ const CustomOrders = () => {
       />
       <div className="custom-orders-content-container">
         <div className="custom-orders-image-container">
-          <img src={image} alt="" />
+          {/* <img src={image} alt="" /> */}
+          <ImageSlides item={{ images: customItemImages }} />
         </div>
         <form className="custom-form-container" onSubmit={handleSubmit}>
           <h3>Get a Quote for a custom build</h3>
