@@ -4,10 +4,12 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 const Footer = () => {
   return (
     <footer>
+      {/* Company Name or Logo */}
       <div className="company-logo-container">
         <a href="/" className="company-logo">
           Sunset Woods
         </a>
+        {/* Social media accounts */}
         <div className="socials-link">
           <span>Follow Us: </span>
           <Link to="https://www.instagram.com/sunsettrailwoods/">
@@ -16,6 +18,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="links-container">
+        {/* Website Links -> Not including contact or custom orders */}
         <div className="links-section-container">
           <ul className="quick-links">
             <li>
@@ -35,6 +38,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
+        {/* Contact & Custom orders links */}
         <div className="links-section-container">
           <ul className="quick-links">
             <li>

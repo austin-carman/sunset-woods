@@ -21,6 +21,7 @@ const ItemOptions = ({ item, itemOptions, setItemOptions }) => {
             <div className="option-boxes-container">
               {/* Iterate over options in current category */}
               {item.options[key].map((option, index) => {
+                // render the content for each option-box
                 return (
                   <div
                     key={index}
