@@ -2,11 +2,8 @@
 const CategoryFilter = ({ category, selected, handleFilter }) => {
   return (
     <div
-      className={
-        selected.toLowerCase() === category.toLowerCase()
-          ? "shop-categories-item selected"
-          : "shop-categories-item"
-      }
+      // eslint-disable-next-line prettier/prettier
+      className={`shop-categories-item ${selected.toLowerCase() === category.toLowerCase() && "selected"}`}
       onClick={() => handleFilter(category)}
     >
       <h4>{category}</h4>
