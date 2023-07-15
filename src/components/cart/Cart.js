@@ -1,9 +1,11 @@
 import { CartContext } from "../../context/CartContext";
 import { useContext, useState } from "react";
 import { showConfirmation } from "../../helper-functions/helper-functions";
+import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
 
 // eslint-disable-next-line react/prop-types
 const Cart = ({ isCartOpen, setIsCartOpen }) => {
+  // shared state -> see CartContext.js
   const { cart, setCart } = useContext(CartContext);
   const [isConfirmationOpen, setIsConfirmationOpen] = useState(false);
 
@@ -31,14 +33,18 @@ const Cart = ({ isCartOpen, setIsCartOpen }) => {
   return (
     <div className={`cart ${isCartOpen ? "slide-in" : "slide-out"}`}>
       <div className="cart-header">
+        {/* # of items in cart */}
         <h3>({cart.length}) Items</h3>
+        {/* Close cart */}
         <span className="close-cart" onClick={handleCloseCart}>
           x
         </span>
       </div>
+      {/* Checkout button */}
       <div className="proceed-to-checkout">
         <button>Checkout</button>
       </div>
+      {/* Item successfully removed from cart confirmation message */}
       {isConfirmationOpen && (
         <div className="remove-from-cart">Item Removed</div>
       )}
@@ -50,6 +56,7 @@ const Cart = ({ isCartOpen, setIsCartOpen }) => {
           </div>
           <h6>${cartTotal}</h6>
         </div>
+        {/* Cart Items */}
         {cart.map((item, index) => {
           return (
             <div className="cart-item" key={`${item.id}-${index}`}>
@@ -58,7 +65,7 @@ const Cart = ({ isCartOpen, setIsCartOpen }) => {
                   className="delete-cart-item"
                   onClick={() => handleDeleteCartItem(index)}
                 >
-                  X
+                  <DeleteOutlinedIcon fontSize="5rem" />
                 </span>
                 <div>
                   <img src={item.image} alt="" />

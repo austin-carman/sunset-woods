@@ -1,15 +1,13 @@
 /* eslint-disable react/prop-types */
 import { createContext, useState } from "react";
 
-// Create a new context
+// Create new context
 export const CartContext = createContext();
 
-// Create a context provider component
+// Create context provider component
 export const CartContextProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
-
-  // Define any functions or state you want to share
-
+  // state to share
   const sharedState = {
     cart,
     setCart,

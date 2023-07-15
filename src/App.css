@@ -682,6 +682,10 @@ footer a {
 .delete-cart-item {
   margin-right: 2rem;
   color: red;
+  width: 100%;
+  /* border: 1px solid red; */
+  font-size: 5rem;
+  align-self: center;
 }
 .delete-cart-item:hover {
   margin-right: 2rem;
@@ -717,13 +721,10 @@ footer a {
 }
 
 .remove-from-cart {
-  background-color: red;
+  background-color: 	rgb(209, 1, 1, 0.8);
   position: fixed;
-  right: 0;
-  /* top: 12rem; */
   width: 30rem;
   text-align: center;
-  /*  */
   color: black;
   top: 0;
 }

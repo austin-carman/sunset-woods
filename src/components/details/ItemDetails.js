@@ -12,10 +12,8 @@ import { showConfirmation } from "../../helper-functions/helper-functions";
 const ItemDetails = () => {
   const { id } = useParams();
   const item = shopItems.find((shopItem) => shopItem.id === parseInt(id));
-  // cart state from Cart.js component
+  // shared state -> See CartContext.js
   const { cart, setCart } = useContext(CartContext);
-
-  console.log("item: ", item);
 
   // Sets the structure and default values for item options
   const getItemOptions = () => {
