@@ -3,7 +3,6 @@ import { useState } from "react";
 import CheckCircleOutlinedIcon from "@mui/icons-material/CheckCircleOutlined";
 import ErrorOutlineOutlinedIcon from "@mui/icons-material/ErrorOutlineOutlined";
 import ImageSlides from "../details/ImageSlides";
-import { customItemImages } from "../../data/data";
 import { showConfirmation } from "../../helper-functions/helper-functions";
 
 const CustomOrders = () => {
@@ -20,6 +19,17 @@ const CustomOrders = () => {
   const [customOrderForm, setCustomOrderForm] = useState(initialState);
   const [isConfirmationOpen, setIsConfirmationOpen] = useState(false);
   const [error, setError] = useState(null);
+  // Images for slides
+  const customItemImages = [
+    // eslint-disable-next-line no-undef
+    process.env.PUBLIC_URL + "/images/1.png",
+    // eslint-disable-next-line no-undef
+    process.env.PUBLIC_URL + "/images/2.png",
+    // eslint-disable-next-line no-undef
+    process.env.PUBLIC_URL + "/images/3.png",
+    // eslint-disable-next-line no-undef
+    process.env.PUBLIC_URL + "/images/4.png",
+  ];
 
   const handleChange = (e) => {
     const { name, value } = e.target;
