@@ -6,19 +6,6 @@ const ItemOptions = ({ item, itemOptions, setItemOptions }) => {
     setItemOptions({ ...itemOptions, [name]: value });
   };
 
-  // Determines className for each option for styling
-  // -> is the option selected or not
-  const getClassName = (key, option) => {
-    if (key === "customizations") {
-      return itemOptions[key] === option
-        ? "selected-option"
-        : "not-selected-option";
-    }
-    return itemOptions[key] === option
-      ? "selected-option"
-      : "not-selected-option";
-  };
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -35,7 +22,8 @@ const ItemOptions = ({ item, itemOptions, setItemOptions }) => {
                   <div
                     key={index}
                     onClick={() => handleClickOption(key, option)}
-                    className={`option-box ${getClassName(key, option)}`}
+                    // eslint-disable-next-line prettier/prettier
+                    className={`option-box ${itemOptions[key] === option ? "selected-option" : "not-selected-option"}`}
                   >
                     {typeof option === "object" ? (
                       <div>

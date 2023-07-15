@@ -312,19 +312,19 @@ export const shopItems = [
     options: {
       size: [
         {
-          value: "small - 10x8x1.5 inches",
+          value: `S - 10"x8"x1.5"`,
           addedCost: 0,
         },
         {
-          value: "medium - 18x12x1.5 inches",
+          value: `M - 18"x12"x1.5"`,
           addedCost: 20,
         },
         {
-          value: "large - 20x15x1.5 inches",
+          value: `L - 20"x15"x1.5"`,
           addedCost: 30,
         },
         {
-          value: "extra large - 24x18x1.5 inches",
+          value: `XL - 24"x18"x1.5"`,
           addedCost: 40,
         },
       ],
@@ -342,7 +342,17 @@ export const shopItems = [
           addedCost: 200,
         },
       ],
-      customizations: ["No", "Yes"],
+      // customizations: ["No", "Yes"],
+      customizations: [
+        {
+          value: "No",
+          addedCost: 0,
+        },
+        {
+          value: "Yes",
+          addedCost: 20,
+        },
+      ],
     },
   },
   {
@@ -378,7 +388,17 @@ export const shopItems = [
           addedCost: 200,
         },
       ],
-      customizations: ["No", "Yes"],
+      // customizations: ["No", "Yes"],
+      customizations: [
+        {
+          value: "No",
+          addedCost: 0,
+        },
+        {
+          value: "Yes",
+          addedCost: 20,
+        },
+      ],
     },
   },
   {
