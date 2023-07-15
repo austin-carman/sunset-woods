@@ -4,6 +4,7 @@ import CheckCircleOutlinedIcon from "@mui/icons-material/CheckCircleOutlined";
 import ErrorOutlineOutlinedIcon from "@mui/icons-material/ErrorOutlineOutlined";
 import ImageSlides from "../details/ImageSlides";
 import { customItemImages } from "../../data/data";
+import { showConfirmation } from "../../helper-functions/helper-functions";
 
 const CustomOrders = () => {
   const initialState = {
@@ -17,21 +18,12 @@ const CustomOrders = () => {
     file: "",
   };
   const [customOrderForm, setCustomOrderForm] = useState(initialState);
-  const [confirmation, setConfirmation] = useState(false);
+  const [isConfirmationOpen, setIsConfirmationOpen] = useState(false);
   const [error, setError] = useState(null);
-  // eslint-disable-next-line no-undef
-  // const image = process.env.PUBLIC_URL + "/images/table5.png";
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setCustomOrderForm({ ...customOrderForm, [name]: value });
-  };
-
-  const getConfirmation = () => {
-    setConfirmation(true);
-    setTimeout(() => {
-      setConfirmation(false);
-    }, 1500);
   };
 
   const getErrorMessage = () => {
@@ -56,7 +48,7 @@ const CustomOrders = () => {
         getErrorMessage();
       } else {
         setCustomOrderForm(initialState);
-        getConfirmation();
+        showConfirmation(setIsConfirmationOpen);
       }
     } catch (error) {
       setError(error);
@@ -130,16 +122,9 @@ const CustomOrders = () => {
             value={customOrderForm.details}
             onChange={handleChange}
           ></textarea>
-          {/* <label>Examples</label> */}
-          {/* <input
-            name="file"
-            value={customOrderForm.file}
-            type="file"
-            onChange={handleChange}
-          ></input> */}
           <div className="contact-button-container">
             <button onClick={handleSubmit}>Send Message</button>
-            {confirmation && (
+            {isConfirmationOpen && (
               <span className="contact-confirmation">
                 {<CheckCircleOutlinedIcon sx={{ color: "green" }} />} Message
                 Sent
