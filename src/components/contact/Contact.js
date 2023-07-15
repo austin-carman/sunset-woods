@@ -20,13 +20,8 @@ const Contact = () => {
     setContactForm({ ...contactForm, [name]: value });
   };
 
-  const getErrorMessage = () => {
-    setError(true);
-    setTimeout(() => {
-      setError(false);
-    }, 1500);
-  };
-
+  // Using mockAPI endpoint to demonstrate example of
+  // API call if Backend existed
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -39,7 +34,7 @@ const Contact = () => {
         }
       );
       if (!response.ok) {
-        getErrorMessage();
+        showConfirmation(setError);
       } else {
         setContactForm(initialState);
         showConfirmation(setIsConfirmationOpen);
@@ -74,6 +69,7 @@ const Contact = () => {
             </a>
           </h6>
         </div>
+        {/* Contact Form */}
         <form className="contact-form" onSubmit={handleSubmit}>
           <h3>Send us a message</h3>
           <input
@@ -105,12 +101,14 @@ const Contact = () => {
           ></textarea>
           <div className="contact-button-container">
             <button onClick={handleSubmit}>Send Message</button>
+            {/* Message Sent Confirmation */}
             {isConfirmationOpen && (
               <span className="contact-confirmation">
                 {<CheckCircleOutlinedIcon sx={{ color: "green" }} />} Message
                 Sent
               </span>
             )}
+            {/* Error message */}
             {error && (
               <span className="contact-confirmation">
                 {<ErrorOutlineOutlinedIcon sx={{ color: "red" }} />} Error
