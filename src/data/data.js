@@ -19,7 +19,7 @@ export const shopItems = [
       "Consectetur mollit cillum pariatur quis culpa anim et. Velit commodo velit est proident aliqua ex ipsum culpa velit exercitation. Exercitation est ex nulla dolore non. Ea eu id laboris quis elit ipsum cupidatat esse labore pariatur nulla. Sunt mollit aute quis consectetur duis cillum voluptate dolor velit amet laboris mollit tempor sint.",
     basePrice: 2000,
     options: {
-      length: [
+      "length (inches)": [
         {
           value: 48,
           addedCost: 0,
@@ -41,7 +41,7 @@ export const shopItems = [
           addedCost: 200,
         },
       ],
-      width: [
+      "width (inches)": [
         {
           value: 30,
           addedCost: 0,
@@ -83,9 +83,9 @@ export const shopItems = [
           addedCost: 100,
         },
       ],
-      leafExtension: [
+      "leaf extension (inches)": [
         {
-          value: 0,
+          value: "No",
           addedCost: 0,
         },
         {
@@ -122,7 +122,7 @@ export const shopItems = [
       "Consectetur mollit cillum pariatur quis culpa anim et. Velit commodo velit est proident aliqua ex ipsum culpa velit exercitation. Exercitation est ex nulla dolore non. Ea eu id laboris quis elit ipsum cupidatat esse labore pariatur nulla. Sunt mollit aute quis consectetur duis cillum voluptate dolor velit amet laboris mollit tempor sint.",
     basePrice: 2500,
     options: {
-      length: [
+      "length (inches)": [
         {
           value: 60,
           addedCost: 0,
@@ -144,7 +144,7 @@ export const shopItems = [
           addedCost: 200,
         },
       ],
-      width: [
+      "width (inches)": [
         {
           value: 36,
           addedCost: 0,
@@ -186,9 +186,9 @@ export const shopItems = [
           addedCost: 100,
         },
       ],
-      leafExtension: [
+      "leaf extension (inches)": [
         {
-          value: 0,
+          value: "No",
           addedCost: 0,
         },
         {
@@ -225,7 +225,7 @@ export const shopItems = [
       "Consectetur mollit cillum pariatur quis culpa anim et. Velit commodo velit est proident aliqua ex ipsum culpa velit exercitation. Exercitation est ex nulla dolore non. Ea eu id laboris quis elit ipsum cupidatat esse labore pariatur nulla. Sunt mollit aute quis consectetur duis cillum voluptate dolor velit amet laboris mollit tempor sint.",
     basePrice: 300,
     options: {
-      height: [
+      "height (inches)": [
         {
           value: 36,
           addedCost: 0,
@@ -239,7 +239,7 @@ export const shopItems = [
           addedCost: 50,
         },
       ],
-      width: [
+      "width (inches)": [
         {
           value: 18,
           addedCost: 0,
@@ -298,21 +298,21 @@ export const shopItems = [
       "Consectetur mollit cillum pariatur quis culpa anim et. Velit commodo velit est proident aliqua ex ipsum culpa velit exercitation. Exercitation est ex nulla dolore non. Ea eu id laboris quis elit ipsum cupidatat esse labore pariatur nulla. Sunt mollit aute quis consectetur duis cillum voluptate dolor velit amet laboris mollit tempor sint.",
     basePrice: 100,
     options: {
-      size: [
+      "size (inches)": [
         {
-          value: `S - 10"x8"x1.5"`,
+          value: "S - 8 x 10 x 1.5",
           addedCost: 0,
         },
         {
-          value: `M - 18"x12"x1.5"`,
+          value: "M - 12 x 18 x 1.5",
           addedCost: 20,
         },
         {
-          value: `L - 20"x15"x1.5"`,
+          value: "L - 15 x 20 x 1.5",
           addedCost: 30,
         },
         {
-          value: `XL - 24"x18"x1.5"`,
+          value: "XL - 18 x 24 x 1.5",
           addedCost: 40,
         },
       ],
