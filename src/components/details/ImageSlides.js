@@ -4,11 +4,15 @@ import { useState } from "react";
 const ImageSlides = ({ item }) => {
   const [currentImage, setCurrentImage] = useState(1);
 
-  // move to last or next slide -> n will be -1 or +1
+  // move to previous or next slide -> n will be -1 or +1
   const changeImageSlide = (n) => {
     let next = currentImage + n;
+    // If already at the last slide and
+    // trying to go to next, go back to the first slide
     if (next > item.images.length) {
       next = 1;
+      // If already at the first slide and
+      // trying to go to previous, go to the last slide
     } else if (next < 1) {
       next = item.images.length;
     }

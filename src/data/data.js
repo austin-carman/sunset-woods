@@ -1,15 +1,3 @@
-// // custom item images
-// export const customItemImages = [
-//   // eslint-disable-next-line no-undef
-//   process.env.PUBLIC_URL + "/images/1.png",
-//   // eslint-disable-next-line no-undef
-//   process.env.PUBLIC_URL + "/images/2.png",
-//   // eslint-disable-next-line no-undef
-//   process.env.PUBLIC_URL + "/images/3.png",
-//   // eslint-disable-next-line no-undef
-//   process.env.PUBLIC_URL + "/images/4.png",
-// ];
-
 // Shop items for sale
 export const shopItems = [
   {
