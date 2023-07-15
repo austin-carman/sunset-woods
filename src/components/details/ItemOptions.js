@@ -1,20 +1,22 @@
+/* eslint-disable react/prop-types */
 import { useEffect } from "react";
 
-/* eslint-disable react/prop-types */
 const ItemOptions = ({ item, itemOptions, setItemOptions }) => {
   const handleClickOption = (name, value) => {
     setItemOptions({ ...itemOptions, [name]: value });
   };
 
+  // Determines className for each option for styling
+  // -> is the option selected or not
   const getClassName = (key, option) => {
     if (key === "customizations") {
       return itemOptions[key] === option
-        ? "selected-option option-box"
-        : "option-box not-selected-option";
+        ? "selected-option"
+        : "not-selected-option";
     }
     return itemOptions[key] === option
-      ? "selected-option option-box"
-      : "option-box not-selected-option";
+      ? "selected-option"
+      : "not-selected-option";
   };
 
   useEffect(() => {
@@ -33,7 +35,7 @@ const ItemOptions = ({ item, itemOptions, setItemOptions }) => {
                   <div
                     key={index}
                     onClick={() => handleClickOption(key, option)}
-                    className={getClassName(key, option)}
+                    className={`option-box ${getClassName(key, option)}`}
                   >
                     {typeof option === "object" ? (
                       <div>
