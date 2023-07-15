@@ -1,4 +1,4 @@
-import CategoryFilter from "./CategoryFilters";
+import CategoryFilter from "./CategoryFilter";
 import { shopItems } from "../../data/data";
 import { useState, useEffect } from "react";
 import ShopItem from "./ShopItem";
