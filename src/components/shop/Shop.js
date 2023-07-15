@@ -1,5 +1,5 @@
 import CategoryFilter from "./CategoryFilters";
-import { shopFilters, shopItems } from "../../data/data";
+import { shopItems } from "../../data/data";
 import { useState, useEffect } from "react";
 import ShopItem from "./ShopItem";
 import HeroContent from "../hero/HeroContent";
@@ -7,23 +7,35 @@ import { useLocation } from "react-router-dom";
 
 const Shop = () => {
   const location = useLocation();
-  const initialSelected = shopFilters[0];
-  const [selected, setSelected] = useState(
-    location.state ? location.state : initialSelected
+  // Shop Categories & Filters
+  const shopCategories = [
+    "All Products",
+    "Tables",
+    "Signs",
+    "Cutting Boards",
+    "Coasters",
+    "Other",
+  ];
+  // If user clicked shop category on Home Page make that category selected
+  // Otherwise, default category is "All Products"
+  const [selectedCategory, setSelectedCategory] = useState(
+    location.state ? location.state : shopCategories[0]
   );
 
+  // Get shop items that match the selected Category
   const filterShopItems = () => {
     return shopItems.filter((item) => {
-      return item.category.toLowerCase() === selected.toLowerCase();
+      return item.category.toLowerCase() === selectedCategory.toLowerCase();
     });
   };
 
+  // Determine which shop items will be displayed
+  // -> All or items that match selected category
   const filteredShopItems =
-    selected === initialSelected ? shopItems : filterShopItems();
+    selectedCategory === shopCategories[0] ? shopItems : filterShopItems();
 
   const handleFilter = (category) => {
-    setSelected(category);
-    filterShopItems();
+    setSelectedCategory(category);
   };
 
   useEffect(() => {
@@ -39,18 +51,20 @@ const Shop = () => {
         link="/custom-orders"
         callToActionText="Custom Orders"
       />
+      {/* Shop Category Filter options */}
       <div className="shop-categories">
-        {shopFilters.map((category) => {
+        {shopCategories.map((category) => {
           return (
             <CategoryFilter
               key={category}
               category={category}
-              selected={selected}
+              selected={selectedCategory}
               handleFilter={handleFilter}
             />
           );
         })}
       </div>
+      {/* Shop items that match category filter */}
       <section className="shop-gallery">
         {filteredShopItems.map((item) => {
           return <ShopItem key={item.id} item={item} />;

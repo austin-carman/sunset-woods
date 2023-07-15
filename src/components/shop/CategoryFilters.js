@@ -1,8 +1,5 @@
 /* eslint-disable react/prop-types */
 const CategoryFilter = ({ category, selected, handleFilter }) => {
-  // eslint-disable-next-line no-undef
-  const image = process.env.PUBLIC_URL + "./blue.png";
-
   return (
     <div
       className={
@@ -12,7 +9,6 @@ const CategoryFilter = ({ category, selected, handleFilter }) => {
       }
       onClick={() => handleFilter(category)}
     >
-      <img src={image} alt="" />
       <h4>{category}</h4>
     </div>
   );

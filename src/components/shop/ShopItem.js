@@ -13,7 +13,7 @@ const ShopItem = ({ item }) => {
       <img src={item.images[0]} alt="" />
       <h3>{item.title}</h3>
       <h5>{item.subtitle}</h5>
-      <h5>Starting at ${item.basePrice}</h5>
+      <h6>Starting at ${item.basePrice}</h6>
     </div>
   );
 };

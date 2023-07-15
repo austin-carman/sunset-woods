@@ -1,13 +1,3 @@
-// Shop Filter Categories
-export const shopFilters = [
-  "All Products",
-  "Tables",
-  "Signs",
-  "Cutting Boards",
-  "Coasters",
-  "Other",
-];
-
 // custom item images
 export const customItemImages = [
   // eslint-disable-next-line no-undef
