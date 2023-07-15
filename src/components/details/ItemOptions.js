@@ -1,18 +1,18 @@
 import { useEffect } from "react";
 
 /* eslint-disable react/prop-types */
-const ItemOptions = ({ item, orderForm, setOrderForm }) => {
+const ItemOptions = ({ item, itemOptions, setItemOptions }) => {
   const handleClickOption = (name, value) => {
-    setOrderForm({ ...orderForm, [name]: value });
+    setItemOptions({ ...itemOptions, [name]: value });
   };
 
   const getClassName = (key, option) => {
     if (key === "customizations") {
-      return orderForm[key] === option
+      return itemOptions[key] === option
         ? "selected-option option-box"
         : "option-box not-selected-option";
     }
-    return orderForm[key] === option
+    return itemOptions[key] === option
       ? "selected-option option-box"
       : "option-box not-selected-option";
   };
@@ -23,7 +23,7 @@ const ItemOptions = ({ item, orderForm, setOrderForm }) => {
 
   return (
     <div className="item-customized-options">
-      {Object.keys(orderForm).map((key) => {
+      {Object.keys(itemOptions).map((key) => {
         return (
           <div key={key}>
             <h3>{key}</h3>

@@ -7,12 +7,17 @@ import { CartContext } from "../../context/CartContext";
 import { shopItems } from "../../data/data";
 import ItemOptions from "./ItemOptions";
 import CheckCircleOutlinedIcon from "@mui/icons-material/CheckCircleOutlined";
+import { showConfirmation } from "../../helper-functions/helper-functions";
 
 const ItemDetails = () => {
   const { id } = useParams();
   const item = shopItems.find((shopItem) => shopItem.id === parseInt(id));
+  // cart state from Cart.js component
   const { cart, setCart } = useContext(CartContext);
 
+  console.log("item: ", item);
+
+  // Sets the structure and default values for item options
   const getItemOptions = () => {
     const options = {};
     for (const key in item.options) {
@@ -21,11 +26,13 @@ const ItemDetails = () => {
     return options;
   };
 
+  // added cost from base price based on selected options
   const [addOnCost, setAddOnCost] = useState(0);
   const [quantity, setQuantity] = useState(1);
-  const [orderForm, setOrderForm] = useState(getItemOptions());
+  const [itemOptions, setItemOptions] = useState(getItemOptions());
   const [isConfirmationOpen, setIsConfirmationOpen] = useState(false);
 
+  // Add item to cart with information for checkout and order fulfillment
   const handleAddToCart = () => {
     setCart([
       ...cart,
@@ -33,23 +40,21 @@ const ItemDetails = () => {
         id: item.id,
         name: item.title,
         image: item.images[0],
-        options: orderForm,
+        options: itemOptions,
         quantity: quantity,
         unitPrice: item.basePrice + addOnCost,
         totalPrice: (item.basePrice + addOnCost) * quantity,
       },
     ]);
-    setIsConfirmationOpen(true);
-    setTimeout(() => {
-      setIsConfirmationOpen(false);
-    }, 1000);
+    showConfirmation(setIsConfirmationOpen);
   };
 
+  // Totals all the added costs from selected options
   const calculateAddedCost = () => {
     let total = 0;
-    for (const key in orderForm) {
-      if (orderForm[key]?.addedCost) {
-        total += orderForm[key]["addedCost"];
+    for (const key in itemOptions) {
+      if (itemOptions[key]?.addedCost) {
+        total += itemOptions[key]["addedCost"];
       }
     }
     return total;
@@ -58,17 +63,16 @@ const ItemDetails = () => {
   useEffect(() => {
     const addedCost = calculateAddedCost();
     setAddOnCost(addedCost);
-  }, [orderForm]);
+  }, [itemOptions]);
 
   return (
     <>
       <div className="item-order-container">
-        {/* Images */}
+        {/* Item Images */}
         <div className="item-images">
           <ImageSlides item={item} />
         </div>
         <div className="order-container">
-          {/* Title */}
           <div className="item-title-container">
             <h2>{item.title}</h2>
             <h4>{item.subtitle}</h4>
@@ -76,8 +80,8 @@ const ItemDetails = () => {
           {/* Customizable Options */}
           <ItemOptions
             item={item}
-            orderForm={orderForm}
-            setOrderForm={setOrderForm}
+            itemOptions={itemOptions}
+            setItemOptions={setItemOptions}
           />
           {/* Quantity */}
           <ItemQuantity quantity={quantity} setQuantity={setQuantity} />
@@ -87,7 +91,6 @@ const ItemDetails = () => {
             addOnCost={addOnCost}
             quantity={quantity}
           />
-          {/* Add to Cart */}
           <div className="add-to-cart-container">
             <button className="add-to-cart-button" onClick={handleAddToCart}>
               Add to Cart
@@ -101,7 +104,7 @@ const ItemDetails = () => {
           )}
         </div>
       </div>
-      {/* Description */}
+      {/* Item Description */}
       <div className="item-description-container">
         <h2>Description</h2>
         <p>{item.description}</p>
