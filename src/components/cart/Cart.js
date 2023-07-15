@@ -1,5 +1,6 @@
 import { CartContext } from "../../context/CartContext";
 import { useContext, useState } from "react";
+import { showConfirmation } from "../../helper-functions/helper-functions";
 
 // eslint-disable-next-line react/prop-types
 const Cart = ({ isCartOpen, setIsCartOpen }) => {
@@ -14,10 +15,7 @@ const Cart = ({ isCartOpen, setIsCartOpen }) => {
     const updatedCart = [...cart];
     updatedCart.splice(index, 1);
     setCart(updatedCart);
-    setIsConfirmationOpen(true);
-    setTimeout(() => {
-      setIsConfirmationOpen(false);
-    }, 1000);
+    showConfirmation(setIsConfirmationOpen);
   };
 
   const calculateCartTotal = () => {
