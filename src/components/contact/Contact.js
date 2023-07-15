@@ -2,6 +2,7 @@ import HeroContent from "../hero/HeroContent";
 import { useState } from "react";
 import CheckCircleOutlinedIcon from "@mui/icons-material/CheckCircleOutlined";
 import ErrorOutlineOutlinedIcon from "@mui/icons-material/ErrorOutlineOutlined";
+import { showConfirmation } from "../../helper-functions/helper-functions";
 
 const Contact = () => {
   const initialState = {
@@ -11,19 +12,12 @@ const Contact = () => {
     message: "",
   };
   const [contactForm, setContactForm] = useState(initialState);
-  const [confirmation, setConfirmation] = useState(false);
+  const [isConfirmationOpen, setIsConfirmationOpen] = useState(false);
   const [error, setError] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setContactForm({ ...contactForm, [name]: value });
-  };
-
-  const getConfirmation = () => {
-    setConfirmation(true);
-    setTimeout(() => {
-      setConfirmation(false);
-    }, 1500);
   };
 
   const getErrorMessage = () => {
@@ -48,7 +42,7 @@ const Contact = () => {
         getErrorMessage();
       } else {
         setContactForm(initialState);
-        getConfirmation();
+        showConfirmation(setIsConfirmationOpen);
       }
     } catch (error) {
       setError(error);
@@ -111,7 +105,7 @@ const Contact = () => {
           ></textarea>
           <div className="contact-button-container">
             <button onClick={handleSubmit}>Send Message</button>
-            {confirmation && (
+            {isConfirmationOpen && (
               <span className="contact-confirmation">
                 {<CheckCircleOutlinedIcon sx={{ color: "green" }} />} Message
                 Sent
