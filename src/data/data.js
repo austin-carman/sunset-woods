@@ -1,4 +1,4 @@
-// Shop items for sale
+// Dummy Data -> Shop items for sale
 export const shopItems = [
   {
     id: 1,
