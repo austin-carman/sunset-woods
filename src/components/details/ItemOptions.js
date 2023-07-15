@@ -28,16 +28,6 @@ const ItemOptions = ({ item, itemOptions, setItemOptions }) => {
                     // eslint-disable-next-line prettier/prettier
                     className={`option-box ${itemOptions[key] === option ? "selected-option" : "not-selected-option"}`}
                   >
-                    {/* {typeof option === "object" ? (
-                      <div>
-                        {option.value === 0 ? "No" : option.value}
-                        {option.value !== 0 &&
-                          typeof option.value === "number" &&
-                          `"`}
-                      </div>
-                    ) : (
-                      <div>{option}</div>
-                    )} */}
                     <div>{option.value}</div>
                     <div className="selected-option-added-cost">
                       {option.addedCost > 0 && `+$${option.addedCost}`}
