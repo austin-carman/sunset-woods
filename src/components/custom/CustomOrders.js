@@ -26,13 +26,8 @@ const CustomOrders = () => {
     setCustomOrderForm({ ...customOrderForm, [name]: value });
   };
 
-  const getErrorMessage = () => {
-    setError(true);
-    setTimeout(() => {
-      setError(false);
-    }, 1500);
-  };
-
+  // Using mockAPI endpoint to demonstrate example of
+  // API call if Backend existed
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -45,7 +40,7 @@ const CustomOrders = () => {
         }
       );
       if (!response.ok) {
-        getErrorMessage();
+        showConfirmation(setError);
       } else {
         setCustomOrderForm(initialState);
         showConfirmation(setIsConfirmationOpen);
@@ -66,9 +61,9 @@ const CustomOrders = () => {
       />
       <div className="custom-orders-content-container">
         <div className="custom-orders-image-container">
-          {/* <img src={image} alt="" /> */}
           <ImageSlides item={{ images: customItemImages }} />
         </div>
+        {/* Custom Order Form */}
         <form className="custom-form-container" onSubmit={handleSubmit}>
           <h3>Get a Quote for a custom build</h3>
           <input
@@ -124,12 +119,14 @@ const CustomOrders = () => {
           ></textarea>
           <div className="contact-button-container">
             <button onClick={handleSubmit}>Send Message</button>
+            {/* Order form sent successfully confirmation */}
             {isConfirmationOpen && (
               <span className="contact-confirmation">
                 {<CheckCircleOutlinedIcon sx={{ color: "green" }} />} Message
                 Sent
               </span>
             )}
+            {/* Error message */}
             {error && (
               <span className="contact-confirmation">
                 {<ErrorOutlineOutlinedIcon sx={{ color: "red" }} />} Error

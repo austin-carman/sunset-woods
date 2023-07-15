@@ -101,7 +101,7 @@ const Contact = () => {
           ></textarea>
           <div className="contact-button-container">
             <button onClick={handleSubmit}>Send Message</button>
-            {/* Message Sent Confirmation */}
+            {/* Message Sent successfully Confirmation message */}
             {isConfirmationOpen && (
               <span className="contact-confirmation">
                 {<CheckCircleOutlinedIcon sx={{ color: "green" }} />} Message
