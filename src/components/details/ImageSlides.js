@@ -4,10 +4,15 @@ import { useState } from "react";
 const ImageSlides = ({ item }) => {
   const [currentImage, setCurrentImage] = useState(1);
 
-  const plusSlides = (n) => {
+  // move to previous or next slide -> n will be -1 or +1
+  const changeImageSlide = (n) => {
     let next = currentImage + n;
+    // If already at the last slide and
+    // trying to go to next, go back to the first slide
     if (next > item.images.length) {
       next = 1;
+      // If already at the first slide and
+      // trying to go to previous, go to the last slide
     } else if (next < 1) {
       next = item.images.length;
     }
@@ -23,6 +28,7 @@ const ImageSlides = ({ item }) => {
       <div className="slides-container">
         {item.images.map((image, index) => {
           return (
+            // Large Image
             <div
               key={index}
               className={
@@ -33,16 +39,20 @@ const ImageSlides = ({ item }) => {
             </div>
           );
         })}
-        <div className="prev" onClick={() => plusSlides(-1)}>
+        {/* Previous arrow */}
+        <div className="prev" onClick={() => changeImageSlide(-1)}>
           &#10094;
         </div>
-        <div className="next" onClick={() => plusSlides(1)}>
+        {/* Next arrow */}
+        <div className="next" onClick={() => changeImageSlide(1)}>
           &#10095;
         </div>
       </div>
+      {/* Image Thumbnail Container */}
       <div className="thumbnail-container">
         {item.images.map((image, index) => {
           return (
+            // Image Thumbnail
             <img
               key={index}
               className={

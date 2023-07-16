@@ -1,26 +1,4 @@
-// Shop Filter Categories
-export const shopFilters = [
-  "All Products",
-  "Tables",
-  "Signs",
-  "Cutting Boards",
-  "Coasters",
-  "Other",
-];
-
-// custom item images
-export const customItemImages = [
-  // eslint-disable-next-line no-undef
-  process.env.PUBLIC_URL + "/images/1.png",
-  // eslint-disable-next-line no-undef
-  process.env.PUBLIC_URL + "/images/2.png",
-  // eslint-disable-next-line no-undef
-  process.env.PUBLIC_URL + "/images/3.png",
-  // eslint-disable-next-line no-undef
-  process.env.PUBLIC_URL + "/images/4.png",
-];
-
-// Shop items for sale
+// Dummy Data -> Shop items for sale
 export const shopItems = [
   {
     id: 1,
@@ -41,7 +19,7 @@ export const shopItems = [
       "Consectetur mollit cillum pariatur quis culpa anim et. Velit commodo velit est proident aliqua ex ipsum culpa velit exercitation. Exercitation est ex nulla dolore non. Ea eu id laboris quis elit ipsum cupidatat esse labore pariatur nulla. Sunt mollit aute quis consectetur duis cillum voluptate dolor velit amet laboris mollit tempor sint.",
     basePrice: 2000,
     options: {
-      length: [
+      "length (inches)": [
         {
           value: 48,
           addedCost: 0,
@@ -63,7 +41,7 @@ export const shopItems = [
           addedCost: 200,
         },
       ],
-      width: [
+      "width (inches)": [
         {
           value: 30,
           addedCost: 0,
@@ -105,9 +83,9 @@ export const shopItems = [
           addedCost: 100,
         },
       ],
-      leafExtension: [
+      "leaf extension (inches)": [
         {
-          value: 0,
+          value: "No",
           addedCost: 0,
         },
         {
@@ -144,7 +122,7 @@ export const shopItems = [
       "Consectetur mollit cillum pariatur quis culpa anim et. Velit commodo velit est proident aliqua ex ipsum culpa velit exercitation. Exercitation est ex nulla dolore non. Ea eu id laboris quis elit ipsum cupidatat esse labore pariatur nulla. Sunt mollit aute quis consectetur duis cillum voluptate dolor velit amet laboris mollit tempor sint.",
     basePrice: 2500,
     options: {
-      length: [
+      "length (inches)": [
         {
           value: 60,
           addedCost: 0,
@@ -166,7 +144,7 @@ export const shopItems = [
           addedCost: 200,
         },
       ],
-      width: [
+      "width (inches)": [
         {
           value: 36,
           addedCost: 0,
@@ -208,9 +186,9 @@ export const shopItems = [
           addedCost: 100,
         },
       ],
-      leafExtension: [
+      "leaf extension (inches)": [
         {
-          value: 0,
+          value: "No",
           addedCost: 0,
         },
         {
@@ -247,7 +225,7 @@ export const shopItems = [
       "Consectetur mollit cillum pariatur quis culpa anim et. Velit commodo velit est proident aliqua ex ipsum culpa velit exercitation. Exercitation est ex nulla dolore non. Ea eu id laboris quis elit ipsum cupidatat esse labore pariatur nulla. Sunt mollit aute quis consectetur duis cillum voluptate dolor velit amet laboris mollit tempor sint.",
     basePrice: 300,
     options: {
-      height: [
+      "height (inches)": [
         {
           value: 36,
           addedCost: 0,
@@ -261,7 +239,7 @@ export const shopItems = [
           addedCost: 50,
         },
       ],
-      width: [
+      "width (inches)": [
         {
           value: 18,
           addedCost: 0,
@@ -320,21 +298,21 @@ export const shopItems = [
       "Consectetur mollit cillum pariatur quis culpa anim et. Velit commodo velit est proident aliqua ex ipsum culpa velit exercitation. Exercitation est ex nulla dolore non. Ea eu id laboris quis elit ipsum cupidatat esse labore pariatur nulla. Sunt mollit aute quis consectetur duis cillum voluptate dolor velit amet laboris mollit tempor sint.",
     basePrice: 100,
     options: {
-      size: [
+      "size (inches)": [
         {
-          value: "small - 10x8x1.5 inches",
+          value: "S - 8 x 10 x 1.5",
           addedCost: 0,
         },
         {
-          value: "medium - 18x12x1.5 inches",
+          value: "M - 12 x 18 x 1.5",
           addedCost: 20,
         },
         {
-          value: "large - 20x15x1.5 inches",
+          value: "L - 15 x 20 x 1.5",
           addedCost: 30,
         },
         {
-          value: "extra large - 24x18x1.5 inches",
+          value: "XL - 18 x 24 x 1.5",
           addedCost: 40,
         },
       ],
@@ -352,7 +330,16 @@ export const shopItems = [
           addedCost: 200,
         },
       ],
-      customizations: ["No", "Yes"],
+      customizations: [
+        {
+          value: "No",
+          addedCost: 0,
+        },
+        {
+          value: "Yes",
+          addedCost: 20,
+        },
+      ],
     },
   },
   {
@@ -388,7 +375,16 @@ export const shopItems = [
           addedCost: 200,
         },
       ],
-      customizations: ["No", "Yes"],
+      customizations: [
+        {
+          value: "No",
+          addedCost: 0,
+        },
+        {
+          value: "Yes",
+          addedCost: 20,
+        },
+      ],
     },
   },
   {

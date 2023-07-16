@@ -1,20 +1,10 @@
+/* eslint-disable react/prop-types */
 import { useEffect } from "react";
 
-/* eslint-disable react/prop-types */
-const ItemOptions = ({ item, orderForm, setOrderForm }) => {
+const ItemOptions = ({ item, itemOptions, setItemOptions }) => {
+  // store selected options in state: itemOptions
   const handleClickOption = (name, value) => {
-    setOrderForm({ ...orderForm, [name]: value });
-  };
-
-  const getClassName = (key, option) => {
-    if (key === "customizations") {
-      return orderForm[key] === option
-        ? "selected-option option-box"
-        : "option-box not-selected-option";
-    }
-    return orderForm[key] === option
-      ? "selected-option option-box"
-      : "option-box not-selected-option";
+    setItemOptions({ ...itemOptions, [name]: value });
   };
 
   useEffect(() => {
@@ -23,28 +13,23 @@ const ItemOptions = ({ item, orderForm, setOrderForm }) => {
 
   return (
     <div className="item-customized-options">
-      {Object.keys(orderForm).map((key) => {
+      {/* Iterate over option categories */}
+      {Object.keys(itemOptions).map((key) => {
         return (
           <div key={key}>
             <h3>{key}</h3>
             <div className="option-boxes-container">
+              {/* Iterate over options in current category */}
               {item.options[key].map((option, index) => {
+                // render the content for each option-box
                 return (
                   <div
                     key={index}
                     onClick={() => handleClickOption(key, option)}
-                    className={getClassName(key, option)}
+                    // eslint-disable-next-line prettier/prettier
+                    className={`option-box ${itemOptions[key] === option ? "selected-option" : "not-selected-option"}`}
                   >
-                    {typeof option === "object" ? (
-                      <div>
-                        {option.value === 0 ? "No" : option.value}
-                        {option.value !== 0 &&
-                          typeof option.value === "number" &&
-                          `"`}
-                      </div>
-                    ) : (
-                      <div>{option}</div>
-                    )}
+                    <div>{option.value}</div>
                     <div className="selected-option-added-cost">
                       {option.addedCost > 0 && `+$${option.addedCost}`}
                     </div>

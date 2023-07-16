@@ -7,6 +7,7 @@ const HeroContent = ({ title, subtitle, link, callToActionText }) => {
       <div className="hero-content-container">
         <h1>{title}</h1>
         <h2>{subtitle}</h2>
+        {/* If text for a Call To Action button is provided, render a CTA button */}
         {callToActionText && (
           <Link to={link}>
             <button className="call-to-action-button">

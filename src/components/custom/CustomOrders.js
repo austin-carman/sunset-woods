@@ -3,7 +3,7 @@ import { useState } from "react";
 import CheckCircleOutlinedIcon from "@mui/icons-material/CheckCircleOutlined";
 import ErrorOutlineOutlinedIcon from "@mui/icons-material/ErrorOutlineOutlined";
 import ImageSlides from "../details/ImageSlides";
-import { customItemImages } from "../../data/data";
+import { showConfirmation } from "../../helper-functions/helper-functions";
 
 const CustomOrders = () => {
   const initialState = {
@@ -17,30 +17,27 @@ const CustomOrders = () => {
     file: "",
   };
   const [customOrderForm, setCustomOrderForm] = useState(initialState);
-  const [confirmation, setConfirmation] = useState(false);
+  const [isConfirmationOpen, setIsConfirmationOpen] = useState(false);
   const [error, setError] = useState(null);
-  // eslint-disable-next-line no-undef
-  // const image = process.env.PUBLIC_URL + "/images/table5.png";
+  // Images for slides
+  const customItemImages = [
+    // eslint-disable-next-line no-undef
+    process.env.PUBLIC_URL + "/images/1.png",
+    // eslint-disable-next-line no-undef
+    process.env.PUBLIC_URL + "/images/2.png",
+    // eslint-disable-next-line no-undef
+    process.env.PUBLIC_URL + "/images/3.png",
+    // eslint-disable-next-line no-undef
+    process.env.PUBLIC_URL + "/images/4.png",
+  ];
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setCustomOrderForm({ ...customOrderForm, [name]: value });
   };
 
-  const getConfirmation = () => {
-    setConfirmation(true);
-    setTimeout(() => {
-      setConfirmation(false);
-    }, 1500);
-  };
-
-  const getErrorMessage = () => {
-    setError(true);
-    setTimeout(() => {
-      setError(false);
-    }, 1500);
-  };
-
+  // Using mockAPI endpoint to demonstrate example of
+  // API call if Backend existed
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -53,10 +50,10 @@ const CustomOrders = () => {
         }
       );
       if (!response.ok) {
-        getErrorMessage();
+        showConfirmation(setError);
       } else {
         setCustomOrderForm(initialState);
-        getConfirmation();
+        showConfirmation(setIsConfirmationOpen);
       }
     } catch (error) {
       setError(error);
@@ -74,9 +71,9 @@ const CustomOrders = () => {
       />
       <div className="custom-orders-content-container">
         <div className="custom-orders-image-container">
-          {/* <img src={image} alt="" /> */}
           <ImageSlides item={{ images: customItemImages }} />
         </div>
+        {/* Custom Order Form */}
         <form className="custom-form-container" onSubmit={handleSubmit}>
           <h3>Get a Quote for a custom build</h3>
           <input
@@ -130,21 +127,16 @@ const CustomOrders = () => {
             value={customOrderForm.details}
             onChange={handleChange}
           ></textarea>
-          {/* <label>Examples</label> */}
-          {/* <input
-            name="file"
-            value={customOrderForm.file}
-            type="file"
-            onChange={handleChange}
-          ></input> */}
           <div className="contact-button-container">
             <button onClick={handleSubmit}>Send Message</button>
-            {confirmation && (
+            {/* Order form sent successfully confirmation */}
+            {isConfirmationOpen && (
               <span className="contact-confirmation">
                 {<CheckCircleOutlinedIcon sx={{ color: "green" }} />} Message
                 Sent
               </span>
             )}
+            {/* Error message */}
             {error && (
               <span className="contact-confirmation">
                 {<ErrorOutlineOutlinedIcon sx={{ color: "red" }} />} Error

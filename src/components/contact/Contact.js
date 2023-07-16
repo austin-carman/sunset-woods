@@ -2,6 +2,7 @@ import HeroContent from "../hero/HeroContent";
 import { useState } from "react";
 import CheckCircleOutlinedIcon from "@mui/icons-material/CheckCircleOutlined";
 import ErrorOutlineOutlinedIcon from "@mui/icons-material/ErrorOutlineOutlined";
+import { showConfirmation } from "../../helper-functions/helper-functions";
 
 const Contact = () => {
   const initialState = {
@@ -11,7 +12,7 @@ const Contact = () => {
     message: "",
   };
   const [contactForm, setContactForm] = useState(initialState);
-  const [confirmation, setConfirmation] = useState(false);
+  const [isConfirmationOpen, setIsConfirmationOpen] = useState(false);
   const [error, setError] = useState(null);
 
   const handleChange = (e) => {
@@ -19,20 +20,8 @@ const Contact = () => {
     setContactForm({ ...contactForm, [name]: value });
   };
 
-  const getConfirmation = () => {
-    setConfirmation(true);
-    setTimeout(() => {
-      setConfirmation(false);
-    }, 1500);
-  };
-
-  const getErrorMessage = () => {
-    setError(true);
-    setTimeout(() => {
-      setError(false);
-    }, 1500);
-  };
-
+  // Using mockAPI endpoint to demonstrate example of
+  // API call if Backend existed
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -45,10 +34,10 @@ const Contact = () => {
         }
       );
       if (!response.ok) {
-        getErrorMessage();
+        showConfirmation(setError);
       } else {
         setContactForm(initialState);
-        getConfirmation();
+        showConfirmation(setIsConfirmationOpen);
       }
     } catch (error) {
       setError(error);
@@ -80,6 +69,7 @@ const Contact = () => {
             </a>
           </h6>
         </div>
+        {/* Contact Form */}
         <form className="contact-form" onSubmit={handleSubmit}>
           <h3>Send us a message</h3>
           <input
@@ -111,12 +101,14 @@ const Contact = () => {
           ></textarea>
           <div className="contact-button-container">
             <button onClick={handleSubmit}>Send Message</button>
-            {confirmation && (
+            {/* Message Sent successfully Confirmation message */}
+            {isConfirmationOpen && (
               <span className="contact-confirmation">
                 {<CheckCircleOutlinedIcon sx={{ color: "green" }} />} Message
                 Sent
               </span>
             )}
+            {/* Error message */}
             {error && (
               <span className="contact-confirmation">
                 {<ErrorOutlineOutlinedIcon sx={{ color: "red" }} />} Error

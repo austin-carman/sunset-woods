@@ -1,13 +1,10 @@
-import { useState, useContext } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import { CartContext } from "../../context/CartContext";
 
 // eslint-disable-next-line react/prop-types
 const Navbar = ({ isCartOpen, setIsCartOpen }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  // eslint-disable-next-line no-unused-vars
-  const { cart } = useContext(CartContext);
 
   const handleToggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
