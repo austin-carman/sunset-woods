@@ -12,6 +12,11 @@ const Home = () => {
   // eslint-disable-next-line no-undef
   const familyImage = process.env.PUBLIC_URL + "/images/about-us.png";
 
+  // HeroContent props
+  const heroTitle = "Custom Woodworking";
+  const callToActionLink = "/custom-orders";
+  const callToActionText = "Custom Order";
+
   const handleClickCategory = (category) => {
     navigate("/shop", { state: category });
   };
@@ -20,10 +25,9 @@ const Home = () => {
     <>
       {/* Hero image and Call to Action */}
       <HeroContent
-        title="Custom Woodworking."
-        subtitle=""
-        link="/custom-orders"
-        callToActionText="Custom Quote"
+        title={heroTitle}
+        link={callToActionLink}
+        callToActionText={callToActionText}
       />
       {/* Shop Category Links */}
       <section className="home-gallery">
