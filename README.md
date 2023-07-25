@@ -1,6 +1,57 @@
-# Getting Started with Create React App
+# Sunset Woods: custom woodworking shop
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+
+This application is a frontend demo for Sunset Trail Woods LLC, a small woodworking business. The purpose of this demo site is to:
+  - Provide a brief description about the company.
+  - Showcase various shop items that can be added to a cart and purchased.
+  - Display contact information with option to send a message directly on site.
+  - Allow customers to submit an order for a custom made item.
+
+**Note: This project is still a work in progress.**
+
+As currently constructed, this frontend project uses mockAPI endpoints for all API requests. Both the backend and database have not yet been developed thus all API requests in this project serve no real purpose other than to demonstrate knowledge of the `fetch()` method to retrieve and send data through API requests. Until the backend and database are completed, dummy data contained in the `data.js` file is used for the shop items displayed on the Shop page.
+
+**The motivation behind this project is 3 fold:**
+1. `Practice`, practice, practice.
+2. Seek `advice` to improve my coding skills and meeting best coding practices. I want to learn from you!
+4. Learn about possible `job opportunities`. I am actively seeking job opportunities and if you are aware of any I would love to hear from you! Here's my resume
+
+Here's how to reach out or give your feedback:
+  - Connect with and/or message me via [LinkedIn](https://www.linkedin.com/in/austin-carman/).
+  - [Github](https://github.com/austin-carman/sunset-woods): You can submit an issue, pull request, or leave a comment in the discussion.
+  
+Feel free to checkout other repos pinned on my [Github profile](https://github.com/austin-carman/)!
+
+## TODO:
+
+- Checkout page
+  - Opens when user clicks the checkout button in cart
+  - Form to gather payment & shipping information
+  - API request (using mockAPI endpoint)
+  - Payment receipt & confirmation OR Payment error
+
+- Replace Lorem Ipsum text in the following files: `Home.js`, `About.js`, and `data.js` (description for each shop item).
+
+- Update phone and email contact information in the following files: `Contact.js` and `Footer.js`.
+
+- Replace mockAPI endpoints with real endpoints when they exist. Stop using dummy data and use data returned from API request to display shop items.
+
+## Running the project
+
+From the repo:
+  1. Clone this project locally
+  2. `cd` into project directory
+  2. Run `npm install` in your command line
+  3. Run `npm start` in your command line to view in browser
+
+## Dependency list
+
+- [ESLint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
+- [React](https://react.dev/)
+- [React Router](https://reactrouter.com/en/main)
+- [Material Icons](https://mui.com/material-ui/material-icons/)
 
 ## Available Scripts
 
