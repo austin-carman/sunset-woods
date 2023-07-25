@@ -15,6 +15,11 @@ const Contact = () => {
   const [isConfirmationOpen, setIsConfirmationOpen] = useState(false);
   const [error, setError] = useState(null);
 
+  // HeroContent props
+  const heroTitle = "Contact";
+  const callToActionLink = "/custom-orders";
+  const callToActionText = "Custom Order";
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setContactForm({ ...contactForm, [name]: value });
@@ -48,10 +53,9 @@ const Contact = () => {
     <>
       {/* Hero image and Call to Action */}
       <HeroContent
-        title="Contact"
-        subtitle="Nostrud labore minim consequat excepteur"
-        link="/custom-orders"
-        callToActionText="Custom Orders"
+        title={heroTitle}
+        link={callToActionLink}
+        callToActionText={callToActionText}
       />
       <div className="contact-container">
         <div className="info-container">
