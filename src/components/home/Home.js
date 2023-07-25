@@ -11,7 +11,6 @@ const Home = () => {
   const engravingImage = process.env.PUBLIC_URL + "/images/custom-engraving.png";
   // eslint-disable-next-line no-undef
   const familyImage = process.env.PUBLIC_URL + "/images/about-us.png";
-
   // HeroContent props
   const heroTitle = "Custom Woodworking";
   const callToActionLink = "/custom-orders";

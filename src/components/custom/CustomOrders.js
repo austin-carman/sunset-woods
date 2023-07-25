@@ -19,6 +19,7 @@ const CustomOrders = () => {
   const [customOrderForm, setCustomOrderForm] = useState(initialState);
   const [isConfirmationOpen, setIsConfirmationOpen] = useState(false);
   const [error, setError] = useState(null);
+
   // Images for slides
   const customItemImages = [
     // eslint-disable-next-line no-undef
@@ -30,6 +31,11 @@ const CustomOrders = () => {
     // eslint-disable-next-line no-undef
     process.env.PUBLIC_URL + "/images/4.png",
   ];
+
+  // HeroContent props
+  const heroTitle = "Custom Orders";
+  const callToActionLink = "/shop";
+  const callToActionText = "Shop";
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -64,10 +70,9 @@ const CustomOrders = () => {
     <>
       {/* Hero image and Call to Action */}
       <HeroContent
-        title="Custom Orders"
-        subtitle="Nostrud labore minim consequat excepteur"
-        link="/shop"
-        callToActionText="Visit Shop"
+        title={heroTitle}
+        link={callToActionLink}
+        callToActionText={callToActionText}
       />
       <div className="custom-orders-content-container">
         <div className="custom-orders-image-container">

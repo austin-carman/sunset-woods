@@ -5,6 +5,11 @@ import ErrorOutlineOutlinedIcon from "@mui/icons-material/ErrorOutlineOutlined";
 import { showConfirmation } from "../../helper-functions/helper-functions";
 
 const Contact = () => {
+  // HeroContent props
+  const heroTitle = "Contact";
+  const callToActionLink = "/custom-orders";
+  const callToActionText = "Custom Order";
+
   const initialState = {
     name: "",
     phone: "",
@@ -14,11 +19,6 @@ const Contact = () => {
   const [contactForm, setContactForm] = useState(initialState);
   const [isConfirmationOpen, setIsConfirmationOpen] = useState(false);
   const [error, setError] = useState(null);
-
-  // HeroContent props
-  const heroTitle = "Contact";
-  const callToActionLink = "/custom-orders";
-  const callToActionText = "Custom Order";
 
   const handleChange = (e) => {
     const { name, value } = e.target;
