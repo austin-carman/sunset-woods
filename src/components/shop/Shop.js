@@ -22,6 +22,11 @@ const Shop = () => {
     location.state ? location.state : shopCategories[0]
   );
 
+  // HeroContent props
+  const heroTitle = "Shop";
+  const callToActionLink = "/custom-orders";
+  const callToActionText = "Custom Order";
+
   // Get shop items that match the selected Category
   const filterShopItems = () => {
     return shopItems.filter((item) => {
@@ -46,10 +51,9 @@ const Shop = () => {
     <>
       {/* Hero image and Call to Action */}
       <HeroContent
-        title="Shop"
-        subtitle="Nostrud labore minim consequat excepteur"
-        link="/custom-orders"
-        callToActionText="Custom Orders"
+        title={heroTitle}
+        link={callToActionLink}
+        callToActionText={callToActionText}
       />
       {/* Shop Category Filter options */}
       <div className="shop-categories">

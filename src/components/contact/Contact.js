@@ -5,6 +5,11 @@ import ErrorOutlineOutlinedIcon from "@mui/icons-material/ErrorOutlineOutlined";
 import { showConfirmation } from "../../helper-functions/helper-functions";
 
 const Contact = () => {
+  // HeroContent props
+  const heroTitle = "Contact";
+  const callToActionLink = "/custom-orders";
+  const callToActionText = "Custom Order";
+
   const initialState = {
     name: "",
     phone: "",
@@ -48,10 +53,9 @@ const Contact = () => {
     <>
       {/* Hero image and Call to Action */}
       <HeroContent
-        title="Contact"
-        subtitle="Nostrud labore minim consequat excepteur"
-        link="/custom-orders"
-        callToActionText="Custom Orders"
+        title={heroTitle}
+        link={callToActionLink}
+        callToActionText={callToActionText}
       />
       <div className="contact-container">
         <div className="info-container">

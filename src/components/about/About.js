@@ -3,15 +3,18 @@ import HeroContent from "../hero/HeroContent";
 const About = () => {
   // eslint-disable-next-line no-undef
   const familyImage = process.env.PUBLIC_URL + "/images/about-us.png";
+  // HeroContent props
+  const heroTitle = "About us";
+  const callToActionLink = "/shop";
+  const callToActionText = "Shop";
 
   return (
     <>
       {/* Hero image and Call to Action */}
       <HeroContent
-        title="About us"
-        subtitle="Quis in ea ex occaecat labore."
-        link={"/shop"}
-        callToActionText="Shop"
+        title={heroTitle}
+        link={callToActionLink}
+        callToActionText={callToActionText}
       />
       <section className="about-section">
         <div className="about-content">
