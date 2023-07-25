@@ -20,7 +20,7 @@ const Home = () => {
     <>
       {/* Hero image and Call to Action */}
       <HeroContent
-        title="Quality. Custom. Handcrafted."
+        title="Custom Woodworking."
         subtitle=""
         link="/custom-orders"
         callToActionText="Custom Quote"
