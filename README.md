@@ -22,6 +22,8 @@ This application is a frontend demo for Sunset Trail Woods LLC, a small woodwork
 
 As currently constructed, this frontend project uses mockAPI endpoints for all API requests simply to demonstrate use of the `fetch()` method to retrieve and send data through API requests. Dummy data contained in the `data.js` file is used for the shop items displayed on the Shop page.  Eventually, the mockAPI endpoints and dummy data will be replaced with real RESTAPI endpoints and data returned from API responses.
 
+View live site [here](https://sunset-woods.vercel.app/)
+
 ## TODO:
 
 - Checkout page
