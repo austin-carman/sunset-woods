@@ -22,7 +22,7 @@ This application is a frontend demo for Sunset Trail Woods LLC, a small woodwork
 
 As currently constructed, this frontend project uses mockAPI endpoints for all API requests simply to demonstrate use of the `fetch()` method to retrieve and send data through API requests. Dummy data contained in the `data.js` file is used for the shop items displayed on the Shop page.  Eventually, the mockAPI endpoints and dummy data will be replaced with real RESTAPI endpoints and data returned from API responses.
 
-View live site [here](https://sunset-woods.vercel.app/)
+View live [site](https://sunset-woods.vercel.app/)
 
 ## TODO:
 
@@ -48,11 +48,11 @@ From the repo:
 
 ## Dependency list
 
-- [ESLint](https://eslint.org/)
-- [Prettier](https://prettier.io/)
 - [React](https://react.dev/)
 - [React Router](https://reactrouter.com/en/main)
 - [Material Icons](https://mui.com/material-ui/material-icons/)
+- [ESLint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
 
 ## Available Scripts
 
@@ -96,27 +96,3 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
