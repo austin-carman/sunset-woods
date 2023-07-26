@@ -1,27 +1,26 @@
-# Sunset Woods: custom woodworking shop
+# Sunset Woods: Custom woodworking shop
+
+The motivation behind this project is 3 fold:
+1. `Practice`, practice, practice.
+2. Seek `advice` to improve my coding skills and meeting best coding practices. I want to learn from you!
+4. Learn about possible `job opportunities`. I am actively seeking job opportunities and if you are aware of any I would love to hear from you!
+
+  - Connect with and/or message me via [LinkedIn](https://www.linkedin.com/in/austin-carman/).
+  - [Github](https://github.com/austin-carman/sunset-woods): You can submit an issue, pull request, or leave a comment in the discussion.
+  
+Feel free to checkout other repos pinned on my [Github profile](https://github.com/austin-carman/)!
 
 ## Overview
 
-This application is a frontend demo for Sunset Trail Woods LLC, a small woodworking business. The purpose of this demo site is to:
-  - Provide a brief description about the company.
+This application is a frontend demo for Sunset Trail Woods LLC, a small woodworking business. Features of this site include:
+  - Brief description about the company.
   - Showcase various shop items that can be added to a cart and purchased.
   - Display contact information with option to send a message directly on site.
   - Allow customers to submit an order for a custom made item.
 
 **Note: This project is still a work in progress.**
 
-As currently constructed, this frontend project uses mockAPI endpoints for all API requests. Both the backend and database have not yet been developed thus all API requests in this project serve no real purpose other than to demonstrate knowledge of the `fetch()` method to retrieve and send data through API requests. Until the backend and database are completed, dummy data contained in the `data.js` file is used for the shop items displayed on the Shop page.
-
-**The motivation behind this project is 3 fold:**
-1. `Practice`, practice, practice.
-2. Seek `advice` to improve my coding skills and meeting best coding practices. I want to learn from you!
-4. Learn about possible `job opportunities`. I am actively seeking job opportunities and if you are aware of any I would love to hear from you! Here's my resume
-
-Here's how to reach out or give your feedback:
-  - Connect with and/or message me via [LinkedIn](https://www.linkedin.com/in/austin-carman/).
-  - [Github](https://github.com/austin-carman/sunset-woods): You can submit an issue, pull request, or leave a comment in the discussion.
-  
-Feel free to checkout other repos pinned on my [Github profile](https://github.com/austin-carman/)!
+As currently constructed, this frontend project uses mockAPI endpoints for all API requests simply to demonstrate use of the `fetch()` method to retrieve and send data through API requests. Dummy data contained in the `data.js` file is used for the shop items displayed on the Shop page.  Eventually, the mockAPI endpoints and dummy data will be replaced with real RESTAPI endpoints and data returned from API responses.
 
 ## TODO:
 
@@ -35,7 +34,7 @@ Feel free to checkout other repos pinned on my [Github profile](https://github.c
 
 - Update phone and email contact information in the following files: `Contact.js` and `Footer.js`.
 
-- Replace mockAPI endpoints with real endpoints when they exist. Stop using dummy data and use data returned from API request to display shop items.
+- Replace mockAPI endpoints with real endpoints. Stop using dummy data and use data returned from API request to display shop items.
 
 ## Running the project
 
