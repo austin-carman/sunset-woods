@@ -19,7 +19,7 @@ This responsive, single-page web application is a frontend demo for Sunset Trail
   - About us page with brief about section.
   - Shop page with category filters showcasing various shop items that can be added to cart.
   - Cart to hold any items added to cart by user.
-  - Checkout page *_checkout button in cart and checkout page is still in progress. See [TODO](## TODO:) section below._ 
+  - Checkout page *_checkout button in cart and checkout page is still in progress. See [TODO](##-TODO:) section below._ 
   - Contact page to display contact information and contact form to send a message directly on site.
   - Custom order page with form to allow customers to submit an order for a custom made item.
 
