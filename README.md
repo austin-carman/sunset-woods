@@ -12,11 +12,16 @@ Feel free to checkout other repos pinned on my [Github profile](https://github.c
 
 ## Overview
 
-This application is a frontend demo for Sunset Trail Woods LLC, a small woodworking business. Features of this site include:
-  - Brief description about the company.
-  - Showcase various shop items that can be added to a cart and purchased.
-  - Display contact information with option to send a message directly on site.
-  - Allow customers to submit an order for a custom made item.
+This responsive, single-page web application is a frontend demo for Sunset Trail Woods LLC, a small woodworking business. Features of this site include:
+  - Navbar with nav links including cart.
+  - Footer with nav links.
+  - Home Page with links to shop categories and brief about section.
+  - About us page with brief about section.
+  - Shop page with category filters showcasing various shop items that can be added to cart.
+  - Cart to hold any items added to cart by user.
+  - Checkout page *_checkout button in cart and checkout page is still in progress. See [TODO](## TODO:) section below._ 
+  - Contact page to display contact information and contact form to send a message directly on site.
+  - Custom order page with form to allow customers to submit an order for a custom made item.
 
 **Note: This project is still a work in progress.**
 
